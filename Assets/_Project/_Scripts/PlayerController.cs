@@ -16,6 +16,5 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         rb.velocity = moveSpeed * new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")).normalized;
-        Debug.Log(new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")));
     }
 }
