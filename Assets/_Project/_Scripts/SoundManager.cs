@@ -3,39 +3,61 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class SoundManager : Singleton<SoundManager>
+public class SoundManager : SingletonPersistent<SoundManager>
 {
-    public SFXClip[] SFXClipArray;
-
-    //private GameObject[] soundAudioClips;
+    [Header("Sounds")]
+    public SoundAudioClip[] soundAudioClipsArray;
 
     [SerializeField]
     private Queue<GameObject> soundAudioClipsQueue;
+    private GameObject musicGameObject;
 
     [SerializeField]
     private int maxAudioSources = 10;
 
-    private void Start()
-    {
-        //soundAudioClips = new GameObject[maxAudioSources];
-
-        soundAudioClipsQueue = new Queue<GameObject>(maxAudioSources);
-    }
+    [Header("Music")]
+    public SongAudioClip[] musicAudioClipsArray;
 
     public enum Sounds
     {
-        CannonAttack,
-        Hit,
-        Thunder
+        PlayerDamage,
+        PoolStickSwipe,
+        PoolStickProjectile,
+        Boomerang,
+        TridentStab,
+        TridentThrow,
+        ScorpionPincer,
+        ArmordiloRoll,
+        DealerAttack
     }
 
-    //Use this for sounds that may be repeated very quickly Ex: a bunch of towers shooting
+    public enum Songs
+    {
+        TestSong
+    }
+
+    private void Start()
+    {
+        PlaySong(Songs.TestSong);
+    }
+
+    /// <summary>
+    /// Use this for sounds that may be repeated very quickly Ex: a bunch of towers shooting
+    /// </summary>
+    /// <param name="_sound"></param>
     public void PlaySound(Sounds _sound)
     {
+        if (soundAudioClipsQueue == null)
+        {
+            soundAudioClipsQueue = new Queue<GameObject>(maxAudioSources);
+        }
+
+        Debug.Log("Number of Audio Sources: " + soundAudioClipsQueue.Count);
+
         GameObject soundGameObject;
         AudioSource audioSource;
         //Create Audio Source Game Object
-        if (soundAudioClipsQueue.Count <= maxAudioSources)
+        if (soundAudioClipsQueue.Count < maxAudioSources)
         {
             soundGameObject = new GameObject("Sound");
             soundAudioClipsQueue.Enqueue(soundGameObject);
@@ -53,8 +75,12 @@ public class SoundManager : Singleton<SoundManager>
         audioSource.PlayOneShot(audioSource.clip);
     }
 
-    // Use this for sound effects where you want to hear the entire sound effect ex: Lightning
-    // WARNING: using this with sound effects that are repeated often may result in broken audio
+    /// <summary>
+    /// Use this for sound effects where you want to hear the entire sound effect ex: Lightning
+    /// WARNING: using this with sound effects that are repeated often may result in broken audio
+    /// </summary>
+    /// <param name="_sound"></param>
+
     public void PlayEntireSound(Sounds _sound)
     {
         //Create Audio Source Game Object
@@ -67,9 +93,32 @@ public class SoundManager : Singleton<SoundManager>
         Destroy(soundGameObject, audioSource.clip.length);
     }
 
-    private SFXClip GetAudioClip(Sounds _sound)
+    /// <summary>
+    /// Changes the currently playing song
+    /// </summary>
+    /// <param name="_sound"></param>
+    /// <returns></returns>
+    public void PlaySong(Songs _song)
     {
-        foreach (SFXClip soundAudioClip in SFXClipArray)
+        if (musicGameObject == null)
+        {
+            musicGameObject = new GameObject("Music");
+            musicGameObject.AddComponent<AudioSource>();
+            DontDestroyOnLoad(musicGameObject);
+        }
+        AudioSource audioSource = musicGameObject.GetComponent<AudioSource>();
+
+        audioSource.Stop();
+        audioSource.clip = GetAudioClip(_song).audioClip;
+        audioSource.volume = GetAudioClip(_song).volume;
+        audioSource.priority = 10;
+        audioSource.loop = true;
+        audioSource.Play();
+    }
+
+    private SoundAudioClip GetAudioClip(Sounds _sound)
+    {
+        foreach (SoundAudioClip soundAudioClip in soundAudioClipsArray)
         {
             if (soundAudioClip.sound == _sound)
             {
@@ -77,12 +126,26 @@ public class SoundManager : Singleton<SoundManager>
             }
         }
 
-        Debug.LogError("Sound " + SFXClipArray + "not found!");
+        Debug.LogError("Sound " + soundAudioClipsArray + "not found!");
+        return null;
+    }
+
+    private SongAudioClip GetAudioClip(Songs _song)
+    {
+        foreach (SongAudioClip songAudioClip in musicAudioClipsArray)
+        {
+            if (songAudioClip.song == _song)
+            {
+                return songAudioClip;
+            }
+        }
+
+        Debug.LogError("Song " + musicAudioClipsArray + "not found!");
         return null;
     }
 
     [Serializable]
-    public class SFXClip
+    public class SoundAudioClip
     {
         public Sounds sound;
         public AudioClip audioClip;
@@ -91,6 +154,15 @@ public class SoundManager : Singleton<SoundManager>
         public float volume;
     }
 
+    [Serializable]
+    public class SongAudioClip
+    {
+        public Songs song;
+        public AudioClip audioClip;
+
+        [SerializeField, Range(0f, 1f)]
+        public float volume;
+    }
 
 
 }
