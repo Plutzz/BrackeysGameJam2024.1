@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class SoundManager : SingletonPersistent<SoundManager>
+public class AudioManager : SingletonPersistent<AudioManager>
 {
     [Header("Sounds")]
     public SoundAudioClip[] soundAudioClipsArray;

@@ -9,10 +9,11 @@ public class PlayerAttacks : MonoBehaviour
     [SerializeField] private float projectileSpeed;
     
 
-    // Update is called once per frame
+    //TODO relinquish player input instead of having to check if the game is paused
     void Update()
     {
-        if (PauseManager.isPaused) { return; }
+        if (PauseManager.Instance.isPaused) { return; }
+
         if (Input.GetMouseButtonDown(0)) {
             PerformMeleeAttack();
         }

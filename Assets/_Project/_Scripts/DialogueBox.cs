@@ -29,14 +29,6 @@ public class DialogueBox : MonoBehaviour
         speakerPicSprite = speakerPicObject.GetComponent<Image>();
     }
 
-    //Adding here so it will only be added to Update on a game object thats mostly disabled
-    private void Update()
-    {
-        if (Input.GetMouseButtonDown(0)) { 
-            DialogueManager.Instance.ShowNextFrame();
-        }
-    }
-
     public void SetSpeaker(DialogueSpeaker speaker) { 
         speakerNameText.text = speaker.name;
         speakerPicSprite.sprite = speaker.sprite;

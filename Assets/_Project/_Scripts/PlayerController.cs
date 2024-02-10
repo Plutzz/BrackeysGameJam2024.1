@@ -15,6 +15,6 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        rb.velocity = moveSpeed * new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")).normalized;
+        rb.velocity = moveSpeed * InputHandler.Instance.inputVector;
     }
 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class DialogueManager : Singleton<DialogueManager>
 {
@@ -17,15 +18,22 @@ public class DialogueManager : Singleton<DialogueManager>
         }
 
         dialogueBox.gameObject.SetActive(false);
+
+        //Adds ShowNextFrame() as a listener to the nextDialogue button
+        InputHandler.Instance.playerInputActions.Dialogue.NextDialogue.performed += 
+            (InputAction.CallbackContext context) => ShowNextFrame();
     }
 
     public void ActivateDialogue(DialogueScriptableObject dialogue) {
         Debug.Log("Activating Dialogue");
-        PauseManager.Instance.Pause();
+
+        InputHandler.Instance.playerInputActions.Player.Disable();
+        InputHandler.Instance.playerInputActions.Dialogue.Enable();
+
         currentDialogue = dialogue;
         dialogueBox.gameObject.SetActive(true);
         dialogueFrame = 0;
-        
+
         ShowNextFrame();
     }
 
@@ -56,7 +64,8 @@ public class DialogueManager : Singleton<DialogueManager>
 
     private void DeactiveDialogue() {
         dialogueBox.gameObject.SetActive(false);
-        PauseManager.Instance.UnPause();
+        InputHandler.Instance.playerInputActions.Player.Enable();
+        InputHandler.Instance.playerInputActions.Dialogue.Disable();
         currentDialogue = null;
     }
 

@@ -10,7 +10,7 @@ public class NPC : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player" && Input.GetKeyDown(KeyCode.E)) {
+        if (collision.gameObject.tag == "Player" && InputHandler.Instance.isInteracting) {
             ShowDialogue();
         }
     }
