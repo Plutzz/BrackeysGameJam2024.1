@@ -18,9 +18,12 @@ public class DialogueManager : Singleton<DialogueManager>
         }
 
         dialogueBox.gameObject.SetActive(false);
+    }
 
+    private void Start()
+    {
         //Adds ShowNextFrame() as a listener to the nextDialogue button
-        InputHandler.Instance.playerInputActions.Dialogue.NextDialogue.performed += 
+        InputHandler.Instance.playerInputActions.Dialogue.NextDialogue.performed +=
             (InputAction.CallbackContext context) => ShowNextFrame();
     }
 
