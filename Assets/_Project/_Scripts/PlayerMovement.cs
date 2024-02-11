@@ -1,8 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Xml.Serialization;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+
+// TODO: Add jump buffering
+// TODO: Fix cancel jump early when gravity is flipped
+// TODO: Add head check to stop momentum if you hit your head
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerMovement : MonoBehaviour
 {
@@ -81,20 +86,17 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        if(!flipGravity)
+        if(InputHandler.Instance.playerInputActions.Player.Jump.WasReleasedThisFrame())
         {
-            transform.localScale = new Vector2(1, 1);
+            JumpCanceled();
         }
-        else
-        {
-            transform.localScale = new Vector2(1, -1);
-        }
+
         HandleInputs();
+        GravityCheck();
         CollisionCheck();
 
         CalculateJumpApex();
         CalculateGravity();
-        CalculateJump();
 
         CalculateWalkSpeed();
         Move();
@@ -108,6 +110,18 @@ public class PlayerMovement : MonoBehaviour
     private void Move()
     {
         rb.velocity = new Vector2(currentVelocityX, currentVelocityY);
+    }
+
+    private void GravityCheck()
+    {
+        if (!flipGravity)
+        {
+            transform.localScale = new Vector2(1, 1);
+        }
+        else
+        {
+            transform.localScale = new Vector2(1, -1);
+        }
     }
 
     private void CalculateWalkSpeed()
@@ -141,6 +155,7 @@ public class PlayerMovement : MonoBehaviour
         if(currentState == States.Airborne && IsGrounded)
         {
             currentState = States.Moving;
+            currentVelocityY = 0;
         }
         else if(currentState == States.Moving && !IsGrounded)
         {
@@ -157,7 +172,7 @@ public class PlayerMovement : MonoBehaviour
         if (IsGrounded)
         {
             // Move out of the ground
-            if (currentVelocityY < 0) currentVelocityY = 0;
+            //if (currentVelocityY != 0) currentVelocityY = 0;
         }
         // Gravity is normal
         else if(!flipGravity)
@@ -169,19 +184,19 @@ public class PlayerMovement : MonoBehaviour
             currentVelocityY -= _fallAcceleration * Time.deltaTime;
 
             // Clamp
-            if (currentVelocityY < fallClamp) currentVelocityY = fallClamp;
+            if (Mathf.Abs(currentVelocityY) > Mathf.Abs(fallClamp)) currentVelocityY = -fallClamp;
         }
-        // Gracity is flipped
+        // Gravity is flipped
         else
         {
             // Add downward force while ascending if we ended the jump early
-            var _fallAcceleration = endedJumpEarly && currentVelocityY > 0 ? fallAcceleration * jumpEndEarlyGravityModifier : fallAcceleration;
+            var _fallAcceleration = endedJumpEarly && currentVelocityY < 0 ? fallAcceleration * jumpEndEarlyGravityModifier : fallAcceleration;
 
             // Fall
             currentVelocityY += _fallAcceleration * Time.deltaTime;
 
             // Clamp
-            if (Mathf.Abs(currentVelocityY) > Mathf.Abs(fallClamp)) currentVelocityY = -fallClamp;
+            if (Mathf.Abs(currentVelocityY) > Mathf.Abs(fallClamp)) currentVelocityY = fallClamp;
         }
     }
 
@@ -201,33 +216,43 @@ public class PlayerMovement : MonoBehaviour
 
     private void JumpPressed(InputAction.CallbackContext context)
     {
+        Debug.Log("Jump Pressed");
         lastJumpPressed = Time.time;
+        if (IsGrounded || coyoteUsable)
+        {
+            Jump();
+        }
     }
 
-    private void CalculateJump()
+    private void JumpCanceled()
     {
-        // Jump if: grounded or within coyote threshold || sufficient jump buffer
-        if (InputHandler.Instance.isJumping && (IsGrounded || coyoteUsable))
-        {
-            if (!flipGravity)
-            {
-                currentVelocityY = jumpHeight;
-            }
-            else
-            {
-                currentVelocityY = -jumpHeight;
-            }
-            endedJumpEarly = false;
-            coyoteUsable = false;
-            timeLeftGround = Time.time;
-        }
-
+        Debug.Log("Jump Canceled Early");
         // End the jump early if button released
-        if (!IsGrounded && !InputHandler.Instance.isJumping && !endedJumpEarly && rb.velocity.y > 0)
+        if (!IsGrounded && !endedJumpEarly && rb.velocity.y > 0)
         {
-            // _currentVerticalSpeed = 0;
+            Debug.Log("EndJump Early test");
             endedJumpEarly = true;
         }
+
+    }
+
+    private void Jump()
+    {
+        timeLeftGround = Time.time;
+        endedJumpEarly = false;
+        coyoteUsable = false;
+        Debug.Log("JUMP!");
+        // Jump if: grounded or within coyote threshold || sufficient jump buffer
+        if (!flipGravity)
+        {
+            currentVelocityY = jumpHeight;
+        }
+        else
+        {
+            currentVelocityY = -jumpHeight;
+        }
+
+
 
         //if (HitHead)
         //{
@@ -247,6 +272,11 @@ public class PlayerMovement : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireCube(groundCheck.position, groundCheckSize);
+    }
+
+    public void FlipGravity()
+    {
+        flipGravity = !flipGravity;
     }
 
 }
