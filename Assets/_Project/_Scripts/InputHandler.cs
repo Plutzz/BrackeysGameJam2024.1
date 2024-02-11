@@ -17,6 +17,7 @@ public class InputHandler : Singleton<InputHandler>
     [Header("Player Input")]
     public Vector2 inputVector;     //Player's input vector for movement
     public bool isInteracting;      //is true if player is pressing interact button
+    public bool isJumping;      //is true if player is pressing interact button
     protected override void Awake()
     {
         base.Awake();
@@ -35,6 +36,7 @@ public class InputHandler : Singleton<InputHandler>
     {
         inputVector = playerInputActions.Player.Movement.ReadValue<Vector2>();
         isInteracting = playerInputActions.Player.Interact.ReadValue<float>() == 1;
+        isJumping = playerInputActions.Player.Jump.ReadValue<float>() == 1;
 
         // Gets the state of every input map (so we can see what is active easier through the inspector)
         playerMap = playerInputActions.Player.enabled;
