@@ -375,6 +375,38 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 2912692242817594504, guid: 71011ac535ff0164598c76982f3ae617, type: 3}
+      propertyPath: m_Size.x
+      value: 0.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 2912692242817594504, guid: 71011ac535ff0164598c76982f3ae617, type: 3}
+      propertyPath: m_Size.y
+      value: 0.72
+      objectReference: {fileID: 0}
+    - target: {fileID: 2912692242817594504, guid: 71011ac535ff0164598c76982f3ae617, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 2912692242817594504, guid: 71011ac535ff0164598c76982f3ae617, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 3847929634212778594, guid: 71011ac535ff0164598c76982f3ae617, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4775942610013423041, guid: 71011ac535ff0164598c76982f3ae617, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4775942610013423041, guid: 71011ac535ff0164598c76982f3ae617, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4775942610013423041, guid: 71011ac535ff0164598c76982f3ae617, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4775942610013423041, guid: 71011ac535ff0164598c76982f3ae617, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -415,57 +447,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6811564988920863054, guid: 71011ac535ff0164598c76982f3ae617, type: 3}
-      propertyPath: m_BodyType
+    - target: {fileID: 4775942610013423041, guid: 71011ac535ff0164598c76982f3ae617, type: 3}
+      propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6811564988920863054, guid: 71011ac535ff0164598c76982f3ae617, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 6200000, guid: 6acd83781988e344394fba0273e15047, type: 2}
-    - target: {fileID: 6811564988920863054, guid: 71011ac535ff0164598c76982f3ae617, type: 3}
-      propertyPath: m_GravityScale
-      value: 0
+    - target: {fileID: 6352515841452530849, guid: 71011ac535ff0164598c76982f3ae617, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 6352515841452530849, guid: 71011ac535ff0164598c76982f3ae617, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.473
       objectReference: {fileID: 0}
     - target: {fileID: 8635853092785948894, guid: 71011ac535ff0164598c76982f3ae617, type: 3}
-      propertyPath: maxSpeed
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8635853092785948894, guid: 71011ac535ff0164598c76982f3ae617, type: 3}
-      propertyPath: jumpHeight
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 8635853092785948894, guid: 71011ac535ff0164598c76982f3ae617, type: 3}
-      propertyPath: acceleration
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 8635853092785948894, guid: 71011ac535ff0164598c76982f3ae617, type: 3}
-      propertyPath: deceleration
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 8635853092785948894, guid: 71011ac535ff0164598c76982f3ae617, type: 3}
-      propertyPath: maxFallSpeed
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 8635853092785948894, guid: 71011ac535ff0164598c76982f3ae617, type: 3}
-      propertyPath: minFallSpeed
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8635853092785948894, guid: 71011ac535ff0164598c76982f3ae617, type: 3}
-      propertyPath: jumpApexThreshold
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8635853092785948894, guid: 71011ac535ff0164598c76982f3ae617, type: 3}
-      propertyPath: groundLayer.m_Bits
-      value: 64
-      objectReference: {fileID: 0}
-    - target: {fileID: 8635853092785948894, guid: 71011ac535ff0164598c76982f3ae617, type: 3}
-      propertyPath: maxFallAcceleration
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 8635853092785948894, guid: 71011ac535ff0164598c76982f3ae617, type: 3}
-      propertyPath: minFallAcceleration
-      value: 15
+      propertyPath: groundCheckSize.x
+      value: 0.88
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -30,7 +30,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float minFallAcceleration = 1f;
     [SerializeField] private float maxFallAcceleration = 3f;
     [SerializeField] private float fallClamp = -40f;
-    private float fallSpeed;
+    [SerializeField] private bool flipGravity = false;
+    private float fallAcceleration;
 
     [Header("Jumping")]
     [SerializeField] private float jumpHeight = 30;
@@ -75,11 +76,19 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         // When a jump is pressed, record the time (to be used for jump buffering)
-        InputHandler.Instance.playerInputActions.Player.Jump.performed += (InputAction.CallbackContext context) => lastJumpPressed = Time.time;
+        InputHandler.Instance.playerInputActions.Player.Jump.performed += JumpPressed;
     }
 
     private void Update()
     {
+        if(!flipGravity)
+        {
+            transform.localScale = new Vector2(1, 1);
+        }
+        else
+        {
+            transform.localScale = new Vector2(1, -1);
+        }
         HandleInputs();
         CollisionCheck();
 
@@ -150,25 +159,39 @@ public class PlayerMovement : MonoBehaviour
             // Move out of the ground
             if (currentVelocityY < 0) currentVelocityY = 0;
         }
-        else
+        // Gravity is normal
+        else if(!flipGravity)
         {
             // Add downward force while ascending if we ended the jump early
-            var _fallSpeed = endedJumpEarly && currentVelocityY > 0 ? fallSpeed * jumpEndEarlyGravityModifier : fallSpeed;
+            var _fallAcceleration = endedJumpEarly && currentVelocityY > 0 ? fallAcceleration * jumpEndEarlyGravityModifier : fallAcceleration;
 
             // Fall
-            currentVelocityY -= _fallSpeed * Time.deltaTime;
+            currentVelocityY -= _fallAcceleration * Time.deltaTime;
 
             // Clamp
             if (currentVelocityY < fallClamp) currentVelocityY = fallClamp;
         }
+        // Gracity is flipped
+        else
+        {
+            // Add downward force while ascending if we ended the jump early
+            var _fallAcceleration = endedJumpEarly && currentVelocityY > 0 ? fallAcceleration * jumpEndEarlyGravityModifier : fallAcceleration;
+
+            // Fall
+            currentVelocityY += _fallAcceleration * Time.deltaTime;
+
+            // Clamp
+            if (Mathf.Abs(currentVelocityY) > Mathf.Abs(fallClamp)) currentVelocityY = -fallClamp;
+        }
     }
 
+    // Player has reduced gravity as they approach the apex of their jump
     private void CalculateJumpApex()
     {
         if (!IsGrounded)
         {
             apexPoint = Mathf.InverseLerp(jumpApexThreshold, 0, Mathf.Abs(rb.velocity.y));
-            fallSpeed = Mathf.Lerp(maxFallAcceleration, minFallAcceleration, apexPoint);
+            fallAcceleration = Mathf.Lerp(maxFallAcceleration, minFallAcceleration, apexPoint);
         }
         else
         {
@@ -176,13 +199,24 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    private void JumpPressed(InputAction.CallbackContext context)
+    {
+        lastJumpPressed = Time.time;
+    }
 
     private void CalculateJump()
     {
         // Jump if: grounded or within coyote threshold || sufficient jump buffer
         if (InputHandler.Instance.isJumping && (IsGrounded || coyoteUsable))
         {
-            currentVelocityY = jumpHeight;
+            if (!flipGravity)
+            {
+                currentVelocityY = jumpHeight;
+            }
+            else
+            {
+                currentVelocityY = -jumpHeight;
+            }
             endedJumpEarly = false;
             coyoteUsable = false;
             timeLeftGround = Time.time;
