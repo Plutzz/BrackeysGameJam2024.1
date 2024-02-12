@@ -189,7 +189,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (hitHead)
         {
-            if (currentVelocityY > 0) currentVelocityY = 0;
+            if (currentVelocityY * gravityMultiplier > 0) currentVelocityY = 0;
         }
 
         /*// Gravity is normal
@@ -251,7 +251,6 @@ public class PlayerMovement : MonoBehaviour
             Debug.Log("EndJump Early test");
             endedJumpEarly = true;
         }
-
     }
 
     private void Jump()
@@ -269,6 +268,7 @@ public class PlayerMovement : MonoBehaviour
         {
             currentVelocityY = -jumpHeight;
         }
+
     }
 
     private IEnumerator StartCoyoteFrames()
