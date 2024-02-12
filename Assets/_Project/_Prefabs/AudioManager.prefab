@@ -41,7 +41,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4371969006464981452}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b3fa1747ef1447479e9188e29d167de, type: 3}
+  m_Script: {fileID: 11500000, guid: c3138cd8bff90ed44a76c883a98e47a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   soundAudioClipsArray: []
@@ -49,4 +49,4 @@ MonoBehaviour:
   musicAudioClipsArray:
   - song: 0
     audioClip: {fileID: 8300000, guid: c067fe819459ce34e8807d038afae689, type: 3}
-    volume: 0.132
+    volume: 0.337

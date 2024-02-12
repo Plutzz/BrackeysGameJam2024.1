@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4d81716bf402e746a380e91b338fb1b, type: 3}
+  m_Name: GoatSpecial
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 3678116489324079885, guid: 698da695833417143816279a70b3231b, type: 3}
+  fireSpeed: 10

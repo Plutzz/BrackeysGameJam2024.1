@@ -17,12 +17,19 @@ public class PlayerController : MonoBehaviour
     private PlayerMovement playerMovement;
     private float XAxisInput;
 
+    [Header ("Specials")]
+    private PlayerSpecialHandler specialHandler;
+    [SerializeField] private float specialMaxHoldTime = 1f;
+    
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        specialHandler = GetComponent<PlayerSpecialHandler>();
         playerMovement = GetComponent<PlayerMovement>();
 
         InputHandler.Instance.playerInputActions.Player.Jump.performed += playerMovement.JumpPressed;
+        
     }
 
     private void Update()
@@ -35,6 +42,15 @@ public class PlayerController : MonoBehaviour
         if (InputHandler.Instance.playerInputActions.Player.Jump.WasReleasedThisFrame())
         {
             playerMovement.JumpCanceled();
+        }
+        if (InputHandler.Instance.playerInputActions.Player.Special.WasPerformedThisFrame()) {
+            PausePlayerMovement();
+        }
+        if (InputHandler.Instance.playerInputActions.Player.Special.WasReleasedThisFrame() ) {
+            if (InputHandler.Instance.chargePressTime + specialMaxHoldTime > Time.time) {
+                specialHandler.UseSpecial();
+            }
+            ResumePlayerMovement();
         }
     }
 
@@ -58,6 +74,9 @@ public class PlayerController : MonoBehaviour
 
     private void Flip()
     {
+        if (playerMovement.enabled == false) {
+            return;
+        }
         transform.rotation = Quaternion.Euler(new Vector3(transform.rotation.x, isFacingRight? 180 : 0, transform.rotation.z));
         isFacingRight = !isFacingRight;
         cameraFollowObject.CallFlip();
@@ -65,6 +84,16 @@ public class PlayerController : MonoBehaviour
 
     private void DownwardCheck() {
         fallingGameObject.SetActive(rb.velocity.y < 0);
+    }
+
+    
+    private void PausePlayerMovement() { 
+        playerMovement.enabled = false;
+        rb.velocity = Vector3.zero;
+    }
+
+    private void ResumePlayerMovement() {
+        playerMovement.enabled = true;
     }
 
     
