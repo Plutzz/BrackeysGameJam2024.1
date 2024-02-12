@@ -177,7 +177,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void CalculateGravity()
     {
-        float gravityMultiplier = !flipGravity ? 1 : -1;
+        float _gravityMultiplier = !flipGravity ? 1 : -1;
 
         if (IsGrounded)
         {
@@ -185,17 +185,17 @@ public class PlayerMovement : MonoBehaviour
             //if (currentVelocityY != 0) currentVelocityY = 0;
         }
         else { 
-            var _fallAcceleration = endedJumpEarly && currentVelocityY * gravityMultiplier > 0 ? fallAcceleration * jumpEndEarlyGravityModifier : fallAcceleration;
+            var _fallAcceleration = endedJumpEarly && currentVelocityY * _gravityMultiplier > 0 ? fallAcceleration * jumpEndEarlyGravityModifier : fallAcceleration;
 
-            currentVelocityY -= _fallAcceleration * Time.deltaTime * gravityMultiplier;
+            currentVelocityY -= _fallAcceleration * Time.deltaTime * _gravityMultiplier;
 
             // Clamp
-            if (Mathf.Abs(currentVelocityY) > Mathf.Abs(fallClamp)) currentVelocityY = -fallClamp * gravityMultiplier;
+            if (Mathf.Abs(currentVelocityY) > Mathf.Abs(fallClamp)) currentVelocityY = -fallClamp * _gravityMultiplier;
         }
 
         if (hitHead)
         {
-            if (currentVelocityY * gravityMultiplier > 0) currentVelocityY = 0;
+            if (currentVelocityY * _gravityMultiplier > 0) currentVelocityY = 0;
         }
 
         /*// Gravity is normal
@@ -250,9 +250,10 @@ public class PlayerMovement : MonoBehaviour
 
     public void JumpCanceled()
     {
+        float _gravityMultiplier = !flipGravity ? 1 : -1;
         Debug.Log("Jump Canceled Early");
         // End the jump early if button released
-        if (!IsGrounded && !endedJumpEarly && rb.velocity.y > 0)
+        if (!IsGrounded && !endedJumpEarly && rb.velocity.y * _gravityMultiplier > 0)
         {
             Debug.Log("EndJump Early test");
             endedJumpEarly = true;
