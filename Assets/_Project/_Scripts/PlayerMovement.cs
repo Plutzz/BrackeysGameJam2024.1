@@ -4,8 +4,6 @@ using System.Xml.Serialization;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-
-// TODO: Add jump buffering
 // TODO: Fix cancel jump early when gravity is flipped
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerMovement : MonoBehaviour
@@ -41,7 +39,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float jumpHeight = 30;
     [SerializeField] private float jumpApexThreshold = 10f;
     [SerializeField] private float coyoteTimeThreshold = 0.1f;
-    [SerializeField] private float jumpBuffer = 0.1f;
+    [SerializeField] private float jumpBuffer = 0.2f;
     [SerializeField] private float jumpEndEarlyGravityModifier = 3;
 
     private float timeLeftGround;
@@ -94,6 +92,7 @@ public class PlayerMovement : MonoBehaviour
         
         GravityCheck();
         CollisionCheck();
+        HandleStates();
 
         CalculateJumpApex();
         CalculateGravity();
@@ -150,23 +149,30 @@ public class PlayerMovement : MonoBehaviour
     private void CollisionCheck()
     {
         IsGrounded = Physics2D.OverlapBox(groundCheck.position, groundCheckSize, 0f, groundLayer);
+        hitHead = Physics2D.OverlapBox(headCheck.position, headCheckSize, 0f, groundLayer);
+    }
 
+    private void HandleStates()
+    {
         // Player is "airborne" while not on the ground
-        if(currentState == States.Airborne && IsGrounded)
+        if (currentState == States.Airborne && IsGrounded)
         {
             currentState = States.Moving;
             currentVelocityY = 0;
+            // Jump is buffered
+            if (lastJumpPressed + jumpBuffer > Time.time)
+            {
+                Jump();
+            }
         }
-        else if(currentState == States.Moving && !IsGrounded)
+        else if (currentState == States.Moving && !IsGrounded)
         {
-            if(!InputHandler.Instance.isJumping)
+            if (!InputHandler.Instance.isJumping)
             {
                 StartCoroutine(StartCoyoteFrames());
             }
             currentState = States.Airborne;
         }
-
-        hitHead = Physics2D.OverlapBox(headCheck.position, headCheckSize, 0f, groundLayer);
     }
 
     private void CalculateGravity()
