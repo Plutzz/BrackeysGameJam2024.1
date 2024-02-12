@@ -169,12 +169,25 @@ public class PlayerMovement : MonoBehaviour
 
     private void CalculateGravity()
     {
+        float gravityMultiplier = !flipGravity ? 1 : -1;
+
         if (IsGrounded)
         {
             // Move out of the ground
             //if (currentVelocityY != 0) currentVelocityY = 0;
         }
-        // Gravity is normal
+
+
+        else { 
+            var _fallAcceleration = endedJumpEarly && currentVelocityY * gravityMultiplier > 0 ? fallAcceleration * jumpEndEarlyGravityModifier : fallAcceleration;
+
+            currentVelocityY -= _fallAcceleration * Time.deltaTime * gravityMultiplier;
+
+            // Clamp
+            if (Mathf.Abs(currentVelocityY) > Mathf.Abs(fallClamp)) currentVelocityY = -fallClamp * gravityMultiplier;
+        }
+
+        /*// Gravity is normal
         else if(!flipGravity)
         {
             // Add downward force while ascending if we ended the jump early
@@ -197,7 +210,7 @@ public class PlayerMovement : MonoBehaviour
 
             // Clamp
             if (Mathf.Abs(currentVelocityY) > Mathf.Abs(fallClamp)) currentVelocityY = fallClamp;
-        }
+        }*/
     }
 
     // Player has reduced gravity as they approach the apex of their jump
