@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private CameraFollowObject cameraFollowObject;
 
     private Rigidbody2D rb;
-    [SerializeField] private Collider2D footCollider;
+    [SerializeField] private GameObject fallingGameObject;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -40,19 +40,9 @@ public class PlayerController : MonoBehaviour
         cameraFollowObject.CallFlip();
     }
 
-    private void DownwardCheck() { 
-        footCollider.enabled = (rb.velocity.y < 0);
+    private void DownwardCheck() {
+        fallingGameObject.SetActive(rb.velocity.y < 0);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject != gameObject)
-        {
-            UnitHealth health = collision.GetComponent<UnitHealth>();
-            if (health != null)
-            {
-                health.TakeDamage(1);
-            }
-        }
-    }
+    
 }

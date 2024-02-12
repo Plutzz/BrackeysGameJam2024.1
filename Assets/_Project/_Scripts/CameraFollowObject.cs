@@ -21,6 +21,11 @@ public class CameraFollowObject : MonoBehaviour
 
     private void Update()
     {
+        if (playerTransform == null) {
+            this.enabled = false;
+            return;
+        }
+
         transform.position = playerTransform.position;  
     }
 
