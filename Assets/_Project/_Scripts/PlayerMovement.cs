@@ -7,7 +7,6 @@ using UnityEngine.InputSystem;
 
 // TODO: Add jump buffering
 // TODO: Fix cancel jump early when gravity is flipped
-// TODO: Add head check to stop momentum if you hit your head
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerMovement : MonoBehaviour
 {
@@ -18,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
     // Player Movement variables
     //--------------------------------------------------------
     // Horizontal Movement
-    private float targetVelocityX;
+    private float targetVelocityX; 
     private float currentVelocityX;
 
     [Header("Horizontal Movement")]
@@ -57,12 +56,16 @@ public class PlayerMovement : MonoBehaviour
     private float XAxisInput;
 
 
-    // Ground Check
+    // Collision Checks
     [Header("Ground Check")]
     [SerializeField] private Transform groundCheck;
     [SerializeField] private Vector2 groundCheckSize;
     [SerializeField] private LayerMask groundLayer;
     public bool IsGrounded { get; private set; }
+    [Header("Head Check")]
+    [SerializeField] private Transform headCheck;
+    [SerializeField] private Vector2 headCheckSize;
+    public bool hitHead { get; private set; }
 
     // States
     private States currentState = States.Moving;
@@ -162,6 +165,8 @@ public class PlayerMovement : MonoBehaviour
             }
             currentState = States.Airborne;
         }
+
+        hitHead = Physics2D.OverlapBox(headCheck.position, headCheckSize, 0f, groundLayer);
     }
 
     private void CalculateGravity()
@@ -173,8 +178,6 @@ public class PlayerMovement : MonoBehaviour
             // Move out of the ground
             //if (currentVelocityY != 0) currentVelocityY = 0;
         }
-
-
         else { 
             var _fallAcceleration = endedJumpEarly && currentVelocityY * gravityMultiplier > 0 ? fallAcceleration * jumpEndEarlyGravityModifier : fallAcceleration;
 
@@ -182,6 +185,11 @@ public class PlayerMovement : MonoBehaviour
 
             // Clamp
             if (Mathf.Abs(currentVelocityY) > Mathf.Abs(fallClamp)) currentVelocityY = -fallClamp * gravityMultiplier;
+        }
+
+        if (hitHead)
+        {
+            if (currentVelocityY > 0) currentVelocityY = 0;
         }
 
         /*// Gravity is normal
@@ -261,13 +269,6 @@ public class PlayerMovement : MonoBehaviour
         {
             currentVelocityY = -jumpHeight;
         }
-
-
-
-        //if (HitHead)
-        //{
-        //    if (currentVelocityY > 0) currentVelocityY = 0;
-        //}
     }
 
     private IEnumerator StartCoyoteFrames()
@@ -282,6 +283,7 @@ public class PlayerMovement : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireCube(groundCheck.position, groundCheckSize);
+        Gizmos.DrawWireCube(headCheck.position, headCheckSize);
     }
 
     public void FlipGravity()
