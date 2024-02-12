@@ -81,17 +81,14 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         // When a jump is pressed, record the time (to be used for jump buffering)
-        InputHandler.Instance.playerInputActions.Player.Jump.performed += JumpPressed;
+        
     }
 
     private void Update()
     {
-        if(InputHandler.Instance.playerInputActions.Player.Jump.WasReleasedThisFrame())
-        {
-            JumpCanceled();
-        }
+        
 
-        HandleInputs();
+        
         GravityCheck();
         CollisionCheck();
 
@@ -102,9 +99,9 @@ public class PlayerMovement : MonoBehaviour
         Move();
     }
 
-    private void HandleInputs()
+    public void ReceiveHorizontalInput(float inputVector)
     {
-        XAxisInput = InputHandler.Instance.inputVector.x;
+        XAxisInput = inputVector;
     }
 
     private void Move()
@@ -227,7 +224,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void JumpPressed(InputAction.CallbackContext context)
+    public void JumpPressed(InputAction.CallbackContext context)
     {
         Debug.Log("Jump Pressed");
         lastJumpPressed = Time.time;
@@ -237,7 +234,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void JumpCanceled()
+    public void JumpCanceled()
     {
         Debug.Log("Jump Canceled Early");
         // End the jump early if button released

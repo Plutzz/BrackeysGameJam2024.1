@@ -5,14 +5,37 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    
     public bool isFacingRight { get; private set; } = true;
+    [Header("Directions")]
     [SerializeField] private CameraFollowObject cameraFollowObject;
 
+    [Header("Gravity")]
     private Rigidbody2D rb;
     [SerializeField] private GameObject fallingGameObject;
+
+    private PlayerMovement playerMovement;
+    private float XAxisInput;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        playerMovement = GetComponent<PlayerMovement>();
+
+        InputHandler.Instance.playerInputActions.Player.Jump.performed += playerMovement.JumpPressed;
+    }
+
+    private void Update()
+    {
+        ApplyInputs();
+    }
+
+    private void ApplyInputs() {
+        playerMovement.ReceiveHorizontalInput(InputHandler.Instance.inputVector.x);
+        if (InputHandler.Instance.playerInputActions.Player.Jump.WasReleasedThisFrame())
+        {
+            playerMovement.JumpCanceled();
+        }
     }
 
     void FixedUpdate()
