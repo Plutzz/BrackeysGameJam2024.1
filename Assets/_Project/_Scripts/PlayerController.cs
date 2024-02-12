@@ -7,13 +7,18 @@ public class PlayerController : MonoBehaviour
 {
     public bool isFacingRight { get; private set; } = true;
     [SerializeField] private CameraFollowObject cameraFollowObject;
+
+    private Rigidbody2D rb;
+    [SerializeField] private Collider2D footCollider;
     void Start()
     {
+        rb = GetComponent<Rigidbody2D>();
     }
 
     void FixedUpdate()
     {
         TurnCheck();
+        DownwardCheck();
     }
 
     private void TurnCheck()
@@ -33,5 +38,21 @@ public class PlayerController : MonoBehaviour
         transform.rotation = Quaternion.Euler(new Vector3(transform.rotation.x, isFacingRight? 180 : 0, transform.rotation.z));
         isFacingRight = !isFacingRight;
         cameraFollowObject.CallFlip();
+    }
+
+    private void DownwardCheck() { 
+        footCollider.enabled = (rb.velocity.y < 0);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject != gameObject)
+        {
+            UnitHealth health = collision.GetComponent<UnitHealth>();
+            if (health != null)
+            {
+                health.TakeDamage(1);
+            }
+        }
     }
 }
