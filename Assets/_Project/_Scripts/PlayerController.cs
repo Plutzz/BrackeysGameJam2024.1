@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
     [Header ("Specials")]
     private PlayerSpecialHandler specialHandler;
     [SerializeField] private float specialMaxHoldTime = 1f;
-    
+    [SerializeField] private GameObject dummyAnimator;
 
     void Start()
     {
@@ -49,6 +49,7 @@ public class PlayerController : MonoBehaviour
         if (InputHandler.Instance.playerInputActions.Player.Special.WasReleasedThisFrame() ) {
             if (InputHandler.Instance.chargePressTime + specialMaxHoldTime > Time.time) {
                 specialHandler.UseSpecial();
+                StartCoroutine(ReplaceAnimator(gameObject));
             }
             ResumePlayerMovement();
         }
@@ -96,5 +97,18 @@ public class PlayerController : MonoBehaviour
         playerMovement.enabled = true;
     }
 
-    
+    IEnumerator ReplaceAnimator(GameObject user)
+    {
+        Debug.Log("Trying to replace animator");
+        Animator animator = user.GetComponentInChildren<Animator>();
+
+        RuntimeAnimatorController originalController = animator.runtimeAnimatorController;
+
+        animator.runtimeAnimatorController = dummyAnimator.GetComponent<Animator>().runtimeAnimatorController;
+
+        yield return new WaitForSeconds(3);
+
+        animator.runtimeAnimatorController = originalController;
+
+    }
 }

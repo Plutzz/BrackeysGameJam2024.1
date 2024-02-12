@@ -1,12 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
+using UnityEditorInternal;
 
 [CreateAssetMenu(fileName = "GoatSpecial", menuName = "Specials/GoatSpecial")]
 public class GoatSpecial : SpecialMoves
 {
     [SerializeField] private GameObject projectile;
     [SerializeField] private float fireSpeed;
+
+    //Could create a class attached to special game objects to store all of this stuff
+    //[SerializeField] private CinemachineImpulseSource impulse;
     
     public override void UseSpecial(GameObject user)
     {
@@ -20,4 +25,6 @@ public class GoatSpecial : SpecialMoves
 
         CameraShakeManager.Instance.CameraShake();
     }
+
+    
 }
