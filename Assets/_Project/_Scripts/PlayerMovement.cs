@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
 
 
     private Rigidbody2D rb;
+    private PlayerAnimationHandler animationHandler;
 
     // Player Movement variables
     //--------------------------------------------------------
@@ -77,6 +78,7 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        animationHandler = GetComponent<PlayerAnimationHandler>();
     }
 
     private void Start()
@@ -130,19 +132,32 @@ public class PlayerMovement : MonoBehaviour
         {
             targetVelocityX = XAxisInput * maxSpeed;
             currentVelocityX = Mathf.MoveTowards(currentVelocityX, targetVelocityX, acceleration * Time.deltaTime);
-        }
 
+        }
         else if (XAxisInput < 0)
         {
             targetVelocityX = XAxisInput * maxSpeed;
             currentVelocityX = Mathf.MoveTowards(currentVelocityX, targetVelocityX, acceleration * Time.deltaTime);
         }
-
         else
         {
             targetVelocityX = 0f;
             currentVelocityX = Mathf.MoveTowards(currentVelocityX, targetVelocityX, deceleration * Time.deltaTime);
+
         }
+
+        if(currentState == States.Moving && !InputHandler.Instance.isJumping)
+        {
+            if (XAxisInput != 0)
+            {
+                animationHandler.ChangeAnimationState("DuckWalk");
+            }
+            else
+            {
+                animationHandler.ChangeAnimationState("DuckIdle");
+            }
+        }
+
 
     }
 
@@ -154,6 +169,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void HandleStates()
     {
+        if (IsGrounded)
+        {
+            
+        }
+
         // Player is "airborne" while not on the ground
         if (currentState == States.Airborne && IsGrounded)
         {
@@ -164,6 +184,8 @@ public class PlayerMovement : MonoBehaviour
             {
                 Jump();
             }
+            // Change animation
+
         }
         else if (currentState == States.Moving && !IsGrounded)
         {
@@ -262,6 +284,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Jump()
     {
+        animationHandler.ChangeAnimationState("DuckJump");
         timeLeftGround = Time.time;
         endedJumpEarly = false;
         coyoteUsable = false;
