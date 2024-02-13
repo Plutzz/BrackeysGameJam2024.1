@@ -262,7 +262,6 @@ public class PlayerMovement : MonoBehaviour
 
     public void JumpPressed(InputAction.CallbackContext context)
     {
-        Debug.Log("Jump Pressed");
         lastJumpPressed = Time.time;
         if (IsGrounded || coyoteUsable)
         {
@@ -273,13 +272,17 @@ public class PlayerMovement : MonoBehaviour
     public void JumpCanceled()
     {
         float _gravityMultiplier = !flipGravity ? 1 : -1;
-        Debug.Log("Jump Canceled Early");
         // End the jump early if button released
         if (!IsGrounded && !endedJumpEarly && rb.velocity.y * _gravityMultiplier > 0)
         {
-            Debug.Log("EndJump Early test");
             endedJumpEarly = true;
         }
+    }
+
+    public void TakeKnockBack(Vector2 _knockBackVector, float _knockUpAmount)
+    {
+        currentVelocityX = _knockBackVector.x;
+        currentVelocityY = _knockUpAmount;
     }
 
     private void Jump()
@@ -288,7 +291,6 @@ public class PlayerMovement : MonoBehaviour
         timeLeftGround = Time.time;
         endedJumpEarly = false;
         coyoteUsable = false;
-        Debug.Log("JUMP!");
         // Jump if: grounded or within coyote threshold || sufficient jump buffer
         if (!flipGravity)
         {

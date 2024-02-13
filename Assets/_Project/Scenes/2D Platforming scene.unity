@@ -1483,22 +1483,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 2912692242817594504, guid: 71011ac535ff0164598c76982f3ae617, type: 3}
-      propertyPath: m_Offset.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3195496408713258480, guid: 71011ac535ff0164598c76982f3ae617, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3847929634212778594, guid: 71011ac535ff0164598c76982f3ae617, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.343
-      objectReference: {fileID: 0}
-    - target: {fileID: 4109238235498923531, guid: 71011ac535ff0164598c76982f3ae617, type: 3}
-      propertyPath: dummyAnimator
-      value: 
-      objectReference: {fileID: 5839214420964100717, guid: 0f8751faf113f6843bccf20822dbb885, type: 3}
     - target: {fileID: 4109238235498923531, guid: 71011ac535ff0164598c76982f3ae617, type: 3}
       propertyPath: cameraFollowObject
       value: 
@@ -1541,18 +1525,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4775942610013423041, guid: 71011ac535ff0164598c76982f3ae617, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6136752205560024495, guid: 71011ac535ff0164598c76982f3ae617, type: 3}
-      propertyPath: defaultKnockbackForce
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 6352515841452530849, guid: 71011ac535ff0164598c76982f3ae617, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7661767931900194460, guid: 71011ac535ff0164598c76982f3ae617, type: 3}
-      propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

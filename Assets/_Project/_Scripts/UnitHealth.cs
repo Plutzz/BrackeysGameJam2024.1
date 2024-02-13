@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class UnitHealth : MonoBehaviour
 {
-    [SerializeField] private float health;
-    private float maxHealth;
-    [SerializeField] private float defaultKnockbackForce;
-    private void Awake()
+    [SerializeField] protected float health;
+    protected float maxHealth;
+    [SerializeField] protected float defaultKnockbackForce;
+    protected virtual void Awake()
     {
         maxHealth = health;
     }
@@ -15,6 +15,8 @@ public class UnitHealth : MonoBehaviour
     public virtual void TakeDamage(float damage)
     {
         health -= damage;
+        Debug.Log("take " + damage + " damage");
+
         if (health <= 0) {
             Die();
         }
@@ -29,8 +31,12 @@ public class UnitHealth : MonoBehaviour
         {
             
             Vector3 forceDirection = (transform.position - damageOrigin).normalized;
-            rb.AddForce(forceDirection * defaultKnockbackForce, ForceMode2D.Impulse);
 
+            Debug.Log("Take Knockback in this direction: " + forceDirection);
+
+            rb.velocity = defaultKnockbackForce * forceDirection;
+
+            //rb.AddForce(forceDirection * defaultKnockbackForce, ForceMode2D.Impulse);
         }
     }
 
