@@ -1483,6 +1483,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 1201820626952323400, guid: 71011ac535ff0164598c76982f3ae617, type: 3}
+      propertyPath: hitStopDelay
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1201820626952323400, guid: 71011ac535ff0164598c76982f3ae617, type: 3}
+      propertyPath: hitStopTimeScale
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 1201820626952323400, guid: 71011ac535ff0164598c76982f3ae617, type: 3}
+      propertyPath: hitStopRestoreSpeed
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4109238235498923531, guid: 71011ac535ff0164598c76982f3ae617, type: 3}
       propertyPath: cameraFollowObject
       value: 
