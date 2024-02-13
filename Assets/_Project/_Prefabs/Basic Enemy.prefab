@@ -210,6 +210,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 4
+  defaultKnockbackForce: 10
 --- !u!114 &2107361259040402519
 MonoBehaviour:
   m_ObjectHideFlags: 0
