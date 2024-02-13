@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -21,6 +22,11 @@ public class PlayerController : MonoBehaviour
 
     [Header("Ability Checks")]
     public bool hasDoor;
+
+    [Header("Interactable")]
+    [SerializeField] private float startOffset = -.5f;
+    [SerializeField] private float rayLength = 1.5f;
+    [SerializeField] private LayerMask interactableLayer;
 
     void Start()
     {
@@ -52,6 +58,9 @@ public class PlayerController : MonoBehaviour
                 StartCoroutine(ReplaceAnimator(gameObject));
             }
             ResumePlayerMovement();
+        }
+        if (InputHandler.Instance.playerInputActions.Player.Interact.WasPerformedThisFrame()) {
+            TryInteract();
         }
     }
 
@@ -110,5 +119,17 @@ public class PlayerController : MonoBehaviour
 
         animator.runtimeAnimatorController = originalController;
 
+    }
+
+    private void TryInteract() {
+        //start ray behind to slightly ahead
+        //checking for anything on interactable layer
+        Debug.Log("Trying to interact");
+        RaycastHit2D hit = Physics2D.Raycast(transform.position + transform.right * startOffset, transform.right, rayLength, interactableLayer);
+        if (hit.collider != null)
+        {
+            Interactable interactable = hit.collider.GetComponent<Interactable>();
+            if (interactable != null) { interactable.Interact(); }
+        }
     }
 }

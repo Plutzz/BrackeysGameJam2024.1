@@ -21,13 +21,13 @@ public class Gate : MonoBehaviour
         button.onButtonUp += CloseGate;
     }
 
-    private void OpenGate()
+    public void OpenGate()
     {
         ChangeAnimationState("GateOpen");
         gateCollider.enabled = false;
     }
 
-    private void CloseGate()
+    public void CloseGate()
     {
         ChangeAnimationState("GateClose");
         gateCollider.enabled = true;

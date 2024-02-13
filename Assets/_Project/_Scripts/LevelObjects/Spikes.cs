@@ -15,7 +15,7 @@ public class Spikes : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         currentTimer = spikesVisible ? activeSpikesTime : deactiveSpikesTime;
-        spikes.SetActive(spikesVisible);
+        //spikes.SetActive(spikesVisible);
         animator.SetBool("areSpikesActive", spikesVisible);
     }
     void Update()
