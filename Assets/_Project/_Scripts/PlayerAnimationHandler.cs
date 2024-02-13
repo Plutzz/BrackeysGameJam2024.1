@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem.LowLevel;
 
 public class PlayerAnimationHandler : MonoBehaviour
 {
@@ -23,5 +24,15 @@ public class PlayerAnimationHandler : MonoBehaviour
 
         // reassign the current state
         currentState = newState;
+    }
+
+    public void RepeatAnimationState()
+    {
+        anim.Play(currentState);
+    }
+
+    public void PlayJumpAnimation()
+    {
+        anim.Play("DuckJump");
     }
 }

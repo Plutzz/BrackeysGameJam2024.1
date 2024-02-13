@@ -145,20 +145,6 @@ public class PlayerMovement : MonoBehaviour
             currentVelocityX = Mathf.MoveTowards(currentVelocityX, targetVelocityX, deceleration * Time.deltaTime);
 
         }
-
-        if(currentState == States.Moving && !InputHandler.Instance.isJumping)
-        {
-            if (XAxisInput != 0)
-            {
-                animationHandler.ChangeAnimationState("DuckWalk");
-            }
-            else
-            {
-                animationHandler.ChangeAnimationState("DuckIdle");
-            }
-        }
-
-
     }
 
     private void CollisionCheck()
@@ -169,10 +155,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void HandleStates()
     {
-        if (IsGrounded)
-        {
-            
-        }
+
+
 
         // Player is "airborne" while not on the ground
         if (currentState == States.Airborne && IsGrounded)
@@ -182,18 +166,32 @@ public class PlayerMovement : MonoBehaviour
             // Jump is buffered
             if (lastJumpPressed + jumpBuffer > Time.time)
             {
+                animationHandler.ChangeAnimationState("DuckJump");
+                currentState = States.Airborne;
                 Jump();
             }
-            // Change animation
 
         }
         else if (currentState == States.Moving && !IsGrounded)
         {
-            if (!InputHandler.Instance.isJumping)
+            float _gravityMultiplier = !flipGravity ? 1 : -1;
+            if (currentVelocityY < 0.1f * _gravityMultiplier)
             {
                 StartCoroutine(StartCoyoteFrames());
             }
             currentState = States.Airborne;
+        }
+
+        if (currentState == States.Moving && currentVelocityY < 0.1f)
+        {
+            if (XAxisInput != 0)
+            {
+                animationHandler.ChangeAnimationState("DuckWalk");
+            }
+            else
+            {
+                animationHandler.ChangeAnimationState("DuckIdle");
+            }
         }
     }
 
