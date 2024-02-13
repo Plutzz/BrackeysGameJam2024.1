@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
-using UnityEditorInternal;
 
 [CreateAssetMenu(fileName = "GoatSpecial", menuName = "Specials/GoatSpecial")]
 public class GoatSpecial : SpecialMoves

@@ -229,6 +229,7 @@ MonoBehaviour:
   fallingGameObject: {fileID: 7922510943616794740}
   specialMaxHoldTime: 1
   dummyAnimator: {fileID: 0}
+  hasDoor: 0
 --- !u!114 &6136752205560024495
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -242,6 +243,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 10
+  defaultKnockbackForce: 0
 --- !u!61 &2912692242817594504
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ffb3914c63a3d80449180f134cace21b
+guid: 4f4d24a5b08891c4a889a3eeb31965de
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,259 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: door_env_tiles_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 30dd31769b7098f48b0dee74a36863cb
-      internalID: -53045732
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: door_env_tiles_1
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 26acd3f8884a5074c8087473362aaf2b
-      internalID: 780846061
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: door_env_tiles_2
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0576fcb233225a747aa1dff4ef121e7e
-      internalID: -1548864098
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: door_env_tiles_3
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 127eb4d04e7068246b700b2b4371e83e
-      internalID: 632161427
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: door_env_tiles_4
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c5945223ccee49e4d9ff6f39c516484b
-      internalID: -1221485947
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: door_env_tiles_5
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6f7d15579120eed49813e2440ef998b0
-      internalID: -727539094
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: door_env_tiles_6
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 995e53d8e706ec64bbaad2aec1ee44d3
-      internalID: -832134936
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: door_env_tiles_7
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 056f0c4107dc25349974a9d992586e71
-      internalID: 125892236
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: door_env_tiles_8
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 74735e4f7cc865f42a5fb363dfe06717
-      internalID: 1756184011
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: door_env_tiles_9
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 15d20fdadef86794cbfe577783a19ae5
-      internalID: 1022009764
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: door_env_tiles_10
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 650b8da7644c0f5498d9b4417ea2bb4c
-      internalID: -2045382758
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: door_env_tiles_11
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: de0b6f43c01c84040b15d01207af236b
-      internalID: 303910093
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: door_env_tiles_12
+      name: door_duck_walk_NODOOR_0
       rect:
         serializedVersion: 2
         x: 0
@@ -376,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 38c7bea5e87d3964cbf6d5251676bcd2
-      internalID: -704086924
+      spriteID: cd056cda1249e4f469632ad425d9d616
+      internalID: -691601823
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: door_env_tiles_13
+      name: door_duck_walk_NODOOR_1
       rect:
         serializedVersion: 2
         x: 16
@@ -397,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 332c31c49a0e5eb42a37d4d3cf62c917
-      internalID: -953112376
+      spriteID: d16f8c0a2580ff94ca2b7e96b994e4ec
+      internalID: -1392131652
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: door_env_tiles_14
+      name: door_duck_walk_NODOOR_2
       rect:
         serializedVersion: 2
         x: 32
@@ -418,8 +166,113 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 14c5bccda1a32ff4e8b1a7234a0a751b
-      internalID: -599857275
+      spriteID: 619e19c76ead7ee4f9345b984adc302c
+      internalID: 219857279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door_duck_walk_NODOOR_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5346d66a42325e4c98426ec6b12992c
+      internalID: -63547271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door_duck_walk_NODOOR_4
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9aacc6ad5e4763e4ca106fefda612e37
+      internalID: 1899161665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door_duck_walk_NODOOR_5
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93039f11cbbdf8f4081df87e292ed10b
+      internalID: -507328685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door_duck_walk_NODOOR_6
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6d07f5b8af95a34b9b30355ade79e83
+      internalID: 880092772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door_duck_walk_NODOOR_7
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59e91ef48a53e894d9b67e4a06112989
+      internalID: -1864138120
       vertices: []
       indices: 
       edges: []
@@ -435,21 +288,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      door_env_tiles_0: -53045732
-      door_env_tiles_1: 780846061
-      door_env_tiles_10: -2045382758
-      door_env_tiles_11: 303910093
-      door_env_tiles_12: -704086924
-      door_env_tiles_13: -953112376
-      door_env_tiles_14: -599857275
-      door_env_tiles_2: -1548864098
-      door_env_tiles_3: 632161427
-      door_env_tiles_4: -1221485947
-      door_env_tiles_5: -727539094
-      door_env_tiles_6: -832134936
-      door_env_tiles_7: 125892236
-      door_env_tiles_8: 1756184011
-      door_env_tiles_9: 1022009764
+      door_duck_walk_NODOOR_0: -691601823
+      door_duck_walk_NODOOR_1: -1392131652
+      door_duck_walk_NODOOR_2: 219857279
+      door_duck_walk_NODOOR_3: -63547271
+      door_duck_walk_NODOOR_4: 1899161665
+      door_duck_walk_NODOOR_5: -507328685
+      door_duck_walk_NODOOR_6: 880092772
+      door_duck_walk_NODOOR_7: -1864138120
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

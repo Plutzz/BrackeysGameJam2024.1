@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    
+    private PlayerMovement playerMovement;
     public bool isFacingRight { get; private set; } = true;
     [Header("Directions")]
     [SerializeField] private CameraFollowObject cameraFollowObject;
@@ -14,13 +14,13 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     [SerializeField] private GameObject fallingGameObject;
 
-    private PlayerMovement playerMovement;
-    private float XAxisInput;
-
     [Header ("Specials")]
     private PlayerSpecialHandler specialHandler;
     [SerializeField] private float specialMaxHoldTime = 1f;
     [SerializeField] private GameObject dummyAnimator;
+
+    [Header("Ability Checks")]
+    public bool hasDoor;
 
     void Start()
     {

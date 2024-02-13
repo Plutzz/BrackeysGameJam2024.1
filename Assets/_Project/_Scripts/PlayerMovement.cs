@@ -115,6 +115,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void GravityCheck()
     {
+        if (Input.GetKeyDown(KeyCode.G)) FlipGravity();
+
         if (!flipGravity)
         {
             transform.localScale = new Vector2(1, 1);
@@ -186,11 +188,11 @@ public class PlayerMovement : MonoBehaviour
         {
             if (XAxisInput != 0)
             {
-                animationHandler.ChangeAnimationState("DuckWalk");
+                animationHandler.ChangeAnimationState(animationHandler.DuckWalkState);
             }
             else
             {
-                animationHandler.ChangeAnimationState("DuckIdle");
+                animationHandler.ChangeAnimationState(animationHandler.DuckIdleState);
             }
         }
     }

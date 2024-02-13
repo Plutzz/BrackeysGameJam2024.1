@@ -113,8 +113,8 @@ TextureImporter:
       name: door_env_tiles-export_0
       rect:
         serializedVersion: 2
-        x: 32
-        y: 80
+        x: 48
+        y: 96
         width: 16
         height: 16
       alignment: 0
@@ -124,8 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 23baeecaad017484286408ab304ad519
-      internalID: -1310249879
+      spriteID: 4839892bc665bca4b91860af96de3020
+      internalID: -1565904146
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,8 @@ TextureImporter:
       name: door_env_tiles-export_1
       rect:
         serializedVersion: 2
-        x: 48
-        y: 80
+        x: 64
+        y: 96
         width: 16
         height: 16
       alignment: 0
@@ -145,8 +145,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4ad90874f3108a141a99a5e74727cfdd
-      internalID: -993847166
+      spriteID: 1a9e3817c0fd7f74d91b8aef71378510
+      internalID: -205293977
       vertices: []
       indices: 
       edges: []
@@ -155,8 +155,8 @@ TextureImporter:
       name: door_env_tiles-export_2
       rect:
         serializedVersion: 2
-        x: 64
-        y: 80
+        x: 80
+        y: 96
         width: 16
         height: 16
       alignment: 0
@@ -166,8 +166,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6bd5d9d425421154e8a4c9ba84f11417
-      internalID: -894529534
+      spriteID: 31989e3a88f3eb34ebf69214aff9b433
+      internalID: 1288413971
       vertices: []
       indices: 
       edges: []
@@ -176,6 +176,111 @@ TextureImporter:
       name: door_env_tiles-export_3
       rect:
         serializedVersion: 2
+        x: 96
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f6cf3671d474744580c4be039537b5c
+      internalID: -666893220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door_env_tiles-export_4
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e9c576b0daeff94f92a5b5d0b6c7e4f
+      internalID: 1479430697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door_env_tiles-export_5
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c17a7f1ca90c81e44938755d888b8e79
+      internalID: 1288981098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door_env_tiles-export_6
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3910102b8e07bb4fb782bed481916c3
+      internalID: -305351361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door_env_tiles-export_7
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 415afcf79898f1d49bb5eef8e6ae7715
+      internalID: -1879705922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door_env_tiles-export_8
+      rect:
+        serializedVersion: 2
         x: 80
         y: 80
         width: 16
@@ -187,113 +292,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d03af9989a606324fb5074eb20a5ab4a
-      internalID: 1137101233
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: door_env_tiles-export_4
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 64
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: effe34a6be15b444fb8246508d04716d
-      internalID: -734779066
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: door_env_tiles-export_5
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 64
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7b558bab3926483469ce68b2b1b03269
-      internalID: 705269773
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: door_env_tiles-export_6
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 64
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f6a7408b95d2c994e87e82c6a5dd598d
-      internalID: -1245665322
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: door_env_tiles-export_7
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 64
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6c10a64190649d346bf76819f8024a33
-      internalID: 1597867142
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: door_env_tiles-export_8
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 217f9776a3252854980a37ef233491cd
-      internalID: -1043941385
+      spriteID: cba8120acc1245144b7829eca0356e60
+      internalID: 891820398
       vertices: []
       indices: 
       edges: []
@@ -302,6 +302,132 @@ TextureImporter:
       name: door_env_tiles-export_9
       rect:
         serializedVersion: 2
+        x: 96
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9f239aea6c24854c830eadb29f6013f
+      internalID: -2044062264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door_env_tiles-export_10
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f65f536fb6d956948ab5afc417c9f1fd
+      internalID: -1595590543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door_env_tiles-export_11
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fc6fca5957410d4baa3ad63d576d59f
+      internalID: 2058247639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door_env_tiles-export_12
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a89a14152568234c9e3a3e74a5c0a6a
+      internalID: -1308915609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door_env_tiles-export_13
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90d84a7d949230f45a2d122d435de939
+      internalID: 1561757345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door_env_tiles-export_14
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15eb61daf27e0b14fbf039819349e819
+      internalID: 1225156488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door_env_tiles-export_15
+      rect:
+        serializedVersion: 2
         x: 48
         y: 48
         width: 16
@@ -313,14 +439,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 388f56537cbf688458ba1cec6c1384d9
-      internalID: -690582809
+      spriteID: 4031d58fff41c9d4992ad7763f674a0e
+      internalID: -355485523
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: door_env_tiles-export_10
+      name: door_env_tiles-export_16
       rect:
         serializedVersion: 2
         x: 64
@@ -334,14 +460,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5493ccf603888cb48a42d697b9101f01
-      internalID: 700104522
+      spriteID: ef06d3b33b48f0943ae056f11a9f0177
+      internalID: -177982613
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: door_env_tiles-export_11
+      name: door_env_tiles-export_17
       rect:
         serializedVersion: 2
         x: 80
@@ -355,14 +481,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 41c61f7e4eda2c043ae3841819e68753
-      internalID: -1078671370
+      spriteID: b282ab940052aa54dbc7edac252b494a
+      internalID: 422837268
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: door_env_tiles-export_12
+      name: door_env_tiles-export_18
       rect:
         serializedVersion: 2
         x: 32
@@ -376,14 +502,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 543ee66884a04804a907de8fd90ba899
-      internalID: 600999166
+      spriteID: 9a2833341fcf9f6458202bd851683bdb
+      internalID: -1996825784
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: door_env_tiles-export_13
+      name: door_env_tiles-export_19
       rect:
         serializedVersion: 2
         x: 48
@@ -397,14 +523,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2ba3a121db5aa3346a73b2b276fcf448
-      internalID: 1220425070
+      spriteID: 41a9fbf5a85210c44beba3cff37e0075
+      internalID: 1516677285
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: door_env_tiles-export_14
+      name: door_env_tiles-export_20
       rect:
         serializedVersion: 2
         x: 64
@@ -418,14 +544,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 88a9aed212b2f3142befa2586b571837
-      internalID: 1624066925
+      spriteID: 8fd1028fec033184db69e3674c9fe8ab
+      internalID: -1278777917
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: door_env_tiles-export_15
+      name: door_env_tiles-export_21
       rect:
         serializedVersion: 2
         x: 80
@@ -439,8 +565,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1d9032fee2dce7b4e95be7a72674d53b
-      internalID: 244016407
+      spriteID: d2d617c7c7c0339439dc03a06083e54a
+      internalID: 1045323708
       vertices: []
       indices: 
       edges: []
@@ -456,22 +582,28 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      door_env_tiles-export_0: -1310249879
-      door_env_tiles-export_1: -993847166
-      door_env_tiles-export_10: 700104522
-      door_env_tiles-export_11: -1078671370
-      door_env_tiles-export_12: 600999166
-      door_env_tiles-export_13: 1220425070
-      door_env_tiles-export_14: 1624066925
-      door_env_tiles-export_15: 244016407
-      door_env_tiles-export_2: -894529534
-      door_env_tiles-export_3: 1137101233
-      door_env_tiles-export_4: -734779066
-      door_env_tiles-export_5: 705269773
-      door_env_tiles-export_6: -1245665322
-      door_env_tiles-export_7: 1597867142
-      door_env_tiles-export_8: -1043941385
-      door_env_tiles-export_9: -690582809
+      door_env_tiles-export_0: -1565904146
+      door_env_tiles-export_1: -205293977
+      door_env_tiles-export_10: -1595590543
+      door_env_tiles-export_11: 2058247639
+      door_env_tiles-export_12: -1308915609
+      door_env_tiles-export_13: 1561757345
+      door_env_tiles-export_14: 1225156488
+      door_env_tiles-export_15: -355485523
+      door_env_tiles-export_16: -177982613
+      door_env_tiles-export_17: 422837268
+      door_env_tiles-export_18: -1996825784
+      door_env_tiles-export_19: 1516677285
+      door_env_tiles-export_2: 1288413971
+      door_env_tiles-export_20: -1278777917
+      door_env_tiles-export_21: 1045323708
+      door_env_tiles-export_3: -666893220
+      door_env_tiles-export_4: 1479430697
+      door_env_tiles-export_5: 1288981098
+      door_env_tiles-export_6: -305351361
+      door_env_tiles-export_7: -1879705922
+      door_env_tiles-export_8: 891820398
+      door_env_tiles-export_9: -2044062264
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
