@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4f4d24a5b08891c4a889a3eeb31965de
+guid: d1c8f0491c1a7ee4cbaeaf4f1f1dfa7b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -69,7 +69,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 512
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -110,12 +110,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: door_duck_walk_NODOOR_0
+      name: door_duckwalk_NODOOR_cropped_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 16
+        width: 32
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -124,40 +124,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cd056cda1249e4f469632ad425d9d616
-      internalID: -691601823
+      spriteID: 5203bbed3cd272e42be08307ed5d905b
+      internalID: 1443932726
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: door_duck_walk_NODOOR_1
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d16f8c0a2580ff94ca2b7e96b994e4ec
-      internalID: -1392131652
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: door_duck_walk_NODOOR_2
+      name: door_duckwalk_NODOOR_cropped_1
       rect:
         serializedVersion: 2
         x: 32
         y: 0
-        width: 16
+        width: 32
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -166,40 +145,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 619e19c76ead7ee4f9345b984adc302c
-      internalID: 219857279
+      spriteID: d9cda5c9036d79f49b4b06f930e428ca
+      internalID: 128978207
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: door_duck_walk_NODOOR_3
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d5346d66a42325e4c98426ec6b12992c
-      internalID: -63547271
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: door_duck_walk_NODOOR_4
+      name: door_duckwalk_NODOOR_cropped_2
       rect:
         serializedVersion: 2
         x: 64
         y: 0
-        width: 16
+        width: 32
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -208,40 +166,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9aacc6ad5e4763e4ca106fefda612e37
-      internalID: 1899161665
+      spriteID: 3faf2cb1582e614448a286b021059ebf
+      internalID: 980149956
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: door_duck_walk_NODOOR_5
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 93039f11cbbdf8f4081df87e292ed10b
-      internalID: -507328685
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: door_duck_walk_NODOOR_6
+      name: door_duckwalk_NODOOR_cropped_3
       rect:
         serializedVersion: 2
         x: 96
         y: 0
-        width: 16
+        width: 32
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -250,19 +187,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d6d07f5b8af95a34b9b30355ade79e83
-      internalID: 880092772
+      spriteID: 4c8eb1bdf21bf7d47a1ca582f2798de0
+      internalID: 211575287
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: door_duck_walk_NODOOR_7
+      name: door_duckwalk_NODOOR_cropped_4
       rect:
         serializedVersion: 2
-        x: 112
+        x: 128
         y: 0
-        width: 16
+        width: 32
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -271,8 +208,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 59e91ef48a53e894d9b67e4a06112989
-      internalID: -1864138120
+      spriteID: 4307ad9d0cda12945bf8e842992a2c02
+      internalID: -185382348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door_duckwalk_NODOOR_cropped_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a0178270bf9acb4cb137e5e6e36e264
+      internalID: 424613204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door_duckwalk_NODOOR_cropped_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b24e4a7ab1693df40bf46b30359760b7
+      internalID: 1761371351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door_duckwalk_NODOOR_cropped_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7888b3b9a90620c4689d025d942fc309
+      internalID: 239992198
       vertices: []
       indices: 
       edges: []
@@ -288,14 +288,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      door_duck_walk_NODOOR_0: -691601823
-      door_duck_walk_NODOOR_1: -1392131652
-      door_duck_walk_NODOOR_2: 219857279
-      door_duck_walk_NODOOR_3: -63547271
-      door_duck_walk_NODOOR_4: 1899161665
-      door_duck_walk_NODOOR_5: -507328685
-      door_duck_walk_NODOOR_6: 880092772
-      door_duck_walk_NODOOR_7: -1864138120
+      door_duckwalk_NODOOR_cropped_0: 1443932726
+      door_duckwalk_NODOOR_cropped_1: 128978207
+      door_duckwalk_NODOOR_cropped_2: 980149956
+      door_duckwalk_NODOOR_cropped_3: 211575287
+      door_duckwalk_NODOOR_cropped_4: -185382348
+      door_duckwalk_NODOOR_cropped_5: 424613204
+      door_duckwalk_NODOOR_cropped_6: 1761371351
+      door_duckwalk_NODOOR_cropped_7: 239992198
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

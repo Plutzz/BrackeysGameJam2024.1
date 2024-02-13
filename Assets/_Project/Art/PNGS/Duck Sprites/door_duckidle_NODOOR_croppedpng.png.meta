@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7f8fd3ccc16a01f4789b6d51499216bb
+guid: 40ada363048189b4eb22c647a8baa6d4
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,43 +110,43 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: door_gate_states_0
+      name: door_duckidle_NODOOR_croppedpng_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 9
-        height: 32
+        width: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fa1ef5a2b09b638478d50db2669f9c0a
-      internalID: 1126714725
+      spriteID: 22af1be811c2f0f438025c24ae2d91b8
+      internalID: -135845034
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: door_gate_states_1
+      name: door_duckidle_NODOOR_croppedpng_1
       rect:
         serializedVersion: 2
-        x: 10
+        x: 32
         y: 0
-        width: 22
-        height: 32
-      alignment: 9
-      pivot: {x: 0, y: 0.5}
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f4ccf705739d08c4b84bceb297b46f73
-      internalID: 443248154
+      spriteID: 749732f1ad452244b8e3f8b04c2fa40d
+      internalID: 1215871434
       vertices: []
       indices: 
       edges: []
@@ -162,8 +162,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      door_gate_states_0: 1126714725
-      door_gate_states_1: 443248154
+      door_duckidle_NODOOR_croppedpng_0: -135845034
+      door_duckidle_NODOOR_croppedpng_1: 1215871434
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
