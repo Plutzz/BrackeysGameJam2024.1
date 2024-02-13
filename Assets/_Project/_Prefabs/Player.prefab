@@ -148,12 +148,12 @@ GameObject:
   - component: {fileID: 4775942610013423041}
   - component: {fileID: 8635853092785948894}
   - component: {fileID: 4109238235498923531}
-  - component: {fileID: 6136752205560024495}
   - component: {fileID: 2912692242817594504}
   - component: {fileID: 6811564988920863054}
   - component: {fileID: 5950880913854584597}
   - component: {fileID: 2446294274252613945}
   - component: {fileID: 2955345327829068142}
+  - component: {fileID: 1201820626952323400}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -228,22 +228,8 @@ MonoBehaviour:
   cameraFollowObject: {fileID: 0}
   fallingGameObject: {fileID: 7922510943616794740}
   specialMaxHoldTime: 1
-  dummyAnimator: {fileID: 0}
+  dummyAnimator: {fileID: 5839214420964100717, guid: 0f8751faf113f6843bccf20822dbb885, type: 3}
   hasDoor: 0
---- !u!114 &6136752205560024495
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 726059896361250313}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85712723b45f13a46a88d55ab3c1e9fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 10
-  defaultKnockbackForce: 0
 --- !u!61 &2912692242817594504
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -276,7 +262,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.34, y: -0.14}
+  m_Offset: {x: 0, y: -0.14}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -394,6 +380,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca2c99752b62c4e458d8bce37ce3bc41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1201820626952323400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 726059896361250313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0e72a1b6dfe9154a98778ab2aa389b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 10
+  defaultKnockbackForce: 50
+  knockUpAmount: 10
+  invincibilityTime: 2
+  invincibilityBlinks: 6
+  graphics: {fileID: 7517176257521870480}
 --- !u!1 &3351857646145872459
 GameObject:
   m_ObjectHideFlags: 0
@@ -419,7 +423,7 @@ Transform:
   m_GameObject: {fileID: 3351857646145872459}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.34, y: -0.473, z: 0}
+  m_LocalPosition: {x: 0, y: -0.473, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -450,7 +454,7 @@ Transform:
   m_GameObject: {fileID: 4479176129763756632}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.34, y: 0.225, z: 0}
+  m_LocalPosition: {x: 0, y: 0.225, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -483,7 +487,7 @@ Transform:
   m_GameObject: {fileID: 5868734086801575927}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.343, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -590,7 +594,7 @@ Transform:
   m_GameObject: {fileID: 7922510943616794740}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.3426, y: -0.4689, z: 0}
+  m_LocalPosition: {x: 0, y: -0.4689, z: 0}
   m_LocalScale: {x: 0.6453035, y: 0.24336204, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

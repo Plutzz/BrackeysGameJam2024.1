@@ -34,8 +34,6 @@ public class PlayerAnimationHandler : MonoBehaviour
         // Ensures state change is only triggered once
         if(currentState == newState) return;
 
-        Debug.Log("CHANGE ANIM STATE " + newState);
-
         anim.Play(newState);
 
         // reassign the current state
