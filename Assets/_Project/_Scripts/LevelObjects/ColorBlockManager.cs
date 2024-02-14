@@ -9,7 +9,9 @@ public class ColorBlockManager : Singleton<ColorBlockManager>
     public int numberOfColors;
 
     public float timePerColorSwitch = 2f;
-    public float timeOfLastSwap = 2f;
+    private float timeOfLastSwap;
+
+    private bool initialSwitch = false;
 
     public enum BlockColors
     {
@@ -27,6 +29,12 @@ public class ColorBlockManager : Singleton<ColorBlockManager>
 
     private void Update()
     {
+        if(!initialSwitch)
+        {
+            SwitchColors();
+            initialSwitch = true;
+        }
+
         if(Time.time > timeOfLastSwap + timePerColorSwitch)
         {
             timeOfLastSwap = Time.time;
