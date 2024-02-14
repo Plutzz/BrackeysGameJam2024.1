@@ -5,6 +5,7 @@ using UnityEngine;
 public class Gate : MonoBehaviour
 {
     [SerializeField] private StageButton button;
+    [SerializeField] private bool oneTimeGate;
     private Animator anim;
     private string currentState;
     private Collider2D gateCollider;
@@ -18,16 +19,21 @@ public class Gate : MonoBehaviour
     private void Start()
     {
         button.onButtonDown += OpenGate;
-        button.onButtonUp += CloseGate;
+
+        if(!oneTimeGate)
+        {
+            button.onButtonUp += CloseGate;
+        }
+        
     }
 
-    public void OpenGate()
+    private void OpenGate()
     {
         ChangeAnimationState("GateOpen");
         gateCollider.enabled = false;
     }
 
-    public void CloseGate()
+    private void CloseGate()
     {
         ChangeAnimationState("GateClose");
         gateCollider.enabled = true;
