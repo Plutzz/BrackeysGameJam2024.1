@@ -15,7 +15,7 @@ public class GravityDoor : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.yellow;
-        Gizmos.DrawWireCube(transform.position, Vector3.one);
+        Gizmos.DrawWireCube(transform.position, new Vector3(1,2,1));
     }
 
 }
