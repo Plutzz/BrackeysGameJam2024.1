@@ -39,6 +39,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: BackGroundLit
+    uniqueID: 2163943115
+    locked: 0
+  - name: StageLit
+    uniqueID: 3716405581
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
