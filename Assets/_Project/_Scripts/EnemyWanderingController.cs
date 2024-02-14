@@ -2,26 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2DController))]
+[RequireComponent(typeof(Rigidbody2D))]
 public class EnemyWanderingController : MonoBehaviour
 {
-    [SerializeField] protected Rigidbody2DController rbController;
-    [SerializeField] protected float moveSpeed;
-    [SerializeField] protected float acceleration;
+    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private float moveSpeed;
 
     [Header ("Physics checks")]
-    [SerializeField] protected Transform frontWallCheck;
-    [SerializeField] protected Transform frontFloorCheck;
-    [SerializeField] protected Transform normalFloorCheck;
-    [SerializeField] protected LayerMask groundLayer;
-    [SerializeField] protected LayerMask obstacleLayer;
-    [SerializeField] protected float rayLength;
+    [SerializeField] private Transform frontWallCheck;
+    [SerializeField] private Transform frontFloorCheck;
+    [SerializeField] private Transform normalFloorCheck;
+    [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private float rayLength;
 
     private bool facingRight = true;
 
     void Start()
     {
-        rbController = GetComponent<Rigidbody2DController>();
+        rb = GetComponent<Rigidbody2D>();
         
     }
 
@@ -29,15 +27,14 @@ public class EnemyWanderingController : MonoBehaviour
     void FixedUpdate()
     {
         CheckFlip();
-        rbController.SetTargetXVelocity(transform.right.x * moveSpeed, acceleration);
+        rb.velocity = transform.right * moveSpeed;
     }
 
-    protected virtual void CheckFlip()
+    private void CheckFlip()
     {
         RaycastHit2D hit = Physics2D.Raycast(frontWallCheck.position, transform.right, rayLength, groundLayer);
         if (hit.collider != null) {
             Flip();
-            return;
         }
         RaycastHit2D frontFloorHit = Physics2D.Raycast(frontFloorCheck.position, Vector2.down, rayLength, groundLayer);
         hit = Physics2D.Raycast(normalFloorCheck.position, Vector2.down, rayLength, groundLayer);
@@ -48,10 +45,8 @@ public class EnemyWanderingController : MonoBehaviour
 
     }
 
-    protected void Flip()
+    private void Flip()
     {
-        Debug.Log("Flipping");
-        rbController.ForceSetVelocity(Vector3.zero);
         transform.rotation = Quaternion.Euler(new Vector3(transform.rotation.x, facingRight ? 180 : 0, transform.rotation.z));
         facingRight = !facingRight;
 
@@ -59,7 +54,7 @@ public class EnemyWanderingController : MonoBehaviour
     }
 
 
-    protected virtual void OnDrawGizmos()
+    void OnDrawGizmos()
     {
         // Visualize the raycast
         Gizmos.color = Color.red;

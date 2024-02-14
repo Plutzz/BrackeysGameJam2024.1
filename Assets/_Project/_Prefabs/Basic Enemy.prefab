@@ -99,7 +99,6 @@ GameObject:
   - component: {fileID: 6832957394237771849}
   - component: {fileID: 2107361259040402519}
   - component: {fileID: 1783577605662795944}
-  - component: {fileID: 266028636375974014}
   m_Layer: 0
   m_Name: Basic Enemy
   m_TagString: Untagged
@@ -224,18 +223,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 528c219c5a54d004dacf92b83fa39a15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rbController: {fileID: 266028636375974014}
+  rb: {fileID: 0}
   moveSpeed: 2
-  acceleration: 7
   frontWallCheck: {fileID: 1673938050711603467}
   frontFloorCheck: {fileID: 1454386855673164348}
   normalFloorCheck: {fileID: 7349397650591659048}
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
-  obstacleLayer:
-    serializedVersion: 2
-    m_Bits: 256
   rayLength: 0.1
 --- !u!58 &1783577605662795944
 CircleCollider2D:
@@ -272,18 +267,6 @@ CircleCollider2D:
   m_Offset: {x: 0.43, y: 0.02}
   serializedVersion: 2
   m_Radius: 0.24
---- !u!114 &266028636375974014
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1004311990035471447}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e69ee1802d907b44b881f4ca5f973170, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &3694056280334731926
 GameObject:
   m_ObjectHideFlags: 0
