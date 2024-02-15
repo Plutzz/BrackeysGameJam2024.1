@@ -1,0 +1,811 @@
+fileFormatVersion: 2
+guid: 21c6ad9698d3e0e4a9d75a782f8f7bcf
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: door_duck_slam_Frame_0
+    originalName: 
+    pivot: {x: 0.79310346, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 208
+      width: 29
+      height: 14
+    spriteID: 63132a7ff33e8154aa3f17e431cb0f1a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 208}
+  - name: door_duck_slam_Frame_1
+    originalName: 
+    pivot: {x: 0.8, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 186
+      width: 30
+      height: 14
+    spriteID: eb94c3469fec3d444a1728512e3d6b93
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 186}
+  - name: door_duck_slam_Frame_2
+    originalName: 
+    pivot: {x: 0.80645156, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 84
+      y: 101
+      width: 31
+      height: 14
+    spriteID: 7a84e5c5f82f1ef46a27e10504a2d15e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 84, y: 101}
+  - name: door_duck_slam_Frame_3
+    originalName: 
+    pivot: {x: 0.80645156, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 42
+      y: 187
+      width: 31
+      height: 18
+    spriteID: 1aaca72f25c00d34b939a281ff19f1e4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 42, y: 187}
+  - name: door_duck_slam_Frame_4
+    originalName: 
+    pivot: {x: 0.75999993, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 78
+      width: 25
+      height: 26
+    spriteID: 34ca634d55cad92409e95c7768228c41
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 78}
+  - name: door_duck_slam_Frame_5
+    originalName: 
+    pivot: {x: 0.71428573, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 149
+      width: 21
+      height: 29
+    spriteID: a5631e79a44fe6840b510e05c31ea65a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 149}
+  - name: door_duck_slam_Frame_6
+    originalName: 
+    pivot: {x: 0.6666666, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 42
+      y: 213
+      width: 18
+      height: 31
+    spriteID: fab50c5003b0ace42ad4e79d43b8d131
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 42, y: 213}
+  - name: door_duck_slam_Frame_7
+    originalName: 
+    pivot: {x: 0.3333333, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 42
+      width: 30
+      height: 28
+    spriteID: 0899eb78e57b9504f9ee046619c4eb11
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 42}
+  - name: door_duck_slam_Frame_8
+    originalName: 
+    pivot: {x: 0.30303028, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 42
+      y: 37
+      width: 33
+      height: 17
+    spriteID: 06675f7de6143124fa627c4eaed49dcb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 42, y: 37}
+  - name: door_duck_slam_Frame_9
+    originalName: 
+    pivot: {x: 0.31249997, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 84
+      y: 77
+      width: 32
+      height: 16
+    spriteID: 0c59353b8312c0d419952e44057a1ca9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 84, y: 77}
+  - name: door_duck_slam_Frame_10
+    originalName: 
+    pivot: {x: 0.30303028, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 42
+      y: 62
+      width: 33
+      height: 17
+    spriteID: 3a08421a41ad3aa439db5824bf0dfc9f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 42, y: 62}
+  - name: door_duck_slam_Frame_11
+    originalName: 
+    pivot: {x: 0.31249997, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 84
+      y: 29
+      width: 32
+      height: 17
+    spriteID: af7664068353ff24a9a358f652c2471e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 84, y: 29}
+  - name: door_duck_slam_Frame_12
+    originalName: 
+    pivot: {x: 0.30303028, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 42
+      y: 87
+      width: 33
+      height: 17
+    spriteID: c277e67a2569422418ab5a6ddab0f811
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 42, y: 87}
+  - name: door_duck_slam_Frame_13
+    originalName: 
+    pivot: {x: 0.30303028, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 42
+      y: 112
+      width: 33
+      height: 17
+    spriteID: 26caef9796234174dbbbb3f155937262
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 42, y: 112}
+  - name: door_duck_slam_Frame_14
+    originalName: 
+    pivot: {x: 0.30303028, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 42
+      y: 137
+      width: 33
+      height: 17
+    spriteID: 2712d9744da12094b84e321615139f22
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 42, y: 137}
+  - name: door_duck_slam_Frame_15
+    originalName: 
+    pivot: {x: 0.30303028, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 42
+      y: 162
+      width: 33
+      height: 17
+    spriteID: 389a686858e23684f91beda38aa1fcf7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 42, y: 162}
+  - name: door_duck_slam_Frame_16
+    originalName: 
+    pivot: {x: 0.27777776, y: -0.13333333}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 84
+      y: 54
+      width: 36
+      height: 15
+    spriteID: 85eea7f7d2dd31b49a7fe8b77ae6531a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 84, y: 54}
+  - name: door_duck_slam_Frame_17
+    originalName: 
+    pivot: {x: 0.27777776, y: -0.24999999}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 84
+      y: 123
+      width: 36
+      height: 12
+    spriteID: cdf24d9427b93604bb6699442073db24
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 84, y: 123}
+  - name: door_duck_slam_Frame_18
+    originalName: 
+    pivot: {x: 0.27777776, y: -0.17647058}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 84
+      y: 4
+      width: 36
+      height: 17
+    spriteID: f8a57e32c525cf94ca91cf7c556bc4d1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 84, y: 4}
+  - name: door_duck_slam_Frame_19
+    originalName: 
+    pivot: {x: 0.29411763, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 42
+      y: 4
+      width: 34
+      height: 25
+    spriteID: c5d753b4e9a5f15479fae64f3da4cce7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 42, y: 4}
+  - name: door_duck_slam_Frame_20
+    originalName: 
+    pivot: {x: 0.3333333, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 30
+      height: 30
+    spriteID: 472c44e26127fb04086395ffc1f5df71
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: door_duck_slam_Frame_21
+    originalName: 
+    pivot: {x: 0.7272726, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 112
+      width: 22
+      height: 29
+    spriteID: f0df26ec0ef0b4e4eb120c90e0aa51e3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 112}
+  - name: door_duck_slam_Frame_22
+    originalName: 
+    pivot: {x: 0.79310346, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 230
+      width: 29
+      height: 14
+    spriteID: 0d1d9db3ae09e4f4d9173cdf317957fc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 230}
+  - name: door_duck_slam_Frame_23
+    originalName: 
+    pivot: {x: 0.79310346, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 84
+      y: 143
+      width: 29
+      height: 14
+    spriteID: 1795a78385298d64b8c9c05075094ff2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 84, y: 143}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: -292824422
+    name: door_duck_slam
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: door_duck_slam_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 3
+        y: 0
+        width: 29
+        height: 14
+      spriteId: 63132a7ff33e8154aa3f17e431cb0f1a
+    - name: door_duck_slam_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 2
+        y: 0
+        width: 30
+        height: 14
+      spriteId: eb94c3469fec3d444a1728512e3d6b93
+    - name: door_duck_slam_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 1
+        y: 0
+        width: 31
+        height: 14
+      spriteId: 7a84e5c5f82f1ef46a27e10504a2d15e
+    - name: door_duck_slam_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 1
+        y: 0
+        width: 31
+        height: 18
+      spriteId: 1aaca72f25c00d34b939a281ff19f1e4
+    - name: door_duck_slam_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 7
+        y: 0
+        width: 25
+        height: 26
+      spriteId: 34ca634d55cad92409e95c7768228c41
+    - name: door_duck_slam_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 11
+        y: 0
+        width: 21
+        height: 29
+      spriteId: a5631e79a44fe6840b510e05c31ea65a
+    - name: door_duck_slam_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 14
+        y: 0
+        width: 18
+        height: 31
+      spriteId: fab50c5003b0ace42ad4e79d43b8d131
+    - name: door_duck_slam_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 16
+        y: 0
+        width: 30
+        height: 28
+      spriteId: 0899eb78e57b9504f9ee046619c4eb11
+    - name: door_duck_slam_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 16
+        y: 0
+        width: 33
+        height: 17
+      spriteId: 06675f7de6143124fa627c4eaed49dcb
+    - name: door_duck_slam_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 16
+        y: 0
+        width: 32
+        height: 16
+      spriteId: 0c59353b8312c0d419952e44057a1ca9
+    - name: door_duck_slam_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 16
+        y: 0
+        width: 33
+        height: 17
+      spriteId: 3a08421a41ad3aa439db5824bf0dfc9f
+    - name: door_duck_slam_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 16
+        y: 0
+        width: 32
+        height: 17
+      spriteId: af7664068353ff24a9a358f652c2471e
+    - name: door_duck_slam_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 16
+        y: 0
+        width: 33
+        height: 17
+      spriteId: c277e67a2569422418ab5a6ddab0f811
+    - name: door_duck_slam_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 16
+        y: 0
+        width: 33
+        height: 17
+      spriteId: 26caef9796234174dbbbb3f155937262
+    - name: door_duck_slam_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 16
+        y: 0
+        width: 33
+        height: 17
+      spriteId: 2712d9744da12094b84e321615139f22
+    - name: door_duck_slam_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 16
+        y: 0
+        width: 33
+        height: 17
+      spriteId: 389a686858e23684f91beda38aa1fcf7
+    - name: door_duck_slam_Frame_16
+      frameIndex: 16
+      cellRect:
+        x: 16
+        y: 2
+        width: 36
+        height: 15
+      spriteId: 85eea7f7d2dd31b49a7fe8b77ae6531a
+    - name: door_duck_slam_Frame_17
+      frameIndex: 17
+      cellRect:
+        x: 16
+        y: 3
+        width: 36
+        height: 12
+      spriteId: cdf24d9427b93604bb6699442073db24
+    - name: door_duck_slam_Frame_18
+      frameIndex: 18
+      cellRect:
+        x: 16
+        y: 3
+        width: 36
+        height: 17
+      spriteId: f8a57e32c525cf94ca91cf7c556bc4d1
+    - name: door_duck_slam_Frame_19
+      frameIndex: 19
+      cellRect:
+        x: 16
+        y: 0
+        width: 34
+        height: 25
+      spriteId: c5d753b4e9a5f15479fae64f3da4cce7
+    - name: door_duck_slam_Frame_20
+      frameIndex: 20
+      cellRect:
+        x: 16
+        y: 0
+        width: 30
+        height: 30
+      spriteId: 472c44e26127fb04086395ffc1f5df71
+    - name: door_duck_slam_Frame_21
+      frameIndex: 21
+      cellRect:
+        x: 10
+        y: 0
+        width: 22
+        height: 29
+      spriteId: f0df26ec0ef0b4e4eb120c90e0aa51e3
+    - name: door_duck_slam_Frame_22
+      frameIndex: 22
+      cellRect:
+        x: 3
+        y: 0
+        width: 29
+        height: 14
+      spriteId: 0d1d9db3ae09e4f4d9173cdf317957fc
+    - name: door_duck_slam_Frame_23
+      frameIndex: 23
+      cellRect:
+        x: 3
+        y: 0
+        width: 29
+        height: 14
+      spriteId: 1795a78385298d64b8c9c05075094ff2
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  generatePhysicsShape: 0
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 52, y: 31}

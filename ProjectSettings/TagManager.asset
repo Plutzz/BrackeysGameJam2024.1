@@ -39,14 +39,17 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: BackgroundUnlit
+  - name: BackDrop
     uniqueID: 2163943115
     locked: 0
-  - name: BackgroundLit
+  - name: Background
     uniqueID: 393783987
     locked: 0
   - name: Stage
     uniqueID: 3716405581
+    locked: 0
+  - name: Entities
+    uniqueID: 1040231435
     locked: 0
   - name: Default
     uniqueID: 0

@@ -1,0 +1,2603 @@
+fileFormatVersion: 2
+guid: 41a7956c8ca269b4aa6ab47b77f6d12c
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_1
+    originalName: 
+    pivot: {x: 0.29411766, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 467
+      width: 17
+      height: 24
+    spriteID: aad4200fc59197d438bb3e2e16a86b15
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 467}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_2
+    originalName: 
+    pivot: {x: 0.29411766, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 41
+      y: 4
+      width: 17
+      height: 24
+    spriteID: b1b44cbaf69af34488ef23553471c112
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 41, y: 4}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_3
+    originalName: 
+    pivot: {x: 0.4, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 302
+      width: 20
+      height: 24
+    spriteID: b9ba3d78167889b408570dd04f93c9d7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 302}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_4
+    originalName: 
+    pivot: {x: 0.5862069, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 29
+      height: 30
+    spriteID: 2971fea572082d44cbc7891edd21322b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_5
+    originalName: 
+    pivot: {x: 0.5862069, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 42
+      width: 29
+      height: 30
+    spriteID: d2559cabce74cf140b65b878beb866ee
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 42}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_6
+    originalName: 
+    pivot: {x: 0.5862069, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 80
+      width: 29
+      height: 30
+    spriteID: fcd0c2555591ac84d94ec18bf678136d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 80}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_7
+    originalName: 
+    pivot: {x: 0.5862069, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 118
+      width: 29
+      height: 30
+    spriteID: 7034634e617c60a488ee75f03f94915f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 118}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_8
+    originalName: 
+    pivot: {x: 0.5862069, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 156
+      width: 29
+      height: 30
+    spriteID: 3c987cbf406d244409901c99438ef9d0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 156}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_9
+    originalName: 
+    pivot: {x: 0.5862069, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 194
+      width: 29
+      height: 30
+    spriteID: 71d6651b79b0b1f42a84285ebd309d6a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 194}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_10
+    originalName: 
+    pivot: {x: 0.5862069, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 232
+      width: 29
+      height: 30
+    spriteID: 00cc7f47499085149a4f8052b2b8897c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 232}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_11
+    originalName: 
+    pivot: {x: 0.4, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 334
+      width: 20
+      height: 24
+    spriteID: 016c91cc1e693a746a78da3f1613ea39
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 334}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_12
+    originalName: 
+    pivot: {x: 0.4, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 366
+      width: 20
+      height: 24
+    spriteID: 7343fb059cc950644a92d7979de11f94
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 366}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_13
+    originalName: 
+    pivot: {x: 0.42857143, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 270
+      width: 21
+      height: 24
+    spriteID: 07f947ebc16a7024887eda1a6b9c4961
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 270}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_14
+    originalName: 
+    pivot: {x: 0.4666667, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 177
+      y: 4
+      width: 30
+      height: 10
+    spriteID: e5478fec9c8f9394689cdfb8db1be639
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 177, y: 4}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_15
+    originalName: 
+    pivot: {x: 0.4666667, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 177
+      y: 58
+      width: 30
+      height: 9
+    spriteID: 5b5319f605a4660429475b527c0b8933
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 177, y: 58}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_16
+    originalName: 
+    pivot: {x: 0.4666667, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 177
+      y: 75
+      width: 30
+      height: 9
+    spriteID: fa8daed422e58e04ea9a39441f4b3a99
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 177, y: 75}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_17
+    originalName: 
+    pivot: {x: 0.4666667, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 177
+      y: 92
+      width: 30
+      height: 9
+    spriteID: 0ad53f052101f1d4aa5ea76e79c999fa
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 177, y: 92}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_18
+    originalName: 
+    pivot: {x: 0.4666667, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 177
+      y: 109
+      width: 30
+      height: 9
+    spriteID: d9101f9360703684692d692f404ee2f8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 177, y: 109}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_19
+    originalName: 
+    pivot: {x: 0.4666667, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 177
+      y: 126
+      width: 30
+      height: 9
+    spriteID: 912d3d3ca641d334d8279cf35e213d55
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 177, y: 126}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_20
+    originalName: 
+    pivot: {x: 0.4666667, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 177
+      y: 143
+      width: 30
+      height: 9
+    spriteID: e098be8f95ff9b34fad22f109d9a90e4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 177, y: 143}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_21
+    originalName: 
+    pivot: {x: 0.4666667, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 177
+      y: 160
+      width: 30
+      height: 9
+    spriteID: 8bce787c19a8fd44f9d71015d1eae9c0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 177, y: 160}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_22
+    originalName: 
+    pivot: {x: 0.4666667, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 177
+      y: 177
+      width: 30
+      height: 9
+    spriteID: a8022a1b758a19342b78db8f31530f4e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 177, y: 177}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_23
+    originalName: 
+    pivot: {x: 0.4666667, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 177
+      y: 194
+      width: 30
+      height: 9
+    spriteID: 57dd2e2192657be4ca870c0eb816ae3e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 177, y: 194}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_24
+    originalName: 
+    pivot: {x: 0.4666667, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 177
+      y: 22
+      width: 30
+      height: 10
+    spriteID: f3fce005aa10cb947a2536bc9d6158bc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 177, y: 22}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_25
+    originalName: 
+    pivot: {x: 0.4666667, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 177
+      y: 40
+      width: 30
+      height: 10
+    spriteID: 143069aeb2f858a429c543bae4158635
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 177, y: 40}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_26
+    originalName: 
+    pivot: {x: 0.44827586, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 66
+      y: 4
+      width: 29
+      height: 14
+    spriteID: 5be35d1b13c46c54594239f47fe23ca8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 66, y: 4}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_27
+    originalName: 
+    pivot: {x: 0.44827586, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 66
+      y: 26
+      width: 29
+      height: 14
+    spriteID: 3c7d555cb6334ff40b81063821841f24
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 66, y: 26}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_28
+    originalName: 
+    pivot: {x: 0.44827586, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 66
+      y: 48
+      width: 29
+      height: 14
+    spriteID: ea0ee8a1469da4344b3b3a39df8af728
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 66, y: 48}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_29
+    originalName: 
+    pivot: {x: 0.44827586, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 66
+      y: 70
+      width: 29
+      height: 14
+    spriteID: 70c6cf1afe5fadb4db00ab3f0fe27c61
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 66, y: 70}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_30
+    originalName: 
+    pivot: {x: 0.44827586, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 66
+      y: 92
+      width: 29
+      height: 14
+    spriteID: ff13e3e3528eec840a1a38594a53c8bb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 66, y: 92}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_31
+    originalName: 
+    pivot: {x: 0.44827586, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 66
+      y: 114
+      width: 29
+      height: 14
+    spriteID: 7673fde90218e5f43be7c90b3f545c58
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 66, y: 114}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_32
+    originalName: 
+    pivot: {x: 0.44827586, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 66
+      y: 136
+      width: 29
+      height: 14
+    spriteID: f2ae2fe6cbd16134cb24507c61789f44
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 66, y: 136}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_33
+    originalName: 
+    pivot: {x: 0.44827586, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 66
+      y: 158
+      width: 29
+      height: 14
+    spriteID: 301eb40d644e08145b8533c3ef3d9eeb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 66, y: 158}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_34
+    originalName: 
+    pivot: {x: 0.44827586, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 66
+      y: 180
+      width: 29
+      height: 14
+    spriteID: 548e2ea99e23b8b4ba194a530c890d53
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 66, y: 180}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_35
+    originalName: 
+    pivot: {x: 0.44827586, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 66
+      y: 202
+      width: 29
+      height: 14
+    spriteID: 2ae04ef2f600e694eb5e680083df32fc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 66, y: 202}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_36
+    originalName: 
+    pivot: {x: 0.44827586, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 66
+      y: 224
+      width: 29
+      height: 14
+    spriteID: 3295fa9ca7159894d921e90c6ab8e08e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 66, y: 224}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_37
+    originalName: 
+    pivot: {x: 0.44827586, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 103
+      y: 416
+      width: 29
+      height: 12
+    spriteID: 6b08d23c154bd1640b434109bd361f49
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 103, y: 416}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_38
+    originalName: 
+    pivot: {x: 0.44827586, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 103
+      y: 436
+      width: 29
+      height: 12
+    spriteID: b06a0335bb8ed11428c6b68201c3d955
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 103, y: 436}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_39
+    originalName: 
+    pivot: {x: 0.44827586, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 103
+      y: 456
+      width: 29
+      height: 12
+    spriteID: bb730d42276aa5649890e8f9a180e12d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 103, y: 456}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_40
+    originalName: 
+    pivot: {x: 0.44827586, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 103
+      y: 476
+      width: 29
+      height: 12
+    spriteID: 7c129a5d0a760744f9a77b989edce4e7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 103, y: 476}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_41
+    originalName: 
+    pivot: {x: 0.44827586, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 66
+      y: 246
+      width: 29
+      height: 14
+    spriteID: 9dad6f5ba4f428c43907c81c20804628
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 66, y: 246}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_42
+    originalName: 
+    pivot: {x: 0.44827586, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 398
+      width: 29
+      height: 15
+    spriteID: 8dc67f674231a564f997ce3de54c52b3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 398}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_43
+    originalName: 
+    pivot: {x: 0.44827586, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 66
+      y: 268
+      width: 29
+      height: 14
+    spriteID: 11ca76b26fd6dc14b91afbdce81080df
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 66, y: 268}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_44
+    originalName: 
+    pivot: {x: 0.44827586, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 103
+      y: 496
+      width: 29
+      height: 11
+    spriteID: 0059b90bf2270e642ae2de39f564726a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 103, y: 496}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_45
+    originalName: 
+    pivot: {x: 0.44827586, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 140
+      y: 156
+      width: 29
+      height: 10
+    spriteID: 8e94446233e02844080ad9bb32552d86
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 140, y: 156}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_46
+    originalName: 
+    pivot: {x: 0.44827586, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 66
+      y: 290
+      width: 29
+      height: 14
+    spriteID: e9e21afd7a9ae5449baff69f0a0f1132
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 66, y: 290}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_47
+    originalName: 
+    pivot: {x: 0.44827586, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 421
+      width: 29
+      height: 15
+    spriteID: a95c7a52aeef7fb4cb45084293b1e298
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 421}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_48
+    originalName: 
+    pivot: {x: 0.44827586, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 66
+      y: 312
+      width: 29
+      height: 14
+    spriteID: 59244dfceaa7ea84589c4253c1ca1458
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 66, y: 312}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_49
+    originalName: 
+    pivot: {x: 0.44827586, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 140
+      y: 4
+      width: 29
+      height: 11
+    spriteID: cf189ef7873935d4fbcb9fafdfd9d93a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 140, y: 4}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_50
+    originalName: 
+    pivot: {x: 0.44827586, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 140
+      y: 174
+      width: 29
+      height: 10
+    spriteID: e99653b846850514c8715c81cba9c9a4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 140, y: 174}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_51
+    originalName: 
+    pivot: {x: 0.44827586, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 66
+      y: 334
+      width: 29
+      height: 14
+    spriteID: 5cd160bd2f61c7047b1be0f69859e846
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 66, y: 334}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_52
+    originalName: 
+    pivot: {x: 0.44827586, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 444
+      width: 29
+      height: 15
+    spriteID: 040be27632b0e514d82272ccab9d2ea4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 444}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_53
+    originalName: 
+    pivot: {x: 0.44827586, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 66
+      y: 356
+      width: 29
+      height: 14
+    spriteID: 5c3fc7204c626374f992e1d7173b047a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 66, y: 356}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_54
+    originalName: 
+    pivot: {x: 0.44827586, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 140
+      y: 23
+      width: 29
+      height: 11
+    spriteID: d33341b4389da1548b5c2ebd3bf39a3b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 140, y: 23}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_55
+    originalName: 
+    pivot: {x: 0.44827586, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 140
+      y: 42
+      width: 29
+      height: 11
+    spriteID: 44821e55b113ed948b85b220dcc6338f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 140, y: 42}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_56
+    originalName: 
+    pivot: {x: 0.44827586, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 140
+      y: 61
+      width: 29
+      height: 11
+    spriteID: 8b642bfe213e89440aed0d31eb6d6cbe
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 140, y: 61}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_57
+    originalName: 
+    pivot: {x: 0.44827586, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 140
+      y: 80
+      width: 29
+      height: 11
+    spriteID: 7c7ca5f6fcd17ad40a6102e01043a7d3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 140, y: 80}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_58
+    originalName: 
+    pivot: {x: 0.44827586, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 140
+      y: 99
+      width: 29
+      height: 11
+    spriteID: e85def69a74d74744bb580e9506b93f9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 140, y: 99}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_59
+    originalName: 
+    pivot: {x: 0.44827586, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 140
+      y: 118
+      width: 29
+      height: 11
+    spriteID: 11af61345d7a28e4ea45625a249ea1c6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 140, y: 118}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_60
+    originalName: 
+    pivot: {x: 0.44827586, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 140
+      y: 137
+      width: 29
+      height: 11
+    spriteID: 428efa79ac63e8e4a94119f3d867be17
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 140, y: 137}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_61
+    originalName: 
+    pivot: {x: 0.44827586, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 103
+      y: 290
+      width: 29
+      height: 13
+    spriteID: 1dd5e1c6d0d8085409b5d70a5c4fb449
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 103, y: 290}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_62
+    originalName: 
+    pivot: {x: 0.44827586, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 103
+      y: 311
+      width: 29
+      height: 13
+    spriteID: a3d1d02a29c43934993247af53ea86fc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 103, y: 311}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_63
+    originalName: 
+    pivot: {x: 0.44827586, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 103
+      y: 332
+      width: 29
+      height: 13
+    spriteID: e25cf7ac464fce543916c112ed4e05e3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 103, y: 332}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_64
+    originalName: 
+    pivot: {x: 0.44827586, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 66
+      y: 378
+      width: 29
+      height: 14
+    spriteID: 2f892a87c2f387249967a070fea7ebaf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 66, y: 378}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_65
+    originalName: 
+    pivot: {x: 0.44827586, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 66
+      y: 400
+      width: 29
+      height: 14
+    spriteID: c9de7614c8d1a5d4e911e0c5fe1267f6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 66, y: 400}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_66
+    originalName: 
+    pivot: {x: 0.44827586, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 66
+      y: 422
+      width: 29
+      height: 14
+    spriteID: 60cf42da9a109174ab4af46816be8c5b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 66, y: 422}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_67
+    originalName: 
+    pivot: {x: 0.44827586, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 66
+      y: 444
+      width: 29
+      height: 14
+    spriteID: 9d01a52b587b3ce41ba0161f06f39e13
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 66, y: 444}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_68
+    originalName: 
+    pivot: {x: 0.44827586, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 66
+      y: 466
+      width: 29
+      height: 14
+    spriteID: 54268658ff496ff439b06f53f452e975
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 66, y: 466}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_69
+    originalName: 
+    pivot: {x: 0.44827586, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 66
+      y: 488
+      width: 29
+      height: 14
+    spriteID: 9139275acc0d9da43bc167796abf0f1f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 66, y: 488}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_70
+    originalName: 
+    pivot: {x: 0.44827586, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 103
+      y: 4
+      width: 29
+      height: 14
+    spriteID: 1c162da583d4b9a4b875ec005c7820e4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 103, y: 4}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_71
+    originalName: 
+    pivot: {x: 0.44827586, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 103
+      y: 26
+      width: 29
+      height: 14
+    spriteID: 8ecfb1dbde34e2a498aeeeea4bc18cc1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 103, y: 26}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_72
+    originalName: 
+    pivot: {x: 0.44827586, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 103
+      y: 48
+      width: 29
+      height: 14
+    spriteID: 52c59dd3b5f63fe43b284e1a3d445714
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 103, y: 48}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_73
+    originalName: 
+    pivot: {x: 0.44827586, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 103
+      y: 70
+      width: 29
+      height: 14
+    spriteID: 94f3a0180997ec04fbea387ae4b71ef7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 103, y: 70}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_74
+    originalName: 
+    pivot: {x: 0.44827586, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 103
+      y: 92
+      width: 29
+      height: 14
+    spriteID: 48fb31a2891f71244a85a01170567a5a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 103, y: 92}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_75
+    originalName: 
+    pivot: {x: 0.44827586, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 103
+      y: 114
+      width: 29
+      height: 14
+    spriteID: 7a48564021e24f0448c41347bcd32b16
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 103, y: 114}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_76
+    originalName: 
+    pivot: {x: 0.44827586, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 103
+      y: 136
+      width: 29
+      height: 14
+    spriteID: b90eace4156b7ce48a8ecb1fc3cb928c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 103, y: 136}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_77
+    originalName: 
+    pivot: {x: 0.44827586, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 103
+      y: 353
+      width: 29
+      height: 13
+    spriteID: dbc5c2bd6d47bcd4aaeeab6de93db7fd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 103, y: 353}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_78
+    originalName: 
+    pivot: {x: 0.44827586, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 499
+      width: 29
+      height: 9
+    spriteID: d199e738c9a921b4583125a265c3843f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 499}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_79
+    originalName: 
+    pivot: {x: 0.44827586, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 140
+      y: 192
+      width: 29
+      height: 10
+    spriteID: cb1e53f6f457adb49a430d7a993c45cb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 140, y: 192}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_80
+    originalName: 
+    pivot: {x: 0.44827586, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 103
+      y: 374
+      width: 29
+      height: 13
+    spriteID: bea9d4f7a521dab4d9ed311864461fbd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 103, y: 374}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_81
+    originalName: 
+    pivot: {x: 0.44827586, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 103
+      y: 395
+      width: 29
+      height: 13
+    spriteID: e3bc69e0d9277a641a1c724d7bbdf506
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 103, y: 395}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_82
+    originalName: 
+    pivot: {x: 0.44827586, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 103
+      y: 158
+      width: 29
+      height: 14
+    spriteID: 1aece58ba8f3c0048afc9b212983a2ef
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 103, y: 158}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_83
+    originalName: 
+    pivot: {x: 0.44827586, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 103
+      y: 180
+      width: 29
+      height: 14
+    spriteID: a02cb33965675f2489168bf377e473f4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 103, y: 180}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_84
+    originalName: 
+    pivot: {x: 0.44827586, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 103
+      y: 202
+      width: 29
+      height: 14
+    spriteID: 65deddb0fc26d934096c5a9b7b8a3d16
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 103, y: 202}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_85
+    originalName: 
+    pivot: {x: 0.44827586, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 103
+      y: 224
+      width: 29
+      height: 14
+    spriteID: 698d77f39e51e1f4a938fa3f67b04c6c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 103, y: 224}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_86
+    originalName: 
+    pivot: {x: 0.44827586, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 103
+      y: 246
+      width: 29
+      height: 14
+    spriteID: 0587bdee0a6a23f4880d112b1ddf90cc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 103, y: 246}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_87
+    originalName: 
+    pivot: {x: 0.44827586, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 103
+      y: 268
+      width: 29
+      height: 14
+    spriteID: d13d0bc210ef2ff42a4c4a2dc64f1350
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 103, y: 268}
+  - name: door_duck_getdoor_NOLINEPLZ_Frame_0
+    originalName: 
+    pivot: {x: 0.29411766, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 41
+      y: 36
+      width: 17
+      height: 24
+    spriteID: d8c502d1377c103429d91719c03c002f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 41, y: 36}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: 146865305
+    name: door_duck_getdoor_NOLINEPLZ
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 11
+        y: 0
+        width: 17
+        height: 24
+      spriteId: aad4200fc59197d438bb3e2e16a86b15
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 11
+        y: 0
+        width: 17
+        height: 24
+      spriteId: b1b44cbaf69af34488ef23553471c112
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 8
+        y: 0
+        width: 20
+        height: 24
+      spriteId: b9ba3d78167889b408570dd04f93c9d7
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: -1
+        y: 0
+        width: 29
+        height: 30
+      spriteId: 2971fea572082d44cbc7891edd21322b
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: -1
+        y: 0
+        width: 29
+        height: 30
+      spriteId: d2559cabce74cf140b65b878beb866ee
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: -1
+        y: 0
+        width: 29
+        height: 30
+      spriteId: fcd0c2555591ac84d94ec18bf678136d
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: -1
+        y: 0
+        width: 29
+        height: 30
+      spriteId: 7034634e617c60a488ee75f03f94915f
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: -1
+        y: 0
+        width: 29
+        height: 30
+      spriteId: 3c987cbf406d244409901c99438ef9d0
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: -1
+        y: 0
+        width: 29
+        height: 30
+      spriteId: 71d6651b79b0b1f42a84285ebd309d6a
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: -1
+        y: 0
+        width: 29
+        height: 30
+      spriteId: 00cc7f47499085149a4f8052b2b8897c
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 8
+        y: 0
+        width: 20
+        height: 24
+      spriteId: 016c91cc1e693a746a78da3f1613ea39
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 8
+        y: 0
+        width: 20
+        height: 24
+      spriteId: 7343fb059cc950644a92d7979de11f94
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 7
+        y: 0
+        width: 21
+        height: 24
+      spriteId: 07f947ebc16a7024887eda1a6b9c4961
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 2
+        y: 0
+        width: 30
+        height: 10
+      spriteId: e5478fec9c8f9394689cdfb8db1be639
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 2
+        y: 0
+        width: 30
+        height: 9
+      spriteId: 5b5319f605a4660429475b527c0b8933
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_16
+      frameIndex: 16
+      cellRect:
+        x: 2
+        y: 0
+        width: 30
+        height: 9
+      spriteId: fa8daed422e58e04ea9a39441f4b3a99
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_17
+      frameIndex: 17
+      cellRect:
+        x: 2
+        y: 0
+        width: 30
+        height: 9
+      spriteId: 0ad53f052101f1d4aa5ea76e79c999fa
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_18
+      frameIndex: 18
+      cellRect:
+        x: 2
+        y: 0
+        width: 30
+        height: 9
+      spriteId: d9101f9360703684692d692f404ee2f8
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_19
+      frameIndex: 19
+      cellRect:
+        x: 2
+        y: 0
+        width: 30
+        height: 9
+      spriteId: 912d3d3ca641d334d8279cf35e213d55
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_20
+      frameIndex: 20
+      cellRect:
+        x: 2
+        y: 0
+        width: 30
+        height: 9
+      spriteId: e098be8f95ff9b34fad22f109d9a90e4
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_21
+      frameIndex: 21
+      cellRect:
+        x: 2
+        y: 0
+        width: 30
+        height: 9
+      spriteId: 8bce787c19a8fd44f9d71015d1eae9c0
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_22
+      frameIndex: 22
+      cellRect:
+        x: 2
+        y: 0
+        width: 30
+        height: 9
+      spriteId: a8022a1b758a19342b78db8f31530f4e
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_23
+      frameIndex: 23
+      cellRect:
+        x: 2
+        y: 0
+        width: 30
+        height: 9
+      spriteId: 57dd2e2192657be4ca870c0eb816ae3e
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_24
+      frameIndex: 24
+      cellRect:
+        x: 2
+        y: 0
+        width: 30
+        height: 10
+      spriteId: f3fce005aa10cb947a2536bc9d6158bc
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_25
+      frameIndex: 25
+      cellRect:
+        x: 2
+        y: 0
+        width: 30
+        height: 10
+      spriteId: 143069aeb2f858a429c543bae4158635
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_26
+      frameIndex: 26
+      cellRect:
+        x: 3
+        y: 0
+        width: 29
+        height: 14
+      spriteId: 5be35d1b13c46c54594239f47fe23ca8
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_27
+      frameIndex: 27
+      cellRect:
+        x: 3
+        y: 0
+        width: 29
+        height: 14
+      spriteId: 3c7d555cb6334ff40b81063821841f24
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_28
+      frameIndex: 28
+      cellRect:
+        x: 3
+        y: 0
+        width: 29
+        height: 14
+      spriteId: ea0ee8a1469da4344b3b3a39df8af728
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_29
+      frameIndex: 29
+      cellRect:
+        x: 3
+        y: 0
+        width: 29
+        height: 14
+      spriteId: 70c6cf1afe5fadb4db00ab3f0fe27c61
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_30
+      frameIndex: 30
+      cellRect:
+        x: 3
+        y: 0
+        width: 29
+        height: 14
+      spriteId: ff13e3e3528eec840a1a38594a53c8bb
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_31
+      frameIndex: 31
+      cellRect:
+        x: 3
+        y: 0
+        width: 29
+        height: 14
+      spriteId: 7673fde90218e5f43be7c90b3f545c58
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_32
+      frameIndex: 32
+      cellRect:
+        x: 3
+        y: 0
+        width: 29
+        height: 14
+      spriteId: f2ae2fe6cbd16134cb24507c61789f44
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_33
+      frameIndex: 33
+      cellRect:
+        x: 3
+        y: 0
+        width: 29
+        height: 14
+      spriteId: 301eb40d644e08145b8533c3ef3d9eeb
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_34
+      frameIndex: 34
+      cellRect:
+        x: 3
+        y: 0
+        width: 29
+        height: 14
+      spriteId: 548e2ea99e23b8b4ba194a530c890d53
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_35
+      frameIndex: 35
+      cellRect:
+        x: 3
+        y: 0
+        width: 29
+        height: 14
+      spriteId: 2ae04ef2f600e694eb5e680083df32fc
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_36
+      frameIndex: 36
+      cellRect:
+        x: 3
+        y: 0
+        width: 29
+        height: 14
+      spriteId: 3295fa9ca7159894d921e90c6ab8e08e
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_37
+      frameIndex: 37
+      cellRect:
+        x: 3
+        y: 0
+        width: 29
+        height: 12
+      spriteId: 6b08d23c154bd1640b434109bd361f49
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_38
+      frameIndex: 38
+      cellRect:
+        x: 3
+        y: 0
+        width: 29
+        height: 12
+      spriteId: b06a0335bb8ed11428c6b68201c3d955
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_39
+      frameIndex: 39
+      cellRect:
+        x: 3
+        y: 0
+        width: 29
+        height: 12
+      spriteId: bb730d42276aa5649890e8f9a180e12d
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_40
+      frameIndex: 40
+      cellRect:
+        x: 3
+        y: 0
+        width: 29
+        height: 12
+      spriteId: 7c129a5d0a760744f9a77b989edce4e7
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_41
+      frameIndex: 41
+      cellRect:
+        x: 3
+        y: 0
+        width: 29
+        height: 14
+      spriteId: 9dad6f5ba4f428c43907c81c20804628
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_42
+      frameIndex: 42
+      cellRect:
+        x: 3
+        y: 0
+        width: 29
+        height: 15
+      spriteId: 8dc67f674231a564f997ce3de54c52b3
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_43
+      frameIndex: 43
+      cellRect:
+        x: 3
+        y: 0
+        width: 29
+        height: 14
+      spriteId: 11ca76b26fd6dc14b91afbdce81080df
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_44
+      frameIndex: 44
+      cellRect:
+        x: 3
+        y: 0
+        width: 29
+        height: 11
+      spriteId: 0059b90bf2270e642ae2de39f564726a
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_45
+      frameIndex: 45
+      cellRect:
+        x: 3
+        y: 0
+        width: 29
+        height: 10
+      spriteId: 8e94446233e02844080ad9bb32552d86
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_46
+      frameIndex: 46
+      cellRect:
+        x: 3
+        y: 0
+        width: 29
+        height: 14
+      spriteId: e9e21afd7a9ae5449baff69f0a0f1132
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_47
+      frameIndex: 47
+      cellRect:
+        x: 3
+        y: 0
+        width: 29
+        height: 15
+      spriteId: a95c7a52aeef7fb4cb45084293b1e298
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_48
+      frameIndex: 48
+      cellRect:
+        x: 3
+        y: 0
+        width: 29
+        height: 14
+      spriteId: 59244dfceaa7ea84589c4253c1ca1458
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_49
+      frameIndex: 49
+      cellRect:
+        x: 3
+        y: 0
+        width: 29
+        height: 11
+      spriteId: cf189ef7873935d4fbcb9fafdfd9d93a
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_50
+      frameIndex: 50
+      cellRect:
+        x: 3
+        y: 0
+        width: 29
+        height: 10
+      spriteId: e99653b846850514c8715c81cba9c9a4
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_51
+      frameIndex: 51
+      cellRect:
+        x: 3
+        y: 0
+        width: 29
+        height: 14
+      spriteId: 5cd160bd2f61c7047b1be0f69859e846
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_52
+      frameIndex: 52
+      cellRect:
+        x: 3
+        y: 0
+        width: 29
+        height: 15
+      spriteId: 040be27632b0e514d82272ccab9d2ea4
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_53
+      frameIndex: 53
+      cellRect:
+        x: 3
+        y: 0
+        width: 29
+        height: 14
+      spriteId: 5c3fc7204c626374f992e1d7173b047a
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_54
+      frameIndex: 54
+      cellRect:
+        x: 3
+        y: 0
+        width: 29
+        height: 11
+      spriteId: d33341b4389da1548b5c2ebd3bf39a3b
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_55
+      frameIndex: 55
+      cellRect:
+        x: 3
+        y: 0
+        width: 29
+        height: 11
+      spriteId: 44821e55b113ed948b85b220dcc6338f
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_56
+      frameIndex: 56
+      cellRect:
+        x: 3
+        y: 0
+        width: 29
+        height: 11
+      spriteId: 8b642bfe213e89440aed0d31eb6d6cbe
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_57
+      frameIndex: 57
+      cellRect:
+        x: 3
+        y: 0
+        width: 29
+        height: 11
+      spriteId: 7c7ca5f6fcd17ad40a6102e01043a7d3
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_58
+      frameIndex: 58
+      cellRect:
+        x: 3
+        y: 0
+        width: 29
+        height: 11
+      spriteId: e85def69a74d74744bb580e9506b93f9
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_59
+      frameIndex: 59
+      cellRect:
+        x: 3
+        y: 0
+        width: 29
+        height: 11
+      spriteId: 11af61345d7a28e4ea45625a249ea1c6
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_60
+      frameIndex: 60
+      cellRect:
+        x: 3
+        y: 0
+        width: 29
+        height: 11
+      spriteId: 428efa79ac63e8e4a94119f3d867be17
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_61
+      frameIndex: 61
+      cellRect:
+        x: 3
+        y: 0
+        width: 29
+        height: 13
+      spriteId: 1dd5e1c6d0d8085409b5d70a5c4fb449
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_62
+      frameIndex: 62
+      cellRect:
+        x: 3
+        y: 0
+        width: 29
+        height: 13
+      spriteId: a3d1d02a29c43934993247af53ea86fc
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_63
+      frameIndex: 63
+      cellRect:
+        x: 3
+        y: 0
+        width: 29
+        height: 13
+      spriteId: e25cf7ac464fce543916c112ed4e05e3
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_64
+      frameIndex: 64
+      cellRect:
+        x: 3
+        y: 0
+        width: 29
+        height: 14
+      spriteId: 2f892a87c2f387249967a070fea7ebaf
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_65
+      frameIndex: 65
+      cellRect:
+        x: 3
+        y: 0
+        width: 29
+        height: 14
+      spriteId: c9de7614c8d1a5d4e911e0c5fe1267f6
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_66
+      frameIndex: 66
+      cellRect:
+        x: 3
+        y: 0
+        width: 29
+        height: 14
+      spriteId: 60cf42da9a109174ab4af46816be8c5b
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_67
+      frameIndex: 67
+      cellRect:
+        x: 3
+        y: 0
+        width: 29
+        height: 14
+      spriteId: 9d01a52b587b3ce41ba0161f06f39e13
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_68
+      frameIndex: 68
+      cellRect:
+        x: 3
+        y: 0
+        width: 29
+        height: 14
+      spriteId: 54268658ff496ff439b06f53f452e975
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_69
+      frameIndex: 69
+      cellRect:
+        x: 3
+        y: 0
+        width: 29
+        height: 14
+      spriteId: 9139275acc0d9da43bc167796abf0f1f
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_70
+      frameIndex: 70
+      cellRect:
+        x: 3
+        y: 0
+        width: 29
+        height: 14
+      spriteId: 1c162da583d4b9a4b875ec005c7820e4
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_71
+      frameIndex: 71
+      cellRect:
+        x: 3
+        y: 0
+        width: 29
+        height: 14
+      spriteId: 8ecfb1dbde34e2a498aeeeea4bc18cc1
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_72
+      frameIndex: 72
+      cellRect:
+        x: 3
+        y: 0
+        width: 29
+        height: 14
+      spriteId: 52c59dd3b5f63fe43b284e1a3d445714
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_73
+      frameIndex: 73
+      cellRect:
+        x: 3
+        y: 0
+        width: 29
+        height: 14
+      spriteId: 94f3a0180997ec04fbea387ae4b71ef7
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_74
+      frameIndex: 74
+      cellRect:
+        x: 3
+        y: 0
+        width: 29
+        height: 14
+      spriteId: 48fb31a2891f71244a85a01170567a5a
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_75
+      frameIndex: 75
+      cellRect:
+        x: 3
+        y: 0
+        width: 29
+        height: 14
+      spriteId: 7a48564021e24f0448c41347bcd32b16
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_76
+      frameIndex: 76
+      cellRect:
+        x: 3
+        y: 0
+        width: 29
+        height: 14
+      spriteId: b90eace4156b7ce48a8ecb1fc3cb928c
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_77
+      frameIndex: 77
+      cellRect:
+        x: 3
+        y: 0
+        width: 29
+        height: 13
+      spriteId: dbc5c2bd6d47bcd4aaeeab6de93db7fd
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_78
+      frameIndex: 78
+      cellRect:
+        x: 3
+        y: 0
+        width: 29
+        height: 9
+      spriteId: d199e738c9a921b4583125a265c3843f
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_79
+      frameIndex: 79
+      cellRect:
+        x: 3
+        y: 0
+        width: 29
+        height: 10
+      spriteId: cb1e53f6f457adb49a430d7a993c45cb
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_80
+      frameIndex: 80
+      cellRect:
+        x: 3
+        y: 0
+        width: 29
+        height: 13
+      spriteId: bea9d4f7a521dab4d9ed311864461fbd
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_81
+      frameIndex: 81
+      cellRect:
+        x: 3
+        y: 0
+        width: 29
+        height: 13
+      spriteId: e3bc69e0d9277a641a1c724d7bbdf506
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_82
+      frameIndex: 82
+      cellRect:
+        x: 3
+        y: 0
+        width: 29
+        height: 14
+      spriteId: 1aece58ba8f3c0048afc9b212983a2ef
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_83
+      frameIndex: 83
+      cellRect:
+        x: 3
+        y: 0
+        width: 29
+        height: 14
+      spriteId: a02cb33965675f2489168bf377e473f4
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_84
+      frameIndex: 84
+      cellRect:
+        x: 3
+        y: 0
+        width: 29
+        height: 14
+      spriteId: 65deddb0fc26d934096c5a9b7b8a3d16
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_85
+      frameIndex: 85
+      cellRect:
+        x: 3
+        y: 0
+        width: 29
+        height: 14
+      spriteId: 698d77f39e51e1f4a938fa3f67b04c6c
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_86
+      frameIndex: 86
+      cellRect:
+        x: 3
+        y: 0
+        width: 29
+        height: 14
+      spriteId: 0587bdee0a6a23f4880d112b1ddf90cc
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_87
+      frameIndex: 87
+      cellRect:
+        x: 3
+        y: 0
+        width: 29
+        height: 14
+      spriteId: d13d0bc210ef2ff42a4c4a2dc64f1350
+    - name: door_duck_getdoor_NOLINEPLZ_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 11
+        y: 0
+        width: 17
+        height: 24
+      spriteId: d8c502d1377c103429d91719c03c002f
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  generatePhysicsShape: 0
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 32, y: 32}
