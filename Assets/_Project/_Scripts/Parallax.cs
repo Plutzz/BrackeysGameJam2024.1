@@ -6,12 +6,13 @@ using UnityEngine.Tilemaps;
 public class Parallax : MonoBehaviour
 {
     private float startPosX, startPosY;
-    [SerializeField] GameObject Cam;
+    private Camera Cam;
     [SerializeField] private float parallaxEffectX = 0;
     [SerializeField] private float parallaxEffectY = 0;
 
     private void Start()
     {
+        Cam = Camera.main;
         startPosX = transform.position.x;
         startPosY = transform.position.y;
     }

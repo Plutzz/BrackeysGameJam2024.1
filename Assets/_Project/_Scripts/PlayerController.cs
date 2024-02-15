@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
@@ -28,6 +29,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float rayLength = 1.5f;
     [SerializeField] private LayerMask interactableLayer;
 
+    [Header("Door")]
+    private Door door;
+    [SerializeField] private LayerMask groundLayer;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -35,11 +40,11 @@ public class PlayerController : MonoBehaviour
         playerMovement = GetComponent<PlayerMovement>();
 
         InputHandler.Instance.playerInputActions.Player.Jump.performed += playerMovement.JumpPressed;
-        
+        InputHandler.Instance.playerInputActions.Player.Interact.performed += TryPickUpDoor;
     }
-
     private void Update()
     {
+        Debug.DrawRay(transform.position + transform.right * startOffset, transform.right * rayLength);
         ApplyInputs();
     }
 
@@ -60,7 +65,11 @@ public class PlayerController : MonoBehaviour
             ResumePlayerMovement();
         }
         if (InputHandler.Instance.playerInputActions.Player.Interact.WasPerformedThisFrame()) {
-            TryInteract();
+            //TryInteract();
+        }
+        if(InputHandler.Instance.playerInputActions.Player.Interact.WasReleasedThisFrame() && hasDoor)
+        {
+            PutDownDoor();
         }
     }
 
@@ -131,5 +140,36 @@ public class PlayerController : MonoBehaviour
             Interactable interactable = hit.collider.GetComponent<Interactable>();
             if (interactable != null) { interactable.Interact(); }
         }
+    }
+
+
+
+    private void TryPickUpDoor(InputAction.CallbackContext context)
+    {
+        //start ray behind to slightly ahead
+        //checking for anything on door layer
+        //can be optimsed with layer mask
+        Debug.Log("Trying to pick up door");
+        RaycastHit2D hit = Physics2D.Raycast(transform.position + transform.right * startOffset, transform.right, rayLength, groundLayer);
+        if (hit.collider != null)
+        {
+            door = hit.collider.GetComponent<Door>();
+            if (door != null)
+            {
+                Debug.Log("Pick Up Door!");
+                door.PickUp();
+                door.transform.position = transform.position + (Vector3.up * 0.5f);
+                door.transform.parent = transform;
+                hasDoor = true;
+            }
+
+        }
+    }
+    private void PutDownDoor()
+    {
+        hasDoor = false;
+        door.PutDown();
+        door.transform.parent = null;
+        door = null;
     }
 }
