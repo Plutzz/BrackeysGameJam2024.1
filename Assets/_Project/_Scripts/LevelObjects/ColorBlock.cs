@@ -1,17 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class ColorBlock : MonoBehaviour
+using UnityEngine.Tilemaps;
+[CreateAssetMenu]
+public class ColorBlock : Tile
 {
     public ColorBlockManager.BlockColors blockColor;
     private Collider2D col;
-    private SpriteRenderer ren;
 
     private void Awake()
     {
-        col = GetComponent<Collider2D>();
-        ren = GetComponent<SpriteRenderer>();
+        col = Instantiate(new BoxCollider2D());
+        GetColor(blockColor);
     }
 
     private void Start()
@@ -22,12 +22,29 @@ public class ColorBlock : MonoBehaviour
     public void ActivateBlock()
     {
         col.enabled = true;
-        ren.enabled = true;
     }
 
     public void DeactivateBlock()
     {
         col.enabled = false;
-        ren.enabled = false;
+    }
+
+    private void GetColor(ColorBlockManager.BlockColors blockColor)
+    {
+        switch(blockColor)
+        {
+            case ColorBlockManager.BlockColors.Red:
+                color = Color.red;
+                break;
+            case ColorBlockManager.BlockColors.Blue:
+                color = Color.blue;
+                break;
+            case ColorBlockManager.BlockColors.Yellow:
+                color = Color.yellow;
+                break;
+            case ColorBlockManager.BlockColors.Green:
+                color = Color.green;
+                break;
+        }
     }
 }

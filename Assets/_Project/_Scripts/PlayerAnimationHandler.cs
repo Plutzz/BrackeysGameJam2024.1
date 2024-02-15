@@ -11,6 +11,7 @@ public class PlayerAnimationHandler : MonoBehaviour
 
     public string DuckWalkState { get; private set; }
     public string DuckIdleState { get; private set; }
+    public string DuckJumpState { get; private set; }
 
     private void Awake()
     {
@@ -24,11 +25,13 @@ public class PlayerAnimationHandler : MonoBehaviour
         {
             DuckWalkState = "DuckWalk";
             DuckIdleState = "DuckIdle";
+            DuckJumpState = "DuckJump";
         }
         else
         {
             DuckWalkState = "DuckWalk_NoDoor";
             DuckIdleState = "DuckIdle_NoDoor";
+            DuckJumpState = "DuckJump_NoDoor";
         }
 
         // Ensures state change is only triggered once

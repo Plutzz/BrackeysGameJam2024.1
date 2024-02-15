@@ -168,7 +168,7 @@ public class PlayerMovement : MonoBehaviour
             // Jump is buffered
             if (lastJumpPressed + jumpBuffer > Time.time)
             {
-                animationHandler.ChangeAnimationState("DuckJump");
+                animationHandler.ChangeAnimationState(animationHandler.DuckJumpState);
                 currentState = States.Airborne;
                 Jump();
             }
@@ -287,7 +287,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Jump()
     {
-        animationHandler.ChangeAnimationState("DuckJump");
+        animationHandler.ChangeAnimationState(animationHandler.DuckJumpState);
         timeLeftGround = Time.time;
         endedJumpEarly = false;
         coyoteUsable = false;
