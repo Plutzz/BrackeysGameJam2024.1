@@ -295,7 +295,7 @@ ScriptedImporter:
       cellRect:
         x: 0
         y: 0
-        width: 64
+        width: 79
         height: 40
       spriteId: c1a15cc7466bd9c46adb1c4eab966099
     linkedCells: []
@@ -340,4 +340,4 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 64, y: 48}
+  canvasSize: {x: 80, y: 48}

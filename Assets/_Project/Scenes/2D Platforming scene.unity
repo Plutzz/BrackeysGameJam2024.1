@@ -1604,6 +1604,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button
       objectReference: {fileID: 0}
+    - target: {fileID: 2421041315361612052, guid: 997e75f0ef7b08f43852fdc4252b844a, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 16d5e24a12a131d439a4fb42c16d266e, type: 2}
     - target: {fileID: 8507706575738514851, guid: 997e75f0ef7b08f43852fdc4252b844a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.55
