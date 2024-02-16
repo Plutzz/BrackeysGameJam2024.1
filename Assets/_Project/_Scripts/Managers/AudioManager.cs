@@ -2,11 +2,13 @@ using System;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class AudioManager : Singleton<AudioManager>
 {
     [Header("Sounds")]
     public SoundAudioClip[] soundAudioClipsArray;
+    public AudioMixerGroup sfxMixerGroup;
 
     [SerializeField]
     private Queue<GameObject> soundAudioClipsQueue;
@@ -17,6 +19,9 @@ public class AudioManager : Singleton<AudioManager>
 
     [Header("Music")]
     public SongAudioClip[] musicAudioClipsArray;
+    public AudioMixerGroup musicMixerGroup;
+    
+
 
     public enum Sounds
     {
@@ -62,6 +67,7 @@ public class AudioManager : Singleton<AudioManager>
             soundGameObject = new GameObject("Sound");
             soundAudioClipsQueue.Enqueue(soundGameObject);
             audioSource = soundGameObject.AddComponent<AudioSource>();
+            audioSource.outputAudioMixerGroup = sfxMixerGroup;
         }
         else
         {
@@ -107,6 +113,7 @@ public class AudioManager : Singleton<AudioManager>
             DontDestroyOnLoad(musicGameObject);
         }
         AudioSource audioSource = musicGameObject.GetComponent<AudioSource>();
+        audioSource.outputAudioMixerGroup = musicMixerGroup;
 
         audioSource.Stop();
         audioSource.clip = GetAudioClip(_song).audioClip;

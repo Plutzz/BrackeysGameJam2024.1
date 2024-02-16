@@ -30,7 +30,7 @@ public class LevelManager : Singleton<LevelManager>
     public void ResetLevel() {
 
         reloadingScene?.Invoke();
-
+        
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
@@ -67,6 +67,11 @@ public class LevelManager : Singleton<LevelManager>
         overlay.color = color;
         ResetLevel();
     }
-    
+
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
+
 
 }

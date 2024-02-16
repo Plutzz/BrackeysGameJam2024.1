@@ -4,11 +4,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+
 public class PauseManager : Singleton<PauseManager>
 {
     //TODO distinguish between in game pauses for dialogue and player controlled pauses
     public bool isPaused;
-    public GameObject PauseMenu;
+    public PauseMenu pauseMenu;
+
+    public GameObject firstSelectedButton;
 
 
     private void Start()
@@ -31,7 +34,7 @@ public class PauseManager : Singleton<PauseManager>
     public void Pause()
     {
         Time.timeScale = 0;
-        PauseMenu.SetActive(true);
+        pauseMenu.OpenPauseMenu();
 
         // Relinquishes player input and enables UI input
         InputHandler.Instance.playerInputActions.Player.Disable();
@@ -39,18 +42,20 @@ public class PauseManager : Singleton<PauseManager>
 
 
         isPaused = true;
+
     }
 
     public void UnPause()
     {
         Time.timeScale = 1;
-        PauseMenu.SetActive(false);
+        pauseMenu.ClosePauseMenu();
 
         // Relinquishes UI input and enables player input
         InputHandler.Instance.playerInputActions.Player.Enable();
         InputHandler.Instance.playerInputActions.UI.Disable();
 
         isPaused = false;
+
     }
 
 }

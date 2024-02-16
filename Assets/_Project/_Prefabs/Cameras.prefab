@@ -100,7 +100,7 @@ GameObject:
   - component: {fileID: 9168570905682954901}
   - component: {fileID: 7472646542011559975}
   - component: {fileID: 4141969275167714500}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Room 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -263,7 +263,7 @@ GameObject:
   - component: {fileID: 2362328524011137378}
   - component: {fileID: 6574024157787409723}
   - component: {fileID: 7531834250964412627}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Room 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -523,7 +523,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f453f694addf4275988fac205bc91968, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_BoundingShape2D: {fileID: 9168570905682954901}
+  m_BoundingShape2D: {fileID: 0}
   m_Damping: 0.39
   m_MaxWindowSize: -1
 --- !u!1 &3177354955321446468
@@ -681,7 +681,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f453f694addf4275988fac205bc91968, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_BoundingShape2D: {fileID: 2362328524011137378}
+  m_BoundingShape2D: {fileID: 0}
   m_Damping: 0.5
   m_MaxWindowSize: -1
 --- !u!1 &5272986803954637193
