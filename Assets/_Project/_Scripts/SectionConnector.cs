@@ -22,12 +22,12 @@ public class SectionConnector : MonoBehaviour
 
         if (Vector3.Distance(playerPosition, sideOne.position) < Vector3.Distance(playerPosition, sideTwo.position))
         {
-            LevelManager.Instance.SetRespawnLocation(sideOne.position);
+            LevelManager.Instance.SetRespawnLocation(sideOne.position, cameraOne);
             cameraOne.enabled = true;
             cameraTwo.enabled = false;
         }
         else {
-            LevelManager.Instance.SetRespawnLocation(sideTwo.position);
+            LevelManager.Instance.SetRespawnLocation(sideTwo.position, cameraTwo);
             cameraOne.enabled = false;
             cameraTwo.enabled = true;
         }

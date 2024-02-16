@@ -77,6 +77,13 @@ public class PlayerHealth : UnitHealth
         }
     }
 
+    public override void Die()
+    {
+        base.Die();
+
+        LevelManager.Instance.ScenicResetLevel();
+    }
+
     private IEnumerator Invincibility()
     {
         canTakeDamage = false;

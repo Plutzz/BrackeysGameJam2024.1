@@ -6,4 +6,5 @@ using UnityEngine;
 public class LevelDataScriptableObject : ScriptableObject
 {
     public Vector3 respawnLocation;
+    public int cameraIndex;
 }

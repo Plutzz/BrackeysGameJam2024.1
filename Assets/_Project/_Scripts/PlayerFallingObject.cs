@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerFallingObject : MonoBehaviour
 {
+    [SerializeField] private float verticalVelocity = 10f;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("Player Triggered");
@@ -13,6 +14,7 @@ public class PlayerFallingObject : MonoBehaviour
             if (health != null)
             {
                 health.TakeDamage(1);
+                GetComponentInParent<PlayerMovement>().TakeKnockBack(GetComponentInParent<Rigidbody2D>().velocity, verticalVelocity);
             }
         }
     }
