@@ -35,6 +35,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float fallClamp = -40f;
     [SerializeField] private bool flipGravity = false;
     private float fallAcceleration;
+    private float gravityMultiplier;
 
     [Header("Jumping")]
     [SerializeField] private float jumpHeight = 30;
@@ -64,6 +65,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Head Check")]
     [SerializeField] private Transform headCheck;
     [SerializeField] private Vector2 headCheckSize;
+    [SerializeField] private ContactFilter2D contactFilter;
     public bool hitHead { get; private set; }
 
     // States
@@ -89,9 +91,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        
-
-        
         GravityCheck();
         CollisionCheck();
         HandleStates();
@@ -115,7 +114,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void GravityCheck()
     {
+
+
         if (Input.GetKeyDown(KeyCode.G)) FlipGravity();
+
+        gravityMultiplier = !flipGravity ? 1 : -1;
 
         if (!flipGravity)
         {
@@ -151,19 +154,45 @@ public class PlayerMovement : MonoBehaviour
 
     private void CollisionCheck()
     {
-        IsGrounded = Physics2D.OverlapBox(groundCheck.position, groundCheckSize, 0f, groundLayer);
-        hitHead = Physics2D.OverlapBox(headCheck.position, headCheckSize, 0f, groundLayer);
+        var _groundCheck = Physics2D.OverlapBox(groundCheck.position, groundCheckSize, 0f, groundLayer);
+        // If it is a platform and player is moving up, ignore ground check
+        if (_groundCheck != null)
+        {
+            // is a platform
+            if (_groundCheck.GetComponent<PlatformEffector2D>() != null && currentVelocityY * gravityMultiplier > 0.1f)
+            {
+                Debug.Log("Is a platform");
+                IsGrounded = false;
+            }
+            else
+            {
+                IsGrounded = true;
+            }
+        }
+        else
+        {
+            IsGrounded = false;
+        }
+        var _headCheck = Physics2D.OverlapBox(headCheck.position, headCheckSize, 0f, groundLayer);
+        // If it is a platform, player does not hit head
+        if (_headCheck != null && _headCheck.GetComponent<PlatformEffector2D>() == null)
+        {
+            hitHead = true;
+        }
+        else
+        {
+            hitHead = false;
+        }
+        
     }
 
     private void HandleStates()
     {
-
-
-
         // Player is "airborne" while not on the ground
         if (currentState == States.Airborne && IsGrounded)
         {
             currentState = States.Moving;
+            
             currentVelocityY = 0;
             // Jump is buffered
             if (lastJumpPressed + jumpBuffer > Time.time)
@@ -176,8 +205,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (currentState == States.Moving && !IsGrounded)
         {
-            float _gravityMultiplier = !flipGravity ? 1 : -1;
-            if (currentVelocityY < 0.1f * _gravityMultiplier)
+            if (currentVelocityY < 0.1f * gravityMultiplier)
             {
                 StartCoroutine(StartCoyoteFrames());
             }
@@ -199,7 +227,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void CalculateGravity()
     {
-        float _gravityMultiplier = !flipGravity ? 1 : -1;
 
         if (IsGrounded)
         {
@@ -207,17 +234,17 @@ public class PlayerMovement : MonoBehaviour
             //if (currentVelocityY != 0) currentVelocityY = 0;
         }
         else { 
-            var _fallAcceleration = endedJumpEarly && currentVelocityY * _gravityMultiplier > 0 ? fallAcceleration * jumpEndEarlyGravityModifier : fallAcceleration;
+            var _fallAcceleration = endedJumpEarly && currentVelocityY * gravityMultiplier > 0 ? fallAcceleration * jumpEndEarlyGravityModifier : fallAcceleration;
 
-            currentVelocityY -= _fallAcceleration * Time.deltaTime * _gravityMultiplier;
+            currentVelocityY -= _fallAcceleration * Time.deltaTime * gravityMultiplier;
 
             // Clamp
-            if (Mathf.Abs(currentVelocityY) > Mathf.Abs(fallClamp)) currentVelocityY = -fallClamp * _gravityMultiplier;
+            if (Mathf.Abs(currentVelocityY) > Mathf.Abs(fallClamp)) currentVelocityY = -fallClamp * gravityMultiplier;
         }
 
         if (hitHead)
         {
-            if (currentVelocityY * _gravityMultiplier > 0) currentVelocityY = 0;
+            if (currentVelocityY * gravityMultiplier > 0) currentVelocityY = 0;
         }
 
         /*// Gravity is normal

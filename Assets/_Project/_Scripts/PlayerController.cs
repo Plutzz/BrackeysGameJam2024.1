@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Door")]
     private Door door;
-    [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private LayerMask doorLayer;
 
     void Start()
     {
@@ -150,7 +150,7 @@ public class PlayerController : MonoBehaviour
         //checking for anything on door layer
         //can be optimsed with layer mask
         Debug.Log("Trying to pick up door");
-        RaycastHit2D hit = Physics2D.Raycast(transform.position + transform.right * startOffset, transform.right, rayLength, groundLayer);
+        RaycastHit2D hit = Physics2D.Raycast(transform.position + transform.right * startOffset, transform.right, rayLength, doorLayer);
         if (hit.collider != null)
         {
             door = hit.collider.GetComponent<Door>();

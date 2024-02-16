@@ -8,6 +8,7 @@ public class Door : MonoBehaviour
     [SerializeField] private GameObject graphics;
     [SerializeField] private GameObject openDoorObj;
     [SerializeField] private GameObject closeDoorObj;
+    [SerializeField] private GameObject platformCollider;
 
     private void Awake()
     {
@@ -17,12 +18,14 @@ public class Door : MonoBehaviour
     public void PickUp()
     {
         col.enabled = false;
+        platformCollider.SetActive(false);
         graphics.SetActive(false);
     }
 
     public void PutDown()
     {
         col.enabled = true;
+        platformCollider.SetActive(true);
         graphics.SetActive(true);
     }
 }
