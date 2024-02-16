@@ -1379,6 +1379,14 @@ PrefabInstance:
       propertyPath: playerTransform
       value: 
       objectReference: {fileID: 1894469617}
+    - target: {fileID: 726088368882736255, guid: deb3a140eb2e0f947a469169639c7600, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1361597294836523189, guid: deb3a140eb2e0f947a469169639c7600, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5272986803954637193, guid: deb3a140eb2e0f947a469169639c7600, type: 3}
       propertyPath: m_Name
       value: Cameras
@@ -1554,9 +1562,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 245897007322094089, guid: 9c07f603296206845b1bbd44806cea45, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 635017186068292578, guid: 9c07f603296206845b1bbd44806cea45, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 717395778725874709, guid: 9c07f603296206845b1bbd44806cea45, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2128062930904374609, guid: 9c07f603296206845b1bbd44806cea45, type: 3}
       propertyPath: m_Name
       value: Door
+      objectReference: {fileID: 0}
+    - target: {fileID: 2128062930904374609, guid: 9c07f603296206845b1bbd44806cea45, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2263350920981603153, guid: 9c07f603296206845b1bbd44806cea45, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3642129198650891389, guid: 9c07f603296206845b1bbd44806cea45, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1597,6 +1625,26 @@ PrefabInstance:
     - target: {fileID: 3642129198650891389, guid: 9c07f603296206845b1bbd44806cea45, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4474494874657298597, guid: 9c07f603296206845b1bbd44806cea45, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5096177934054253389, guid: 9c07f603296206845b1bbd44806cea45, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5225801740490402691, guid: 9c07f603296206845b1bbd44806cea45, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5319706293595302158, guid: 9c07f603296206845b1bbd44806cea45, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7522662555402147999, guid: 9c07f603296206845b1bbd44806cea45, type: 3}
+      propertyPath: m_Simulated
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
