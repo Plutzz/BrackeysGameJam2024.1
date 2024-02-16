@@ -40,21 +40,19 @@ public class PlayerController : Singleton<PlayerController>
         playerMovement = GetComponent<PlayerMovement>();
         SubscribeToEvents();
     }
-    public void OnDisable()
-    {
-        UnsubscribeFromEvents();
-    }
 
     private void SubscribeToEvents()
     {
         InputHandler.Instance.playerInputActions.Player.Jump.performed += playerMovement.JumpPressed;
         InputHandler.Instance.playerInputActions.Player.Door.performed += DoorCheck;
+        LevelManager.Instance.reloadingScene += UnsubscribeFromEvents;
     }
 
-    public void UnsubscribeFromEvents()
+    private void UnsubscribeFromEvents()
     {
         InputHandler.Instance.playerInputActions.Player.Jump.performed -= playerMovement.JumpPressed;
         InputHandler.Instance.playerInputActions.Player.Door.performed -= DoorCheck;
+        LevelManager.Instance.reloadingScene -= UnsubscribeFromEvents;
     }
     private void Update()
     {

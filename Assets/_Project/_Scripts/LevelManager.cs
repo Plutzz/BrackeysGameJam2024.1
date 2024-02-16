@@ -10,7 +10,7 @@ public class LevelManager : Singleton<LevelManager>
 
     [SerializeField] private GameObject player;
 
-    private event Action reloadingScene;
+    public event Action reloadingScene;
 
     private void OnEnable()
     {

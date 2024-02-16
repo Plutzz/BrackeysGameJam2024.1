@@ -55,11 +55,4 @@ public class InputHandler : Singleton<InputHandler>
             chargeSpecial = false;
         }
     }
-
-    protected override void OnApplicationQuit()
-    {
-        PlayerController.Instance.UnsubscribeFromEvents();
-        base.OnApplicationQuit();
-    }
-
 }
