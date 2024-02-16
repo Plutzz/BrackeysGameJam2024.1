@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4368414936912579059}
   - component: {fileID: 297893399631641270}
   m_Layer: 6
-  m_Name: Blue Color Block
+  m_Name: Color Block
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -72,10 +72,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -578561715
+  m_SortingLayer: -3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 5788426315487427209, guid: ac226f544305a9c4581ef5c8dc12f1fb, type: 3}
+  m_Sprite: {fileID: 5887710154511286359, guid: 3d664200ca0d89648bb1dd4c1049bba6, type: 3}
   m_Color: {r: 0, g: 0.7058821, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -144,3 +144,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockColor: 0
+  EnabledBlockGraphics: {fileID: 5887710154511286359, guid: 3d664200ca0d89648bb1dd4c1049bba6, type: 3}
+  DisabledBlockGraphics: {fileID: 3975976133751805557, guid: 3d664200ca0d89648bb1dd4c1049bba6, type: 3}
