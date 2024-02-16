@@ -1,8 +1,5 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.CompilerServices;
-using System.Xml.Serialization;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -41,11 +38,23 @@ public class PlayerController : Singleton<PlayerController>
         rb = GetComponent<Rigidbody2D>();
         specialHandler = GetComponent<PlayerSpecialHandler>();
         playerMovement = GetComponent<PlayerMovement>();
+        SubscribeToEvents();
+    }
+    public void OnDisable()
+    {
+        UnsubscribeFromEvents();
+    }
 
+    private void SubscribeToEvents()
+    {
         InputHandler.Instance.playerInputActions.Player.Jump.performed += playerMovement.JumpPressed;
-
-        //Door stuff
         InputHandler.Instance.playerInputActions.Player.Door.performed += DoorCheck;
+    }
+
+    public void UnsubscribeFromEvents()
+    {
+        InputHandler.Instance.playerInputActions.Player.Jump.performed -= playerMovement.JumpPressed;
+        InputHandler.Instance.playerInputActions.Player.Door.performed -= DoorCheck;
     }
     private void Update()
     {
@@ -61,7 +70,7 @@ public class PlayerController : Singleton<PlayerController>
         if (InputHandler.Instance.playerInputActions.Player.Special.WasPerformedThisFrame()) {
             PausePlayerMovement();
         }
-        if (InputHandler.Instance.playerInputActions.Player.Special.WasReleasedThisFrame() ) {
+        if (InputHandler.Instance.playerInputActions.Player.Special.WasReleasedThisFrame()) {
             if (InputHandler.Instance.chargePressTime + specialMaxHoldTime > Time.time) {
                 specialHandler.UseSpecial();
                 StartCoroutine(ReplaceAnimator(gameObject));
