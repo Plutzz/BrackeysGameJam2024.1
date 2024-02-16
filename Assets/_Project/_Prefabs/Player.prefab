@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6726592059971854942}
   - component: {fileID: 3895546889510204912}
   - component: {fileID: 4275411751548670579}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Melee
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -148,7 +148,7 @@ GameObject:
   - component: {fileID: 7018028813924420074}
   - component: {fileID: 454592725790402071}
   - component: {fileID: 4285906701861598060}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Footsteps
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5042,7 +5042,7 @@ GameObject:
   - component: {fileID: 2446294274252613945}
   - component: {fileID: 2955345327829068142}
   - component: {fileID: 1201820626952323400}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -5122,7 +5122,7 @@ MonoBehaviour:
   rayLength: 1.5
   interactableLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   doorLayer:
     serializedVersion: 2
     m_Bits: 512
@@ -5306,7 +5306,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2746568413212969864}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Particles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5338,7 +5338,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6352515841452530849}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5369,7 +5369,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3195496408713258480}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: HeadCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5400,7 +5400,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4689543938330953694}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Graphics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5436,7 +5436,7 @@ GameObject:
   - component: {fileID: 3847929634212778594}
   - component: {fileID: 2965628653351997993}
   - component: {fileID: 7517176257521870480}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PlayerModel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5541,7 +5541,7 @@ GameObject:
   m_Component:
   - component: {fileID: 964331953969157622}
   - component: {fileID: 2631981244068148472}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5625,7 +5625,7 @@ GameObject:
   - component: {fileID: 6432390179454079017}
   - component: {fileID: 4169061339271522330}
   - component: {fileID: 77202588930634063}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: FallingCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}

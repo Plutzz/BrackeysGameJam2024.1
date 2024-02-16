@@ -7,7 +7,7 @@
             "actions": [
                 {
                     "name": "Movement",
-                    "type": "Value",
+                    "type": "PassThrough",
                     "id": "e4e2ac7c-e87b-45f8-b4ab-8b32591afa8d",
                     "expectedControlType": "Vector2",
                     "processors": "",
@@ -63,6 +63,24 @@
                     "name": "Special",
                     "type": "Button",
                     "id": "36fd46f2-4e27-42fd-8055-efbffd11d57b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Door",
+                    "type": "Button",
+                    "id": "1b55dff4-20d0-4ef2-9af4-e2d80eee79ab",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Push",
+                    "type": "Button",
+                    "id": "f6d5d8d4-bced-46c6-83da-899da7a60fc6",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -221,6 +239,28 @@
                     "processors": "",
                     "groups": "Keyboard",
                     "action": "Special",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "919e6721-82ff-40d0-ba0c-aa05cde79df4",
+                    "path": "<Keyboard>/j",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "Door",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2370c12c-a4fb-4548-be94-e942ffc04c39",
+                    "path": "<Keyboard>/k",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "Push",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

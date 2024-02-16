@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using System.Xml.Serialization;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -41,7 +42,9 @@ public class PlayerController : MonoBehaviour
         playerMovement = GetComponent<PlayerMovement>();
 
         InputHandler.Instance.playerInputActions.Player.Jump.performed += playerMovement.JumpPressed;
-        InputHandler.Instance.playerInputActions.Player.Interact.performed += TryPickUpDoor;
+
+        //Door stuff
+        InputHandler.Instance.playerInputActions.Player.Door.performed += TryPickUpDoor;
     }
     private void Update()
     {
@@ -66,9 +69,9 @@ public class PlayerController : MonoBehaviour
             ResumePlayerMovement();
         }
         if (InputHandler.Instance.playerInputActions.Player.Interact.WasPerformedThisFrame()) {
-            //TryInteract();
+            TryInteract();
         }
-        if(InputHandler.Instance.playerInputActions.Player.Interact.WasReleasedThisFrame() && hasDoor)
+        if(InputHandler.Instance.playerInputActions.Player.Door.WasReleasedThisFrame() && hasDoor)
         {
             PutDownDoor();
         }
@@ -144,14 +147,13 @@ public class PlayerController : MonoBehaviour
     }
 
 
-
+    #region Door Methods
     private void TryPickUpDoor(InputAction.CallbackContext context)
     {
         //start ray behind to slightly ahead
         //checking for anything on door layer
         //can be optimsed with layer mask
-        Debug.Log("Trying to pick up door");
-        RaycastHit2D hit = Physics2D.Raycast(transform.position + transform.right * startOffset, transform.right, rayLength, doorLayer);
+        RaycastHit2D hit = Physics2D.Raycast(transform.position + transform.right * startOffset, transform.right, rayLength, interactableLayer);
         if (hit.collider != null)
         {
             door = hit.collider.GetComponent<Door>();
@@ -173,4 +175,5 @@ public class PlayerController : MonoBehaviour
         door.transform.parent = null;
         door = null;
     }
+    #endregion
 }

@@ -107,7 +107,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5464573997145681209}
   - component: {fileID: 2337921213075649611}
-  m_Layer: 9
+  m_Layer: 7
   m_Name: Mask
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -192,7 +192,7 @@ GameObject:
   - component: {fileID: 4880092059513715039}
   - component: {fileID: 635017186068292578}
   - component: {fileID: 7522662555402147999}
-  m_Layer: 9
+  m_Layer: 7
   m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -315,7 +315,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2921083214731918672}
   - component: {fileID: 6521433280225938158}
-  m_Layer: 9
+  m_Layer: 7
   m_Name: OpenPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -399,7 +399,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8579281478346404114}
   - component: {fileID: 5387895047947032626}
-  m_Layer: 9
+  m_Layer: 7
   m_Name: DoorGroundCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -476,7 +476,7 @@ GameObject:
   m_Component:
   - component: {fileID: 331104178826787704}
   - component: {fileID: 8379718842806505626}
-  m_Layer: 9
+  m_Layer: 7
   m_Name: ClosedPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -559,7 +559,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 775673049164616278}
-  m_Layer: 9
+  m_Layer: 7
   m_Name: DoorGraphics
   m_TagString: Untagged
   m_Icon: {fileID: 0}

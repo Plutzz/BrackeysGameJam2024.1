@@ -29,7 +29,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             ""actions"": [
                 {
                     ""name"": ""Movement"",
-                    ""type"": ""Value"",
+                    ""type"": ""PassThrough"",
                     ""id"": ""e4e2ac7c-e87b-45f8-b4ab-8b32591afa8d"",
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
@@ -85,6 +85,24 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""name"": ""Special"",
                     ""type"": ""Button"",
                     ""id"": ""36fd46f2-4e27-42fd-8055-efbffd11d57b"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Door"",
+                    ""type"": ""Button"",
+                    ""id"": ""1b55dff4-20d0-4ef2-9af4-e2d80eee79ab"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Push"",
+                    ""type"": ""Button"",
+                    ""id"": ""f6d5d8d4-bced-46c6-83da-899da7a60fc6"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -245,6 +263,28 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""action"": ""Special"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""919e6721-82ff-40d0-ba0c-aa05cde79df4"",
+                    ""path"": ""<Keyboard>/j"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Door"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2370c12c-a4fb-4548-be94-e942ffc04c39"",
+                    ""path"": ""<Keyboard>/k"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Push"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -345,6 +385,8 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         m_Player_Attack2 = m_Player.FindAction("Attack 2", throwIfNotFound: true);
         m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
         m_Player_Special = m_Player.FindAction("Special", throwIfNotFound: true);
+        m_Player_Door = m_Player.FindAction("Door", throwIfNotFound: true);
+        m_Player_Push = m_Player.FindAction("Push", throwIfNotFound: true);
         // Universal
         m_Universal = asset.FindActionMap("Universal", throwIfNotFound: true);
         m_Universal_Pause = m_Universal.FindAction("Pause", throwIfNotFound: true);
@@ -421,6 +463,8 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Attack2;
     private readonly InputAction m_Player_Jump;
     private readonly InputAction m_Player_Special;
+    private readonly InputAction m_Player_Door;
+    private readonly InputAction m_Player_Push;
     public struct PlayerActions
     {
         private @PlayerInputActions m_Wrapper;
@@ -432,6 +476,8 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         public InputAction @Attack2 => m_Wrapper.m_Player_Attack2;
         public InputAction @Jump => m_Wrapper.m_Player_Jump;
         public InputAction @Special => m_Wrapper.m_Player_Special;
+        public InputAction @Door => m_Wrapper.m_Player_Door;
+        public InputAction @Push => m_Wrapper.m_Player_Push;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -462,6 +508,12 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @Special.started += instance.OnSpecial;
             @Special.performed += instance.OnSpecial;
             @Special.canceled += instance.OnSpecial;
+            @Door.started += instance.OnDoor;
+            @Door.performed += instance.OnDoor;
+            @Door.canceled += instance.OnDoor;
+            @Push.started += instance.OnPush;
+            @Push.performed += instance.OnPush;
+            @Push.canceled += instance.OnPush;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -487,6 +539,12 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @Special.started -= instance.OnSpecial;
             @Special.performed -= instance.OnSpecial;
             @Special.canceled -= instance.OnSpecial;
+            @Door.started -= instance.OnDoor;
+            @Door.performed -= instance.OnDoor;
+            @Door.canceled -= instance.OnDoor;
+            @Push.started -= instance.OnPush;
+            @Push.performed -= instance.OnPush;
+            @Push.canceled -= instance.OnPush;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -661,6 +719,8 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         void OnAttack2(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
         void OnSpecial(InputAction.CallbackContext context);
+        void OnDoor(InputAction.CallbackContext context);
+        void OnPush(InputAction.CallbackContext context);
     }
     public interface IUniversalActions
     {
