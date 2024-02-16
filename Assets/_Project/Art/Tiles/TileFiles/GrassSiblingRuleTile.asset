@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d05ab30bcea7f5d45a52a210a6799221, type: 3}
   m_Name: GrassSiblingRuleTile
   m_EditorClassIdentifier: 
-  m_DefaultSprite: {fileID: 4548488610206211808, guid: 3d664200ca0d89648bb1dd4c1049bba6, type: 3}
+  m_DefaultSprite: {fileID: 3726814924504970574, guid: 3d664200ca0d89648bb1dd4c1049bba6, type: 3}
   m_DefaultGameObject: {fileID: 0}
   m_DefaultColliderType: 1
   m_TilingRules:
