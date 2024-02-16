@@ -79,6 +79,10 @@ public class PlayerController : Singleton<PlayerController>
         {
             StopPushingDoor();
         }
+
+        if (Input.GetKeyDown(KeyCode.R)) { 
+            LevelManager.Instance.ResetLevel();
+        }
     }
 
     void FixedUpdate()

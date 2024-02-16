@@ -22,7 +22,8 @@ public class PauseManager : Singleton<PauseManager>
         {
             UnPause();
         }
-        else { 
+        else
+        {
             Pause();
         }
     }
@@ -40,7 +41,8 @@ public class PauseManager : Singleton<PauseManager>
         isPaused = true;
     }
 
-    public void UnPause() { 
+    public void UnPause()
+    {
         Time.timeScale = 1;
         PauseMenu.SetActive(false);
 
