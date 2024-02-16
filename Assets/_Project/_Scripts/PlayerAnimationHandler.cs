@@ -32,6 +32,11 @@ public class PlayerAnimationHandler : MonoBehaviour
             DuckWalkState = "DuckWalk_NoDoor";
             DuckIdleState = "DuckIdle_NoDoor";
             DuckJumpState = "DuckJump_NoDoor";
+            if (playerController.isPushingDoor)
+            {
+                DuckWalkState = "DuckWalk_Push";
+                DuckIdleState = "DuckIdle_Push";
+            }
         }
 
         // Ensures state change is only triggered once

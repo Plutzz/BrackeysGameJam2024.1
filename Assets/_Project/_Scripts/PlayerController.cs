@@ -33,6 +33,7 @@ public class PlayerController : MonoBehaviour
     [Header("Door")]
     [SerializeField] private LayerMask doorLayer;
     private Door door;
+    public bool isPushingDoor { get; private set; } 
 
 
     void Start()
@@ -44,11 +45,11 @@ public class PlayerController : MonoBehaviour
         InputHandler.Instance.playerInputActions.Player.Jump.performed += playerMovement.JumpPressed;
 
         //Door stuff
-        InputHandler.Instance.playerInputActions.Player.Door.performed += TryPickUpDoor;
+        InputHandler.Instance.playerInputActions.Player.Door.performed += DoorCheck;
+        InputHandler.Instance.playerInputActions.Player.Push.performed += DoorCheck;
     }
     private void Update()
     {
-        Debug.DrawRay(transform.position + transform.right * startOffset, transform.right * rayLength);
         ApplyInputs();
     }
 
@@ -71,9 +72,13 @@ public class PlayerController : MonoBehaviour
         if (InputHandler.Instance.playerInputActions.Player.Interact.WasPerformedThisFrame()) {
             TryInteract();
         }
-        if(InputHandler.Instance.playerInputActions.Player.Door.WasReleasedThisFrame() && hasDoor)
+        if(hasDoor && InputHandler.Instance.playerInputActions.Player.Door.WasReleasedThisFrame())
         {
             PutDownDoor();
+        }
+        if (isPushingDoor && InputHandler.Instance.playerInputActions.Player.Push.WasReleasedThisFrame())
+        {
+            StopPushingDoor();
         }
     }
 
@@ -146,9 +151,8 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-
     #region Door Methods
-    private void TryPickUpDoor(InputAction.CallbackContext context)
+    private void DoorCheck(InputAction.CallbackContext context)
     {
         //start ray behind to slightly ahead
         //checking for anything on door layer
@@ -159,19 +163,40 @@ public class PlayerController : MonoBehaviour
             door = hit.collider.GetComponent<Door>();
             if (door != null)
             {
-                Debug.Log("Pick Up Door!");
-                door.PickUp();
-                door.transform.position = transform.position + (Vector3.up * 0.5f);
-                door.transform.parent = transform;
-                hasDoor = true;
+                if (context.action.name == "Push")
+                {
+                    PushDoor();
+                }
+                else if(!isPushingDoor)
+                {
+                    PickUpDoor();
+                }
             }
-
         }
+    }
+    private void PickUpDoor()
+    {
+        door.PickUp();
+        door.transform.position = transform.position + (Vector3.up * 0.5f);
+        door.transform.parent = transform;
+        hasDoor = true;
     }
     private void PutDownDoor()
     {
         hasDoor = false;
         door.PutDown();
+        door.transform.parent = null;
+        door = null;
+    }
+
+    public void PushDoor()
+    {
+        door.transform.parent = transform;
+        isPushingDoor = true;
+    }
+    private void StopPushingDoor()
+    {
+        isPushingDoor = false;
         door.transform.parent = null;
         door = null;
     }

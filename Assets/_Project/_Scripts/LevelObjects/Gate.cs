@@ -2,10 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Gate : MonoBehaviour
+public class Gate : Activatable
 {
-    [SerializeField] private StageButton button;
-    [SerializeField] private bool oneTimeGate;
     private Animator anim;
     private string currentState;
     private Collider2D gateCollider;
@@ -15,18 +13,6 @@ public class Gate : MonoBehaviour
         anim = GetComponent<Animator>();
         gateCollider = GetComponent<Collider2D>();
     }
-
-    private void Start()
-    {
-        button.onButtonDown += OpenGate;
-
-        if(!oneTimeGate)
-        {
-            button.onButtonUp += CloseGate;
-        }
-        
-    }
-
     private void OpenGate()
     {
         ChangeAnimationState("GateOpen");
@@ -51,4 +37,13 @@ public class Gate : MonoBehaviour
         currentState = newState;
     }
 
+    public override void Activate()
+    {
+        OpenGate();
+    }
+
+    public override void Deactivate()
+    {
+        CloseGate();
+    }
 }

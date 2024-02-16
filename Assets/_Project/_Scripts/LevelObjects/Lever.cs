@@ -1,26 +1,63 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.MPE;
 using UnityEngine;
-using UnityEngine.Events;
 
 public class Lever : Interactable
 {
-    [SerializeField] private UnityEvent onEvent;
-    [SerializeField] private UnityEvent offEvent;
+    //Animations
+    private Animator anim;
+    private string currentState;
+    private bool isActivated;
 
-    private bool leverOn;
+    [SerializeField] private Activatable[] activatables;
+
     public override void Interact()
     {
-        leverOn = !leverOn;
-        if (leverOn)
+        if(isActivated)
         {
-            onEvent?.Invoke();
+            LeverOff();
         }
-        else {
-            offEvent?.Invoke();
+        else
+        {
+            LeverOn();
         }
-        
+    }
+
+    private void Awake()
+    {
+        anim = GetComponent<Animator>();
+    }
+    private void LeverOn()
+    {
+        Debug.Log("Lever Down");
+        ChangeAnimationState("LeverOn");
+        isActivated = true;
+        foreach(var activatable in activatables)
+        {
+            activatable.Activate();
+        }
+
+    }
+    private void LeverOff()
+    {
+        ChangeAnimationState("LeverOff");
+        isActivated = false;
+        foreach (var activatable in activatables)
+        {
+            activatable.Deactivate();
+        }
+    }
+    private void ChangeAnimationState(string newState)
+    {
+
+        // Ensures state change is only triggered once
+        if (currentState == newState) return;
+
+        anim.Play(newState);
+
+        // reassign the current state
+        currentState = newState;
     }
 
 }

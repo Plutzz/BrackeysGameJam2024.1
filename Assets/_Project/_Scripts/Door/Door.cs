@@ -66,4 +66,28 @@ public class Door : Interactable
             CloseDoor();
         }
     }
+
+    private void PushDoor()
+    {
+        if (isOpen)
+        {
+            CloseDoor();
+        }
+        col.enabled = false;
+        platformCollider.SetActive(false);
+        rb.bodyType = RigidbodyType2D.Kinematic;
+    }
+
+    public void StopPushingDoor()
+    {
+
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(InputHandler.Instance.playerInputActions.Player.Push.IsPressed())
+        {
+            PushDoor();
+        }
+    }
 }

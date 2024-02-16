@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
-[CreateAssetMenu]
 public class ColorBlock : MonoBehaviour
 {
     public ColorBlockManager.BlockColors blockColor;
