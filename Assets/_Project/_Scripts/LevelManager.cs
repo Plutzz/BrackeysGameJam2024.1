@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,12 +10,17 @@ public class LevelManager : Singleton<LevelManager>
 
     [SerializeField] private GameObject player;
 
+    private event Action reloadingScene;
+
     private void OnEnable()
     {
         player.transform.position = levelData.respawnLocation;
     }
 
     public void ResetLevel() {
+
+        reloadingScene?.Invoke();
+
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
