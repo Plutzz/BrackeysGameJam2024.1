@@ -5123,6 +5123,9 @@ MonoBehaviour:
   interactableLayer:
     serializedVersion: 2
     m_Bits: 0
+  doorLayer:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!61 &2912692242817594504
 BoxCollider2D:
   m_ObjectHideFlags: 0

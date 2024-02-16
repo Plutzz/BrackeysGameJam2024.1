@@ -65,7 +65,6 @@ public class PlayerMovement : MonoBehaviour
     [Header("Head Check")]
     [SerializeField] private Transform headCheck;
     [SerializeField] private Vector2 headCheckSize;
-    [SerializeField] private ContactFilter2D contactFilter;
     public bool hitHead { get; private set; }
 
     // States

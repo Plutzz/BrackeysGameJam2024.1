@@ -30,8 +30,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private LayerMask interactableLayer;
 
     [Header("Door")]
-    private Door door;
     [SerializeField] private LayerMask doorLayer;
+    private Door door;
+
 
     void Start()
     {
