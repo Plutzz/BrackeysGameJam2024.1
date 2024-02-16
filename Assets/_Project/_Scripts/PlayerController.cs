@@ -6,7 +6,7 @@ using System.Xml.Serialization;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : Singleton<PlayerController>
 {
     private PlayerMovement playerMovement;
     public bool isFacingRight { get; private set; } = true;
@@ -46,7 +46,6 @@ public class PlayerController : MonoBehaviour
 
         //Door stuff
         InputHandler.Instance.playerInputActions.Player.Door.performed += DoorCheck;
-        InputHandler.Instance.playerInputActions.Player.Push.performed += DoorCheck;
     }
     private void Update()
     {
@@ -102,7 +101,7 @@ public class PlayerController : MonoBehaviour
 
     private void Flip()
     {
-        if (playerMovement.enabled == false) {
+        if (playerMovement.enabled == false || isPushingDoor) {
             return;
         }
         transform.rotation = Quaternion.Euler(new Vector3(transform.rotation.x, isFacingRight? 180 : 0, transform.rotation.z));
@@ -163,11 +162,7 @@ public class PlayerController : MonoBehaviour
             door = hit.collider.GetComponent<Door>();
             if (door != null)
             {
-                if (context.action.name == "Push")
-                {
-                    PushDoor();
-                }
-                else if(!isPushingDoor)
+                if(!isPushingDoor)
                 {
                     PickUpDoor();
                 }
@@ -189,14 +184,16 @@ public class PlayerController : MonoBehaviour
         door = null;
     }
 
-    public void PushDoor()
+    public void PushDoor(Door _door)
     {
+        door = _door;
         door.transform.parent = transform;
         isPushingDoor = true;
     }
-    private void StopPushingDoor()
+    public void StopPushingDoor()
     {
         isPushingDoor = false;
+        door.StopPushingDoor();
         door.transform.parent = null;
         door = null;
     }

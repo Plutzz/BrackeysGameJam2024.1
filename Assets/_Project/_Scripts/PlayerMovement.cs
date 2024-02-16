@@ -8,8 +8,6 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerMovement : MonoBehaviour
 {
-
-
     private Rigidbody2D rb;
     private PlayerAnimationHandler animationHandler;
 
@@ -43,7 +41,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float coyoteTimeThreshold = 0.1f;
     [SerializeField] private float jumpBuffer = 0.2f;
     [SerializeField] private float jumpEndEarlyGravityModifier = 3;
-
     private float timeLeftGround;
     [SerializeField] private bool coyoteUsable;
     private bool endedJumpEarly = true;
@@ -313,6 +310,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void Jump()
     {
+        if (PlayerController.Instance.isPushingDoor) return;
+
         animationHandler.ChangeAnimationState(animationHandler.DuckJumpState);
         timeLeftGround = Time.time;
         endedJumpEarly = false;
