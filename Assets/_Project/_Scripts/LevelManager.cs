@@ -36,6 +36,13 @@ public class LevelManager : Singleton<LevelManager>
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
+    public void LoadScene(string sceneName)
+    {
+        reloadingScene?.Invoke();
+
+        SceneManager.LoadScene(sceneName);
+    }
+
     public void SetRespawnLocation(Vector3 newRespawnLocation, CinemachineVirtualCamera activeCamera) {
         levelData.respawnLocation = newRespawnLocation;
         for (int i = 0; i < virtualCameras.Length; i++) { 

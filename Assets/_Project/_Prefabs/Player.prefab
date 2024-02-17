@@ -5087,7 +5087,8 @@ MonoBehaviour:
   maxFallAcceleration: 30
   fallClamp: 40
   flipGravity: 0
-  jumpHeight: 15
+  jumpHeight: 13.5
+  doorJumpHeight: 14.5
   jumpApexThreshold: 1
   coyoteTimeThreshold: 0.1
   jumpBuffer: 0.1
@@ -5120,9 +5121,9 @@ MonoBehaviour:
   interactableLayer:
     serializedVersion: 2
     m_Bits: 128
-  doorLayer:
+  boxLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 512
   pushableBox: {fileID: 0}
 --- !u!61 &2912692242817594504
 BoxCollider2D:
