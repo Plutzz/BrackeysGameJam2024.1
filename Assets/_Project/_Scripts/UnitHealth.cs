@@ -15,7 +15,7 @@ public class UnitHealth : MonoBehaviour
     public virtual void TakeDamage(float damage)
     {
         health -= damage;
-        Debug.Log("take " + damage + " damage");
+        //Debug.Log("take " + damage + " damage");
 
         if (health <= 0) {
             Die();
@@ -32,7 +32,7 @@ public class UnitHealth : MonoBehaviour
             
             Vector3 forceDirection = (transform.position - damageOrigin).normalized;
 
-            Debug.Log("Take Knockback in this direction: " + forceDirection);
+            //Debug.Log("Take Knockback in this direction: " + forceDirection);
 
             rb.velocity = defaultKnockbackForce * forceDirection;
 

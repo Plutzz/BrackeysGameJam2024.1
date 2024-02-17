@@ -241,30 +241,7 @@ public class PlayerMovement : MonoBehaviour
             if (currentVelocityY * gravityMultiplier > 0) currentVelocityY = 0;
         }
 
-        /*// Gravity is normal
-        else if(!flipGravity)
-        {
-            // Add downward force while ascending if we ended the jump early
-            var _fallAcceleration = endedJumpEarly && currentVelocityY > 0 ? fallAcceleration * jumpEndEarlyGravityModifier : fallAcceleration;
-
-            // Fall
-            currentVelocityY -= _fallAcceleration * Time.deltaTime;
-
-            // Clamp
-            if (Mathf.Abs(currentVelocityY) > Mathf.Abs(fallClamp)) currentVelocityY = -fallClamp;
-        }
-        // Gravity is flipped
-        else
-        {
-            // Add downward force while ascending if we ended the jump early
-            var _fallAcceleration = endedJumpEarly && currentVelocityY < 0 ? fallAcceleration * jumpEndEarlyGravityModifier : fallAcceleration;
-
-            // Fall
-            currentVelocityY += _fallAcceleration * Time.deltaTime;
-
-            // Clamp
-            if (Mathf.Abs(currentVelocityY) > Mathf.Abs(fallClamp)) currentVelocityY = fallClamp;
-        }*/
+        
     }
 
     // Player has reduced gravity as they approach the apex of their jump
@@ -302,13 +279,22 @@ public class PlayerMovement : MonoBehaviour
 
     public void TakeKnockBack(Vector2 _knockBackVector, float _knockUpAmount)
     {
+        Debug.Log($"Ended jump early: {endedJumpEarly}");
+        Debug.Log($"Initial Y Velocity: {rb.velocity.y}");
+        JumpCanceled();
+
         currentVelocityX = _knockBackVector.x;
         currentVelocityY = _knockUpAmount;
+
+        Debug.Log($"Final Y Velocity: {rb.velocity.y}");
+        Debug.Log($"Acceleration: {fallAcceleration}");
     }
 
     private void Jump()
     {
         if (PlayerController.Instance.isPushingBox) return;
+
+        Debug.Log("Jumping");
 
         animationHandler.ChangeAnimationState(animationHandler.DuckJumpState);
         timeLeftGround = Time.time;
