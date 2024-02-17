@@ -32,7 +32,7 @@ public class PlayerAnimationHandler : MonoBehaviour
             DuckWalkState = "DuckWalk_NoDoor";
             DuckIdleState = "DuckIdle_NoDoor";
             DuckJumpState = "DuckJump_NoDoor";
-            if (playerController.isPushingDoor)
+            if (playerController.isPushingBox)
             {
                 DuckWalkState = "DuckWalk_Push";
                 DuckIdleState = "DuckIdle_Push";

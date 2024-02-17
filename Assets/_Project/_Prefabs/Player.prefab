@@ -164,7 +164,7 @@ Transform:
   m_GameObject: {fileID: 692527921291309760}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.1, y: -0.5, z: 0}
+  m_LocalPosition: {x: -0.27, y: -0.475, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -423,9 +423,9 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     startSize:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 0.15
-      minScalar: 1
+      minScalar: 0.1
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -476,7 +476,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startSizeY:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 1
       minScalar: 1
       maxCurve:
@@ -529,7 +529,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startSizeZ:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 1
       minScalar: 1
       maxCurve:
@@ -1563,7 +1563,7 @@ ParticleSystem:
         m_NumAlphaKeys: 2
   UVModule:
     serializedVersion: 2
-    enabled: 1
+    enabled: 0
     mode: 1
     timeMode: 0
     fps: 30
@@ -3817,7 +3817,7 @@ ParticleSystem:
     enabled: 1
     serializedVersion: 4
     type: 1
-    collisionMode: 0
+    collisionMode: 1
     colliderForce: 0
     multiplyColliderForceByParticleSize: 1
     multiplyColliderForceByParticleSpeed: 0
@@ -3987,7 +3987,7 @@ ParticleSystem:
     radiusScale: 1
     collidesWith:
       serializedVersion: 2
-      m_Bits: 4294967295
+      m_Bits: 64
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5
@@ -4972,7 +4972,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+  - {fileID: 2100000, guid: 6e2ca70442216184189c5b95ca4c13d9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4990,9 +4990,9 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1040231435
-  m_SortingLayer: -2
-  m_SortingOrder: 1
+  m_SortingLayerID: 1129740619
+  m_SortingLayer: -1
+  m_SortingOrder: 0
   m_RenderMode: 0
   m_MeshDistribution: 0
   m_SortMode: 0
@@ -5038,7 +5038,6 @@ GameObject:
   - component: {fileID: 4109238235498923531}
   - component: {fileID: 2912692242817594504}
   - component: {fileID: 6811564988920863054}
-  - component: {fileID: 5950880913854584597}
   - component: {fileID: 2446294274252613945}
   - component: {fileID: 2955345327829068142}
   - component: {fileID: 1201820626952323400}
@@ -5098,7 +5097,7 @@ MonoBehaviour:
   groundCheckSize: {x: 0.85, y: 0.125}
   groundLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 576
   headCheck: {fileID: 3195496408713258480}
   headCheckSize: {x: 0.85, y: 0.125}
 --- !u!114 &4109238235498923531
@@ -5115,8 +5114,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraFollowObject: {fileID: 0}
   fallingGameObject: {fileID: 7922510943616794740}
-  specialMaxHoldTime: 1
-  dummyAnimator: {fileID: 5839214420964100717, guid: 0f8751faf113f6843bccf20822dbb885, type: 3}
   hasDoor: 0
   startOffset: -0.5
   rayLength: 1.5
@@ -5125,7 +5122,8 @@ MonoBehaviour:
     m_Bits: 128
   doorLayer:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 0
+  pushableBox: {fileID: 0}
 --- !u!61 &2912692242817594504
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5198,19 +5196,6 @@ Rigidbody2D:
   m_SleepingMode: 0
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &5950880913854584597
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 726059896361250313}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6773cd71344a37147aa2725922dd9b98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  forwardSpecial: {fileID: 11400000, guid: 0b1bcb3c1bb3a224099870393e61d0a7, type: 2}
 --- !u!114 &2446294274252613945
 MonoBehaviour:
   m_ObjectHideFlags: 0
