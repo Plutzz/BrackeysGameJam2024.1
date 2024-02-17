@@ -11,12 +11,7 @@ public class Door : Interactable
     [SerializeField] private GameObject openDoorObj;
     [SerializeField] private GameObject closeDoorObj;
     [SerializeField] private GameObject platformCollider;
-    [SerializeField] private GameObject groundCollider;
 
-    [Header("Ground Check")]
-    [SerializeField] private Transform groundCheck;
-    [SerializeField] private Vector2 groundCheckSize;
-    [SerializeField] private LayerMask groundLayer;
 
 
     private void Awake()
@@ -24,20 +19,6 @@ public class Door : Interactable
         col = GetComponent<Collider2D>();
         rb = GetComponent<Rigidbody2D>();
     }
-
-    private void Update()
-    {
-        if(PlayerController.Instance.isPushingDoor)
-        {
-            bool _groundCheck = Physics2D.OverlapBox(groundCheck.position, groundCheckSize, 0f, groundLayer);
-            if(!_groundCheck)
-            {
-                PlayerController.Instance.StopPushingDoor();
-            }
-        }
-
-    }
-
     public void PickUp()
     {
         if(isOpen)
@@ -84,36 +65,5 @@ public class Door : Interactable
         {
             CloseDoor();
         }
-    }
-
-    private void PushDoor()
-    {
-        if (isOpen)
-        {
-            CloseDoor();
-        }
-        PlayerController.Instance.PushDoor(this);
-        platformCollider.SetActive(false);
-        rb.bodyType = RigidbodyType2D.Kinematic;
-    }
-
-    public void StopPushingDoor()
-    {
-        platformCollider.SetActive(true);
-        rb.bodyType = RigidbodyType2D.Dynamic;
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(InputHandler.Instance.playerInputActions.Player.Push.IsPressed())
-        {
-            PushDoor();
-        }
-    }
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireCube(groundCheck.position, groundCheckSize);
     }
 }

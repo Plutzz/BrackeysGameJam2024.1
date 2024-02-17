@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -14,11 +13,6 @@ public class PlayerController : Singleton<PlayerController>
     private Rigidbody2D rb;
     [SerializeField] private GameObject fallingGameObject;
 
-    [Header ("Specials")]
-    private PlayerSpecialHandler specialHandler;
-    [SerializeField] private float specialMaxHoldTime = 1f;
-    [SerializeField] private GameObject dummyAnimator;
-
     [Header("Ability Checks")]
     public bool hasDoor;
 
@@ -30,13 +24,13 @@ public class PlayerController : Singleton<PlayerController>
     [Header("Door")]
     [SerializeField] private LayerMask doorLayer;
     private Door door;
-    public bool isPushingDoor { get; private set; } 
+    public bool isPushingBox { get; private set; }
+    public PushableBox pushableBox;
 
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        specialHandler = GetComponent<PlayerSpecialHandler>();
         playerMovement = GetComponent<PlayerMovement>();
         SubscribeToEvents();
     }
@@ -60,33 +54,29 @@ public class PlayerController : Singleton<PlayerController>
     }
 
     private void ApplyInputs() {
+
         playerMovement.ReceiveHorizontalInput(InputHandler.Instance.inputVector.x);
+
         if (InputHandler.Instance.playerInputActions.Player.Jump.WasReleasedThisFrame())
         {
             playerMovement.JumpCanceled();
         }
-        if (InputHandler.Instance.playerInputActions.Player.Special.WasPerformedThisFrame()) {
+        if (InputHandler.Instance.playerInputActions.Player.Special.WasPerformedThisFrame()) 
+        {
             PausePlayerMovement();
         }
-        if (InputHandler.Instance.playerInputActions.Player.Special.WasReleasedThisFrame()) {
-            if (InputHandler.Instance.chargePressTime + specialMaxHoldTime > Time.time) {
-                specialHandler.UseSpecial();
-                StartCoroutine(ReplaceAnimator(gameObject));
-            }
-            ResumePlayerMovement();
-        }
-        if (InputHandler.Instance.playerInputActions.Player.Interact.WasPerformedThisFrame()) {
+        if (InputHandler.Instance.playerInputActions.Player.Interact.WasPerformedThisFrame()) 
+        {
             TryInteract();
         }
         if(hasDoor && InputHandler.Instance.playerInputActions.Player.Door.WasReleasedThisFrame())
         {
             PutDownDoor();
         }
-        if (isPushingDoor && InputHandler.Instance.playerInputActions.Player.Push.WasReleasedThisFrame())
+        if (isPushingBox && InputHandler.Instance.playerInputActions.Player.Push.WasReleasedThisFrame())
         {
-            StopPushingDoor();
+            StopPushingBox();
         }
-
         if (Input.GetKeyDown(KeyCode.R)) { 
             LevelManager.Instance.ResetLevel();
         }
@@ -112,7 +102,7 @@ public class PlayerController : Singleton<PlayerController>
 
     private void Flip()
     {
-        if (playerMovement.enabled == false || isPushingDoor) {
+        if (playerMovement.enabled == false || isPushingBox) {
             return;
         }
         transform.rotation = Quaternion.Euler(new Vector3(transform.rotation.x, isFacingRight? 180 : 0, transform.rotation.z));
@@ -132,21 +122,6 @@ public class PlayerController : Singleton<PlayerController>
 
     private void ResumePlayerMovement() {
         playerMovement.enabled = true;
-    }
-
-    IEnumerator ReplaceAnimator(GameObject user)
-    {
-        Debug.Log("Trying to replace animator");
-        Animator animator = user.GetComponentInChildren<Animator>();
-
-        RuntimeAnimatorController originalController = animator.runtimeAnimatorController;
-
-        animator.runtimeAnimatorController = dummyAnimator.GetComponent<Animator>().runtimeAnimatorController;
-
-        yield return new WaitForSeconds(3);
-
-        animator.runtimeAnimatorController = originalController;
-
     }
 
     private void TryInteract() {
@@ -173,7 +148,7 @@ public class PlayerController : Singleton<PlayerController>
             door = hit.collider.GetComponent<Door>();
             if (door != null)
             {
-                if(!isPushingDoor)
+                if(!isPushingBox)
                 {
                     PickUpDoor();
                 }
@@ -195,18 +170,19 @@ public class PlayerController : Singleton<PlayerController>
         door = null;
     }
 
-    public void PushDoor(Door _door)
+    public void PushBox()
     {
-        door = _door;
-        door.transform.parent = transform;
-        isPushingDoor = true;
+        isPushingBox = true;
     }
-    public void StopPushingDoor()
+    public void StopPushingBox()
     {
-        isPushingDoor = false;
-        door.StopPushingDoor();
-        door.transform.parent = null;
-        door = null;
+        isPushingBox = false;
+        if(pushableBox != null)
+        {
+            pushableBox.StopPush();
+        }
+        pushableBox = null;
     }
+
     #endregion
 }
