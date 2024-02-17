@@ -215,7 +215,7 @@ public class PlayerController : Singleton<PlayerController>
         if (hit.collider != null)
         {
             pushableBox = hit.collider.GetComponent<PushableBox>();
-            if (pushableBox != null && readyToPush && pushableBox.IsGrounded)
+            if (pushableBox != null && readyToPush && pushableBox.IsGrounded && GetComponent<PlayerMovement>().IsGrounded)
             {
                 if (hasDoor)
                 {

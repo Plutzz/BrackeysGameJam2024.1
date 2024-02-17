@@ -15,7 +15,6 @@ public class PushableBox : MonoBehaviour
     [SerializeField] private Transform groundCheck;
     [SerializeField] private Vector2 groundCheckSize;
     [SerializeField] private LayerMask groundLayer;
-    [SerializeField] private float playerRaycastOffset;
     public bool IsGrounded { get; private set; }
 
     [Header("Gravity Variables")]
@@ -48,15 +47,22 @@ public class PushableBox : MonoBehaviour
         IsGrounded = Physics2D.OverlapBox(groundCheck.position, groundCheckSize, 0f, groundLayer);
         if (PlayerController.Instance.isPushingBox)
         {
-            if (!IsGrounded && PlayerController.Instance.pushableBox != null)
+            if (PlayerController.Instance.pushableBox != null && PlayerController.Instance.pushableBox == this)
             {
-                Debug.Log("Box Off The Ground");
-                PlayerController.Instance.StopPushingBox();
+                if(!IsGrounded)
+                {
+                    Debug.Log("Box Off The Ground");
+                    PlayerController.Instance.StopPushingBox();
+                }
+            }
+            else if (!IsGrounded)
+            {
+                rb.bodyType = RigidbodyType2D.Kinematic;
             }
         }
 
         // When the box hits the ground, set it's body type to static
-        if (!gettingPushed && rb.bodyType == RigidbodyType2D.Kinematic)
+        if (!gettingPushed && rb.bodyType != RigidbodyType2D.Static)
         {
             if (IsGrounded)
             {
