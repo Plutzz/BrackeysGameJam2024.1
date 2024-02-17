@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7655687684572543257}
   - component: {fileID: 8585511997133801682}
   m_Layer: 0
-  m_Name: Gate
+  m_Name: GrassGate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

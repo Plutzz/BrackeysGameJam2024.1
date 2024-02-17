@@ -7,12 +7,16 @@ public class Gate : Activatable
     private Animator anim;
     private string currentState;
     private Collider2D gateCollider;
+    [SerializeField] private bool inverseGate;
 
     private void Awake()
     {
         anim = GetComponent<Animator>();
         gateCollider = GetComponent<Collider2D>();
+
+        if (inverseGate) OpenGate();
     }
+
     private void OpenGate()
     {
         ChangeAnimationState("GateOpen");
@@ -39,11 +43,18 @@ public class Gate : Activatable
 
     public override void Activate()
     {
-        OpenGate();
+        if (inverseGate)
+            CloseGate();
+        else
+            OpenGate();
     }
 
     public override void Deactivate()
     {
-        CloseGate();
+        if (inverseGate)
+            OpenGate();
+        else
+            CloseGate();
+
     }
 }
