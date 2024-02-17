@@ -66,7 +66,7 @@ public class PushableBox : MonoBehaviour
         {
             if (IsGrounded)
             {
-                rb.bodyType = RigidbodyType2D.Static;
+                //rb.bodyType = RigidbodyType2D.Static;
             }
         }
     }
@@ -92,7 +92,12 @@ public class PushableBox : MonoBehaviour
 
     private void CalculateGravity()
     {
-        if(!IsGrounded && rb.bodyType == RigidbodyType2D.Kinematic)
+        if(!gettingPushed)
+        {
+            rb.velocity = new Vector2(0, currentVelocityY);
+        }
+
+        if(!IsGrounded && !gettingPushed)
         {
             currentVelocityY -= fallAcceleration * Time.deltaTime * gravityMultiplier;
 
@@ -101,7 +106,7 @@ public class PushableBox : MonoBehaviour
             {
                 currentVelocityY = -fallClamp * gravityMultiplier;
             }
-            rb.velocity = new Vector2(rb.velocity.x, currentVelocityY);
+            rb.velocity = new Vector2(0, currentVelocityY);
         }
         else
         {
@@ -125,7 +130,6 @@ public class PushableBox : MonoBehaviour
 
         gettingPushed = false;
         Debug.Log("Stop Push");
-        rb.bodyType = RigidbodyType2D.Kinematic;
         rb.velocity = Vector2.zero;
 
     }
