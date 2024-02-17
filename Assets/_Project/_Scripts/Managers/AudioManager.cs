@@ -25,25 +25,20 @@ public class AudioManager : SingletonPersistent<AudioManager>
 
     public enum Sounds
     {
-        PlayerDamage,
-        PoolStickSwipe,
-        PoolStickProjectile,
-        Boomerang,
-        TridentStab,
-        TridentThrow,
-        ScorpionPincer,
-        ArmordiloRoll,
-        DealerAttack
+        DuckWalk,
+
     }
 
     public enum Songs
     {
-        TestSong
+        MainMenu,
+        HaroldsPerplection,
+        SeaOfCircuts
     }
 
     private void Start()
     {
-        PlaySong(Songs.TestSong);
+        PlaySong(Songs.MainMenu);
     }
 
     /// <summary>

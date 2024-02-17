@@ -343,6 +343,42 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1913809583683673993, guid: 6ba5eee84c311f741b1d7dd7362a2be6, type: 3}
+      propertyPath: musicAudioClipsArray.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1913809583683673993, guid: 6ba5eee84c311f741b1d7dd7362a2be6, type: 3}
+      propertyPath: musicAudioClipsArray.Array.data[1].song
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1913809583683673993, guid: 6ba5eee84c311f741b1d7dd7362a2be6, type: 3}
+      propertyPath: musicAudioClipsArray.Array.data[2].song
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1913809583683673993, guid: 6ba5eee84c311f741b1d7dd7362a2be6, type: 3}
+      propertyPath: musicAudioClipsArray.Array.data[0].volume
+      value: 0.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 1913809583683673993, guid: 6ba5eee84c311f741b1d7dd7362a2be6, type: 3}
+      propertyPath: musicAudioClipsArray.Array.data[1].volume
+      value: 0.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 1913809583683673993, guid: 6ba5eee84c311f741b1d7dd7362a2be6, type: 3}
+      propertyPath: musicAudioClipsArray.Array.data[2].volume
+      value: 0.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 1913809583683673993, guid: 6ba5eee84c311f741b1d7dd7362a2be6, type: 3}
+      propertyPath: musicAudioClipsArray.Array.data[0].audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: dbe3881515b436f45acd323ce242f6d4, type: 3}
+    - target: {fileID: 1913809583683673993, guid: 6ba5eee84c311f741b1d7dd7362a2be6, type: 3}
+      propertyPath: musicAudioClipsArray.Array.data[1].audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 7648d0081f8602548a5fee1231d897f7, type: 3}
+    - target: {fileID: 1913809583683673993, guid: 6ba5eee84c311f741b1d7dd7362a2be6, type: 3}
+      propertyPath: musicAudioClipsArray.Array.data[2].audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: f48a2ef1b4d56a3418b2dc260b17c453, type: 3}
     - target: {fileID: 4371969006464981452, guid: 6ba5eee84c311f741b1d7dd7362a2be6, type: 3}
       propertyPath: m_Name
       value: AudioManager

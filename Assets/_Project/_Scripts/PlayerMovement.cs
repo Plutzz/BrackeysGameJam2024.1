@@ -19,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Horizontal Movement")]
     [SerializeField] private float maxSpeed = 10f;
+    [SerializeField] private float pushingBoxMaxSpeed = 5f;
     [SerializeField] private float acceleration = 20f;
     [SerializeField] private float deceleration = 50f;
 
@@ -127,16 +128,17 @@ public class PlayerMovement : MonoBehaviour
 
     private void CalculateWalkSpeed()
     {
+        float _maxSpeed = PlayerController.Instance.isPushingBox ? pushingBoxMaxSpeed : maxSpeed;
 
         if (XAxisInput > 0)
         {
-            targetVelocityX = XAxisInput * maxSpeed;
+            targetVelocityX = _maxSpeed;
             currentVelocityX = Mathf.MoveTowards(currentVelocityX, targetVelocityX, acceleration * Time.deltaTime);
 
         }
         else if (XAxisInput < 0)
         {
-            targetVelocityX = XAxisInput * maxSpeed;
+            targetVelocityX = -_maxSpeed;
             currentVelocityX = Mathf.MoveTowards(currentVelocityX, targetVelocityX, acceleration * Time.deltaTime);
         }
         else
