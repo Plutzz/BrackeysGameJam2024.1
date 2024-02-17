@@ -1015,20 +1015,8 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 341772735496714975, guid: 7bc0971f53b381e41aa93bff2b3da990, type: 3}
-      propertyPath: m_Icon
-      value: 
-      objectReference: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
-    - target: {fileID: 341772735496714975, guid: 7bc0971f53b381e41aa93bff2b3da990, type: 3}
       propertyPath: m_Name
       value: HiddenLever
-      objectReference: {fileID: 0}
-    - target: {fileID: 2791203400794239234, guid: 7bc0971f53b381e41aa93bff2b3da990, type: 3}
-      propertyPath: m_Icon
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2791203400794239234, guid: 7bc0971f53b381e41aa93bff2b3da990, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4720283400894956879, guid: 7bc0971f53b381e41aa93bff2b3da990, type: 3}
       propertyPath: m_LocalPosition.x
