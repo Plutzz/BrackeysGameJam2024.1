@@ -20,18 +20,21 @@ public class PlayerController : Singleton<PlayerController>
     [SerializeField] private float startOffset = -.5f;
     [SerializeField] private float rayLength = 1.5f;
     [SerializeField] private LayerMask interactableLayer;
-
-    [Header("Door")]
-    [SerializeField] private LayerMask doorLayer;
     private Door door;
+
+    [Header("Box")]
+    [SerializeField] private LayerMask boxLayer;
+    [HideInInspector] public PushableBox pushableBox;
     public bool isPushingBox { get; private set; }
-    public PushableBox pushableBox;
+    private bool readyToPush = true;
+
 
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         playerMovement = GetComponent<PlayerMovement>();
+        readyToPush = true;
         SubscribeToEvents();
     }
 
@@ -72,6 +75,14 @@ public class PlayerController : Singleton<PlayerController>
         if(hasDoor && InputHandler.Instance.playerInputActions.Player.Door.WasReleasedThisFrame())
         {
             PutDownDoor();
+        }
+        if(!isPushingBox && InputHandler.Instance.playerInputActions.Player.Push.IsPressed())
+        {
+            BoxCheck();
+        }
+        if(InputHandler.Instance.playerInputActions.Player.Push.WasReleasedThisFrame())
+        {
+            readyToPush = true;
         }
         if (isPushingBox && InputHandler.Instance.playerInputActions.Player.Push.WasReleasedThisFrame())
         {
@@ -197,9 +208,29 @@ public class PlayerController : Singleton<PlayerController>
         door = null;
     }
 
+    private void BoxCheck()
+    {
+        Debug.DrawRay(transform.position - transform.right * startOffset, transform.right * rayLength * 0.5f, Color.red);
+        RaycastHit2D hit = Physics2D.Raycast(transform.position - transform.right * startOffset, transform.right, rayLength * 0.1f, boxLayer);
+        if (hit.collider != null)
+        {
+            pushableBox = hit.collider.GetComponent<PushableBox>();
+            if (pushableBox != null && readyToPush && pushableBox.IsGrounded)
+            {
+                if (hasDoor)
+                {
+                    PutDownDoor();
+                }
+                PushBox();
+            }
+        }
+    }
+
     public void PushBox()
     {
+        readyToPush = false;
         isPushingBox = true;
+        pushableBox.StartPush();
     }
     public void StopPushingBox()
     {

@@ -32,11 +32,9 @@ public class HiddenLevelObject : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(transform.position + transform.right * startOffset, transform.right, rayLength, interactableLayer);
             if (hit.collider != null)
             {
-                Debug.Log(hit.collider.gameObject);
                 door = hit.collider.GetComponent<Door>();
                 if (door != null)
                 {
-                    Debug.Log("Hit Door");
                     if (door.isOpen)
                     {
                         Reveal();

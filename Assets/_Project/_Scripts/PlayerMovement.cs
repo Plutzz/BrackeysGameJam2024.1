@@ -100,7 +100,7 @@ public class PlayerMovement : MonoBehaviour
     private void Move()
     {
         rb.velocity = new Vector2(currentVelocityX, currentVelocityY);
-        if(PlayerController.Instance.pushableBox != null)
+        if(PlayerController.Instance.pushableBox != null && PlayerController.Instance.isPushingBox)
         {
             PlayerController.Instance.pushableBox.SetSpeed(currentVelocityX);
         }
