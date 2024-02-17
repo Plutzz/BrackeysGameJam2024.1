@@ -27,7 +27,13 @@ public class JumpingEnemyBehavior : EnemyWanderingController
         {
             return;
         }
-        RaycastHit2D wallHit = Physics2D.Raycast(frontWallCheck.position, transform.right, rayLength, groundLayer | obstacleLayer);
+        RaycastHit2D obstacleHit = Physics2D.Raycast(frontWallCheck.position, transform.right, jumpRayDistance, obstacleLayer);
+        if (obstacleHit.collider != null)
+        {
+            Flip();
+            return;
+        }
+        RaycastHit2D wallHit = Physics2D.Raycast(frontWallCheck.position, transform.right, rayLength, groundLayer);
         if (wallHit.collider != null)
         {
             Debug.Log("Hit a wall");
@@ -57,8 +63,8 @@ public class JumpingEnemyBehavior : EnemyWanderingController
             {
                 Debug.Log("Nothing infront");
                 hit = Physics2D.Raycast(edgeCheck.position, transform.up * edgeRayDistance * -1, edgeRayDistance, groundLayer);
-                RaycastHit2D obstacleHit = Physics2D.Raycast(edgeCheck.position, transform.up * edgeRayDistance * -1, edgeRayDistance, obstacleLayer);
-                if (hit.collider != null && obstacleHit.collider == null)
+                RaycastHit2D obstacleBelowHit = Physics2D.Raycast(edgeCheck.position, transform.up * edgeRayDistance * -1, edgeRayDistance, obstacleLayer);
+                if (hit.collider != null && obstacleBelowHit.collider == null)
                 {
                     Debug.Log("Can Jump down");
                     rbController.AddVelocity(new Vector2(transform.right.x * edgeHopVelocity.x, edgeHopVelocity.y));
