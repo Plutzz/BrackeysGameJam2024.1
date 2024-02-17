@@ -44,9 +44,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3138cd8bff90ed44a76c883a98e47a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundAudioClipsArray: []
+  soundAudioClipsArray:
+  - sound: 0
+    audioClip: {fileID: 8300000, guid: c856b9f34dd960547b70aa21bc000d3a, type: 3}
+    volume: 0.505
+  - sound: 1
+    audioClip: {fileID: 8300000, guid: 5b3a321480e0efa479f2a8a9c948e92d, type: 3}
+    volume: 0.5
+  - sound: 2
+    audioClip: {fileID: 8300000, guid: e9cb7af1a3da3ee4abe20ebc3fbfd6d0, type: 3}
+    volume: 0.5
+  - sound: 3
+    audioClip: {fileID: 8300000, guid: 3aceeadf8b810b4468d1cdbdc2a1e0d1, type: 3}
+    volume: 0.5
+  - sound: 4
+    audioClip: {fileID: 8300000, guid: 32d4b1811dda14a6cb9e059ee8ad17d2, type: 3}
+    volume: 0.5
+  - sound: 5
+    audioClip: {fileID: 8300000, guid: b99da9a57308d4ba1bee1cf1d9038376, type: 3}
+    volume: 0.5
+  - sound: 6
+    audioClip: {fileID: 8300000, guid: 2c5292ba5cf254919a6b9e2b18e04f49, type: 3}
+    volume: 0.5
+  - sound: 7
+    audioClip: {fileID: 8300000, guid: 81652031b64c342cc8dbc59c138d77c5, type: 3}
+    volume: 0.5
+  sfxMixerGroup: {fileID: 0}
   maxAudioSources: 10
   musicAudioClipsArray:
   - song: 0
-    audioClip: {fileID: 8300000, guid: c067fe819459ce34e8807d038afae689, type: 3}
-    volume: 0.337
+    audioClip: {fileID: 8300000, guid: dbe3881515b436f45acd323ce242f6d4, type: 3}
+    volume: 0.32
+  - song: 1
+    audioClip: {fileID: 8300000, guid: 7648d0081f8602548a5fee1231d897f7, type: 3}
+    volume: 0.32
+  - song: 2
+    audioClip: {fileID: 8300000, guid: f48a2ef1b4d56a3418b2dc260b17c453, type: 3}
+    volume: 0.32
+  musicMixerGroup: {fileID: 0}

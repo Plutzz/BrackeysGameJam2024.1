@@ -26,6 +26,13 @@ public class AudioManager : SingletonPersistent<AudioManager>
     public enum Sounds
     {
         DuckWalk,
+        DoorGet,
+        Door_Borg,
+        Door_Gorg,
+        Lever,
+        Box,
+        Jump,
+        Stalactite,
 
     }
 
@@ -153,7 +160,7 @@ public class AudioManager : SingletonPersistent<AudioManager>
         public AudioClip audioClip;
 
         [SerializeField, Range(0f, 1f)]
-        public float volume;
+        public float volume = .5f;
     }
 
     [Serializable]
@@ -163,7 +170,7 @@ public class AudioManager : SingletonPersistent<AudioManager>
         public AudioClip audioClip;
 
         [SerializeField, Range(0f, 1f)]
-        public float volume;
+        public float volume = .5f;
     }
 
 
