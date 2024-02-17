@@ -51,6 +51,7 @@ MonoBehaviour:
   player: {fileID: 0}
   overlay: {fileID: 0}
   overlayFadeTime: 0
+  glitchEffect: {fileID: 0}
 --- !u!1 &1561295101721846386
 GameObject:
   m_ObjectHideFlags: 0
@@ -138,61 +139,8 @@ Transform:
   - {fileID: 688068389971544277}
   - {fileID: 5348418141243938092}
   - {fileID: 4543474439556008805}
-  - {fileID: 8552813867024455612}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &5767095402501110129
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8552813867024455612}
-  - component: {fileID: 2318468342006331817}
-  m_Layer: 0
-  m_Name: AudioManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8552813867024455612
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5767095402501110129}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 8857428348592627119}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2318468342006331817
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5767095402501110129}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3138cd8bff90ed44a76c883a98e47a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  soundAudioClipsArray: []
-  sfxMixerGroup: {fileID: 5967273936267279566, guid: 5ec34e81d5fba4d40816561ff87eba5c, type: 2}
-  maxAudioSources: 10
-  musicAudioClipsArray:
-  - song: 0
-    audioClip: {fileID: 8300000, guid: c067fe819459ce34e8807d038afae689, type: 3}
-    volume: 0.337
-  musicMixerGroup: {fileID: -8655911079447086582, guid: 5ec34e81d5fba4d40816561ff87eba5c, type: 2}
 --- !u!1 &7153857680083435090
 GameObject:
   m_ObjectHideFlags: 0
@@ -385,5 +333,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPaused: 0
-  PauseMenu: {fileID: 0}
+  pauseMenu: {fileID: 0}
   firstSelectedButton: {fileID: 0}

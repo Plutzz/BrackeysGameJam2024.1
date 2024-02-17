@@ -84,7 +84,7 @@ public class PlayerController : Singleton<PlayerController>
         {
             readyToPush = true;
         }
-        if (isPushingBox && InputHandler.Instance.playerInputActions.Player.Push.WasReleasedThisFrame())
+        if (isPushingBox && (InputHandler.Instance.playerInputActions.Player.Push.WasReleasedThisFrame() || !GetComponent<PlayerMovement>().IsGrounded))
         {
             StopPushingBox();
         }

@@ -4,7 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Audio;
 
-public class AudioManager : Singleton<AudioManager>
+public class AudioManager : SingletonPersistent<AudioManager>
 {
     [Header("Sounds")]
     public SoundAudioClip[] soundAudioClipsArray;
