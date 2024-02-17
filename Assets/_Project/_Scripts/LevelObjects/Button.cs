@@ -15,6 +15,7 @@ public class Button : MonoBehaviour
     private void Awake()
     {
         anim = GetComponent<Animator>();
+        buttonReady = true;
     }
 
     private void Update()
@@ -35,12 +36,13 @@ public class Button : MonoBehaviour
         buttonReady = false;
         Debug.Log("ButtonDown");
         ChangeAnimationState("ButtonDown");
-
-        foreach(var activatable in activatables)
+        if(activatables.Length > 0)
         {
-            activatable.Activate();
+            foreach (var activatable in activatables)
+            {
+                activatable.Activate();
+            }
         }
-
     }
     private void ButtonUp()
     {

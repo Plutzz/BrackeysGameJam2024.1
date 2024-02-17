@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class GlitchController : MonoBehaviour
 {
-    public Material mat;
-    public float Strength;
-    public float Scale;
+    [SerializeField] private Material mat;
+    [SerializeField] private float Strength;
+    [SerializeField] private float Scale;
 
     void Update()
     {
