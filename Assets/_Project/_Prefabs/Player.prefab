@@ -5088,7 +5088,7 @@ MonoBehaviour:
   fallClamp: 40
   flipGravity: 0
   jumpHeight: 13.5
-  doorJumpHeight: 14.5
+  doorJumpHeight: 15
   jumpApexThreshold: 1
   coyoteTimeThreshold: 0.1
   jumpBuffer: 0.1
