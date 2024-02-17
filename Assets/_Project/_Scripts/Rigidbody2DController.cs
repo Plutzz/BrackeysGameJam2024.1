@@ -9,11 +9,11 @@ public class Rigidbody2DController : MonoBehaviour
 
     private float targetXVelocity;
     private float targetYVelocity;
-    private Vector2 targetVelocity;
+    //private Vector2 targetVelocity;
 
     private float xAcceleration = 0;
     private float yAcceleration = 0;
-    private float acceleration;
+    //private float acceleration;
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -90,7 +90,7 @@ public class Rigidbody2DController : MonoBehaviour
 
     public void ClearTargetVelocity()
     {
-        acceleration = 0f;
+        //acceleration = 0f;
     }
 
 

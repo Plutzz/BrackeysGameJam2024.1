@@ -16,7 +16,7 @@ public class PushableBox : MonoBehaviour
     [SerializeField] private Vector2 groundCheckSize;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private float playerRaycastOffset;
-    private bool isGrounded;
+    public bool IsGrounded { get; private set; }
 
     [Header("Gravity Variables")]
     [SerializeField] private float fallAcceleration;
@@ -40,35 +40,15 @@ public class PushableBox : MonoBehaviour
         GravityCheck();
         CalculateGravity();
         GroundCheck();
-        PlayerCheck();
 
-        Debug.DrawRay(transform.position - transform.right * playerRaycastOffset, -transform.right * 0.1f, Color.red);
-        Debug.DrawRay(transform.position + transform.right * playerRaycastOffset, transform.right * 0.1f, Color.red);
-    }
-
-    private void PlayerCheck()
-    {
-        if (gettingPushed) return;
-
-        var _playerLeft = Physics2D.Raycast(transform.position - transform.right * playerRaycastOffset, -transform.right, 0.05f, playerLayer);
-        var _playerRight = Physics2D.Raycast(transform.position + transform.right * playerRaycastOffset, transform.right, 0.05f, playerLayer);
-
-        if(_playerLeft || _playerRight)
-        {
-            Debug.Log("Player Found");
-            if (InputHandler.Instance.playerInputActions.Player.Push.IsPressed() && !PlayerController.Instance.isPushingBox && isGrounded)
-            {
-                StartPush();
-            }
-        }
     }
 
     private void GroundCheck()
     {
-        isGrounded = Physics2D.OverlapBox(groundCheck.position, groundCheckSize, 0f, groundLayer);
+        IsGrounded = Physics2D.OverlapBox(groundCheck.position, groundCheckSize, 0f, groundLayer);
         if (PlayerController.Instance.isPushingBox)
         {
-            if (!isGrounded && PlayerController.Instance.pushableBox != null)
+            if (!IsGrounded && PlayerController.Instance.pushableBox != null)
             {
                 Debug.Log("Box Off The Ground");
                 PlayerController.Instance.StopPushingBox();
@@ -78,9 +58,8 @@ public class PushableBox : MonoBehaviour
         // When the box hits the ground, set it's body type to static
         if (!gettingPushed && rb.bodyType == RigidbodyType2D.Kinematic)
         {
-            if (isGrounded)
+            if (IsGrounded)
             {
-                rb.velocity = Vector2.zero;
                 rb.bodyType = RigidbodyType2D.Static;
             }
         }
@@ -107,7 +86,7 @@ public class PushableBox : MonoBehaviour
 
     private void CalculateGravity()
     {
-        if(!isGrounded && rb.bodyType == RigidbodyType2D.Kinematic)
+        if(!IsGrounded && rb.bodyType == RigidbodyType2D.Kinematic)
         {
             currentVelocityY -= fallAcceleration * Time.deltaTime * gravityMultiplier;
 
@@ -125,15 +104,13 @@ public class PushableBox : MonoBehaviour
     }
 
     //Velocity to be set by PlayerMovement Script (SetSpeed method)
-    private void StartPush()
+    public void StartPush()
     {
         if (gettingPushed) return;
 
         gettingPushed = true;
         Debug.Log("Start Push");
         rb.bodyType = RigidbodyType2D.Dynamic;
-        PlayerController.Instance.pushableBox = this;
-        PlayerController.Instance.PushBox();
     }
 
     public void StopPush()
