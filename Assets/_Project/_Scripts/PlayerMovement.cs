@@ -37,11 +37,12 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Jumping")]
     [SerializeField] private float jumpHeight = 30;
+    [SerializeField] private float doorJumpHeight = 14.5f;
     [SerializeField] private float jumpApexThreshold = 10f;
     [SerializeField] private float coyoteTimeThreshold = 0.1f;
     [SerializeField] private float jumpBuffer = 0.2f;
     [SerializeField] private float jumpEndEarlyGravityModifier = 3;
-    private float timeLeftGround;
+    private bool jumpingOffOfDoor;
     [SerializeField] private bool coyoteUsable;
     private bool endedJumpEarly = true;
     private float apexPoint;
@@ -153,13 +154,22 @@ public class PlayerMovement : MonoBehaviour
         if (_groundCheck != null)
         {
             // is a platform
-            if (_groundCheck.GetComponent<PlatformEffector2D>() != null && currentVelocityY * gravityMultiplier > 0.1f)
+            if (_groundCheck.GetComponent<PlatformEffector2D>() != null)
             {
-               
-                IsGrounded = false;
+                if(currentVelocityY * gravityMultiplier > 0.1f)
+                {
+                    IsGrounded = false;
+                }
+                else
+                {
+                    jumpingOffOfDoor = true;
+                    IsGrounded = true;
+                }
+
             }
             else
             {
+                jumpingOffOfDoor = false;
                 IsGrounded = true;
             }
         }
@@ -288,19 +298,19 @@ public class PlayerMovement : MonoBehaviour
     private void Jump()
     {
         if (PlayerController.Instance.isPushingBox) return;
+        float _jumpHeight = jumpingOffOfDoor ? doorJumpHeight : jumpHeight;
 
         animationHandler.ChangeAnimationState(animationHandler.DuckJumpState);
-        timeLeftGround = Time.time;
         endedJumpEarly = false;
         coyoteUsable = false;
         // Jump if: grounded or within coyote threshold || sufficient jump buffer
         if (!flipGravity)
         {
-            currentVelocityY = jumpHeight;
+            currentVelocityY = _jumpHeight;
         }
         else
         {
-            currentVelocityY = -jumpHeight;
+            currentVelocityY = -_jumpHeight;
         }
 
     }
