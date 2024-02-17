@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6832957394237771849}
   - component: {fileID: 2107361259040402519}
   - component: {fileID: 1783577605662795944}
+  - component: {fileID: 266028636375974014}
   m_Layer: 0
   m_Name: Borg
   m_TagString: Untagged
@@ -138,14 +139,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 528c219c5a54d004dacf92b83fa39a15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 0}
+  rbController: {fileID: 0}
   moveSpeed: 2
+  acceleration: 5
   frontWallCheck: {fileID: 1673938050711603467}
   frontFloorCheck: {fileID: 1454386855673164348}
   normalFloorCheck: {fileID: 7349397650591659048}
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 4096
   rayLength: 0.1
 --- !u!58 &1783577605662795944
 CircleCollider2D:
@@ -182,6 +187,18 @@ CircleCollider2D:
   m_Offset: {x: 0.43, y: 0.02}
   serializedVersion: 2
   m_Radius: 0.24
+--- !u!114 &266028636375974014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1004311990035471447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25126dc92f71ae94f9b0dc124898fca0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1014600523493963439
 GameObject:
   m_ObjectHideFlags: 0
@@ -321,7 +338,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3626916397498700004, guid: bf1f74bf5f45c654982d8a0db95dd846, type: 3}
       propertyPath: m_SortingLayer
-      value: -1
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 3626916397498700004, guid: bf1f74bf5f45c654982d8a0db95dd846, type: 3}
       propertyPath: m_SortingOrder
