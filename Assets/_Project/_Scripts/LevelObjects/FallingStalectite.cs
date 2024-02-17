@@ -5,6 +5,11 @@ using UnityEngine;
 public class FallingStalectite : MonoBehaviour
 {
     [SerializeField] private float damage = 1;
+
+    private void Awake()
+    {
+        Debug.Log("Dropping");
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         UnitHealth health = collision.gameObject.GetComponent<UnitHealth>();
