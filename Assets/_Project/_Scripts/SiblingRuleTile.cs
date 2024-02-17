@@ -7,8 +7,8 @@ public class SiblingRuleTile : RuleTile
 
     public enum SiblingGroup
     {
-        Grass,
-        Tech,
+        Foreground,
+        Background,
     }
     public SiblingGroup siblingGroup;
 

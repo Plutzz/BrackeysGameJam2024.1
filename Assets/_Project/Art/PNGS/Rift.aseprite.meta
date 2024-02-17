@@ -32,7 +32,7 @@ ScriptedImporter:
     sRGBTexture: 1
     spriteMode: 2
     spriteExtrude: 1
-    spriteMeshType: 1
+    spriteMeshType: 0
     alignment: 0
     spritePivot: {x: 0.5, y: 0.5}
     spritePixelsToUnits: 16
@@ -97,7 +97,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638436198699418214
+  platformSettingsDirtyTick: 638437216137014994
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -123,15 +123,15 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: Rift
     originalName: 
-    pivot: {x: 0.53333336, y: 0}
+    pivot: {x: 0.48000002, y: -0.07692309}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 15
-      height: 15
+      width: 25
+      height: 26
     spriteID: 10d1a38bc48b1b44aace003f1298bcf3
     spriteBone: []
     spriteOutline: []
@@ -153,10 +153,10 @@ ScriptedImporter:
     - name: Rift
       frameIndex: 0
       cellRect:
-        x: 0
-        y: 0
-        width: 15
-        height: 15
+        x: 2
+        y: 2
+        width: 25
+        height: 26
       spriteId: 10d1a38bc48b1b44aace003f1298bcf3
     linkedCells: []
     parentIndex: -1
@@ -200,4 +200,4 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 16, y: 16}
+  canvasSize: {x: 28, y: 28}
