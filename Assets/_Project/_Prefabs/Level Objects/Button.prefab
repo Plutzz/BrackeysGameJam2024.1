@@ -69,7 +69,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activatables:
   - {fileID: 0}
-  buttonHitboxSize: {x: 0, y: 0}
+  buttonHitboxSize: {x: 1, y: 1}
 --- !u!212 &3721833281197688041
 SpriteRenderer:
   m_ObjectHideFlags: 0

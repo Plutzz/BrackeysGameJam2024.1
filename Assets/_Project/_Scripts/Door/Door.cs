@@ -7,6 +7,7 @@ public class Door : Interactable
     private Collider2D col;
     private Rigidbody2D rb;
     public bool isOpen { get; private set; }
+    public bool isPickedUp { get; private set; }
     [SerializeField] private GameObject graphics;
     [SerializeField] private GameObject openDoorObj;
     [SerializeField] private GameObject closeDoorObj;
@@ -25,6 +26,7 @@ public class Door : Interactable
         {
             CloseDoor();
         }
+        isPickedUp = true;
         col.enabled = false;
         platformCollider.SetActive(false);
         graphics.SetActive(false);
@@ -33,6 +35,7 @@ public class Door : Interactable
 
     public void PutDown()
     {
+        isPickedUp = false;
         col.enabled = true;
         platformCollider.SetActive(true);
         graphics.SetActive(true);

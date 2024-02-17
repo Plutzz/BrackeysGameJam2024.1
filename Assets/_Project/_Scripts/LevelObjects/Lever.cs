@@ -12,6 +12,7 @@ public class Lever : Interactable
 
     [SerializeField] private Activatable[] activatables;
 
+
     public override void Interact()
     {
         if(isActivated)

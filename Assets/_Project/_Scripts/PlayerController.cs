@@ -127,12 +127,39 @@ public class PlayerController : Singleton<PlayerController>
     private void TryInteract() {
         //start ray behind to slightly ahead
         //checking for anything on interactable layer
-        Debug.Log("Trying to interact");
-        RaycastHit2D hit = Physics2D.Raycast(transform.position + transform.right * startOffset, transform.right, rayLength, interactableLayer);
-        if (hit.collider != null)
+        RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position + transform.right * startOffset, transform.right, rayLength, interactableLayer);
+        if (hits.Length != 0)
         {
-            Interactable interactable = hit.collider.GetComponent<Interactable>();
-            if (interactable != null) { interactable.Interact(); }
+            // If there is another interactable object, prioritize that instead of the door
+            Door _door = null;
+            int _numInteractables = 0;
+
+            foreach(var hit in hits)
+            {
+                Door _tempDoor = hit.collider.GetComponent<Door>();
+                if(_tempDoor == null)
+                {
+                    Interactable interactable = hit.collider.GetComponent<Interactable>();
+                    if (interactable != null)
+                    {
+                        interactable.Interact();
+                        _numInteractables++;
+                    }
+                }
+                // Save reference to the door if found
+                else
+                {
+                    _door = _tempDoor;
+                }
+            }
+            Debug.Log("Num interactables: " +  _numInteractables);
+
+            // If there is a door and that door is the only interactable in the raycast, interact with the door
+            if (_door != null && _numInteractables == 0)
+            {
+                _door.Interact();
+            }
+
         }
     }
 
