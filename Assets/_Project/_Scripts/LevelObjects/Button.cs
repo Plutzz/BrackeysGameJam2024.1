@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Xml.Serialization;
 using UnityEngine;
 
 public class Button : MonoBehaviour
@@ -9,6 +10,7 @@ public class Button : MonoBehaviour
     private Animator anim;
     private string currentState;
     private bool buttonReady;
+    private int numberOfCollisions;
 
     [SerializeField] private Activatable[] activatables;
     [SerializeField] private Vector2 buttonHitboxSize;
@@ -16,19 +18,6 @@ public class Button : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         buttonReady = true;
-    }
-
-    private void Update()
-    {
-        var collision = Physics2D.Raycast(transform.position - new Vector3(transform.localScale.x * 0.5f, 0), transform.right, transform.localScale.x);
-        if (collision && (collision.rigidbody.gameObject.CompareTag("Player") || collision.rigidbody.gameObject.CompareTag("ButtonPressable")))
-        {
-            ButtonDown();
-        }
-        else
-        {
-            ButtonUp();
-        }
     }
     private void ButtonDown()
     {
@@ -63,5 +52,27 @@ public class Button : MonoBehaviour
         anim.Play(newState);
         // reassign the current state
         currentState = newState;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("ButtonPressable"))
+        {
+            numberOfCollisions++;
+            ButtonDown();
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("ButtonPressable"))
+        {
+            numberOfCollisions--;
+            if(numberOfCollisions <= 0)
+            {
+                numberOfCollisions = 0;
+                ButtonUp();
+            }
+        }
     }
 }
