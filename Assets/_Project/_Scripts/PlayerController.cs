@@ -127,7 +127,7 @@ public class PlayerController : Singleton<PlayerController>
     private void TryInteract() {
         //start ray behind to slightly ahead
         //checking for anything on interactable layer
-        Debug.Log("Trying to interact");
+        //Debug.Log("Trying to interact");
         RaycastHit2D hit = Physics2D.Raycast(transform.position + transform.right * startOffset, transform.right, rayLength, interactableLayer);
         if (hit.collider != null)
         {

@@ -70,7 +70,7 @@ public class PlayerHealth : UnitHealth
 
             Vector3 forceDirection = (transform.position - damageOrigin).normalized;
 
-            Debug.Log("Take Knockback in this direction: " + forceDirection);
+            //Debug.Log("Take Knockback in this direction: " + forceDirection);
 
             GetComponent<PlayerMovement>().TakeKnockBack(defaultKnockbackForce * forceDirection, knockUpAmount);
             //rb.AddForce(forceDirection * defaultKnockbackForce, ForceMode2D.Impulse);

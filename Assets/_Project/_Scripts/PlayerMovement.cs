@@ -155,7 +155,7 @@ public class PlayerMovement : MonoBehaviour
             // is a platform
             if (_groundCheck.GetComponent<PlatformEffector2D>() != null && currentVelocityY * gravityMultiplier > 0.1f)
             {
-                Debug.Log("Is a platform");
+               
                 IsGrounded = false;
             }
             else
@@ -279,22 +279,15 @@ public class PlayerMovement : MonoBehaviour
 
     public void TakeKnockBack(Vector2 _knockBackVector, float _knockUpAmount)
     {
-        Debug.Log($"Ended jump early: {endedJumpEarly}");
-        Debug.Log($"Initial Y Velocity: {rb.velocity.y}");
-        JumpCanceled();
+        endedJumpEarly = true;
 
         currentVelocityX = _knockBackVector.x;
         currentVelocityY = _knockUpAmount;
-
-        Debug.Log($"Final Y Velocity: {rb.velocity.y}");
-        Debug.Log($"Acceleration: {fallAcceleration}");
     }
 
     private void Jump()
     {
         if (PlayerController.Instance.isPushingBox) return;
-
-        Debug.Log("Jumping");
 
         animationHandler.ChangeAnimationState(animationHandler.DuckJumpState);
         timeLeftGround = Time.time;
