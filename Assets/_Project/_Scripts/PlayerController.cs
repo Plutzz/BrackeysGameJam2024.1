@@ -72,7 +72,7 @@ public class PlayerController : Singleton<PlayerController>
         {
             TryInteract();
         }
-        if(hasDoor && InputHandler.Instance.playerInputActions.Player.Door.WasPressedThisFrame())
+        if(hasDoor && InputHandler.Instance.playerInputActions.Player.Door.WasReleasedThisFrame())
         {
             PutDownDoor();
         }
@@ -188,18 +188,25 @@ public class PlayerController : Singleton<PlayerController>
             {
                 if(!isPushingBox)
                 {
-                    StartCoroutine(PickUpDoor());
+                    PickUpDoor();
                 }
             }
         }
     }
-    //Has door is false for the first frame
-    private IEnumerator PickUpDoor()
+    // Coroutine for if the door pickup is on toggle
+    //private IEnumerator PickUpDoor()
+    //{
+    //    door.PickUp();
+    //    door.transform.position = transform.position + (Vector3.up * 0.5f);
+    //    door.transform.parent = transform;
+    //    yield return null;
+    //    hasDoor = true;
+    //}
+    private void PickUpDoor()
     {
         door.PickUp();
         door.transform.position = transform.position + (Vector3.up * 0.5f);
         door.transform.parent = transform;
-        yield return null;
         hasDoor = true;
     }
     private void PutDownDoor()

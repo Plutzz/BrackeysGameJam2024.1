@@ -10,9 +10,15 @@ public class HiddenLevelObject : MonoBehaviour
     [SerializeField] private float rayLength = 1f;
     [SerializeField] private LayerMask interactableLayer;
     private Door door;
+    private SpriteRenderer riftSprite;
+    private void Awake()
+    {
+        riftSprite = GetComponent<SpriteRenderer>();
+    }
     protected virtual void Reveal()
     {
         if (!hidden) return;
+        riftSprite.enabled = false;
         hidden = false;
         if(hiddenObject != null) { hiddenObject.SetActive(true); }
     }
@@ -20,6 +26,7 @@ public class HiddenLevelObject : MonoBehaviour
     protected virtual void Hide()
     {
         if (hidden) return;
+        riftSprite.enabled = true;
         hidden = true;
         if (hiddenObject != null) { hiddenObject.SetActive(false); }
     }
