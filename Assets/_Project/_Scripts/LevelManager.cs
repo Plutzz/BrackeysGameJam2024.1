@@ -15,6 +15,8 @@ public class LevelManager : Singleton<LevelManager>
     [SerializeField] private Image overlay; //temp
     [SerializeField, Min(.01f)] private float overlayFadeTime;
 
+    [SerializeField] private GlitchController glitchEffect;
+
     public event Action reloadingScene;
 
     private void OnEnable()
@@ -47,9 +49,13 @@ public class LevelManager : Singleton<LevelManager>
 
     public void ScenicResetLevel() {
         StartCoroutine(FadeInOverlay());
+        StartCoroutine(GlitchOverlay());
     }
 
     IEnumerator FadeInOverlay() {
+
+        yield return new WaitForSeconds(0.5f);
+
         Color color = overlay.color;
         color.a = 0f; // Start with alpha 0
 
@@ -66,6 +72,13 @@ public class LevelManager : Singleton<LevelManager>
         color.a = 1f;
         overlay.color = color;
         ResetLevel();
+    }
+
+    IEnumerator GlitchOverlay()
+    {
+        glitchEffect.GetComponent<Animation>().Play();
+        yield return new WaitForSeconds(glitchEffect.GetComponent<Animation>().clip.length);
+        //ResetLevel();
     }
 
     public void ExitGame()

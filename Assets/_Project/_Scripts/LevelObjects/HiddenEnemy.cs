@@ -19,5 +19,6 @@ public class HiddenEnemy : HiddenLevelObject
         _hiddenObject.GetComponent<CircleCollider2D>().enabled = false;
         yield return new WaitForSeconds(seconds);
         _hiddenObject.GetComponent<CircleCollider2D>().enabled = true;
+        Destroy(gameObject);
     }
 }

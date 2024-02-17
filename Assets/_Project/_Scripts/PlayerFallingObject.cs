@@ -7,7 +7,6 @@ public class PlayerFallingObject : MonoBehaviour
     [SerializeField] private float verticalVelocity = 10f;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Player Triggered");
         if (collision.gameObject != gameObject && collision.gameObject != transform.parent.gameObject)
         {
             UnitHealth health = collision.GetComponent<UnitHealth>();

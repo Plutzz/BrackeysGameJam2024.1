@@ -17,6 +17,13 @@ public class PauseManager : Singleton<PauseManager>
     private void Start()
     {
         InputHandler.Instance.playerInputActions.Universal.Pause.performed += TogglePause;
+        LevelManager.Instance.reloadingScene += Unsubscribe;
+    }
+
+    private void Unsubscribe()
+    {
+        InputHandler.Instance.playerInputActions.Universal.Pause.performed -= TogglePause;
+        LevelManager.Instance.reloadingScene -= Unsubscribe;
     }
 
     public void TogglePause(InputAction.CallbackContext context)
