@@ -79,12 +79,6 @@ public class PlayerMovement : MonoBehaviour
         animationHandler = GetComponent<PlayerAnimationHandler>();
     }
 
-    private void Start()
-    {
-        // When a jump is pressed, record the time (to be used for jump buffering)
-        
-    }
-
     private void Update()
     {
         GravityCheck();
@@ -106,6 +100,10 @@ public class PlayerMovement : MonoBehaviour
     private void Move()
     {
         rb.velocity = new Vector2(currentVelocityX, currentVelocityY);
+        if(PlayerController.Instance.pushableBox != null)
+        {
+            PlayerController.Instance.pushableBox.SetSpeed(currentVelocityX);
+        }
     }
 
     private void GravityCheck()
@@ -310,7 +308,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Jump()
     {
-        if (PlayerController.Instance.isPushingDoor) return;
+        if (PlayerController.Instance.isPushingBox) return;
 
         animationHandler.ChangeAnimationState(animationHandler.DuckJumpState);
         timeLeftGround = Time.time;

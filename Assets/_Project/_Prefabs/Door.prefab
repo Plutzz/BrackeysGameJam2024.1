@@ -194,7 +194,7 @@ GameObject:
   - component: {fileID: 7522662555402147999}
   m_Layer: 7
   m_Name: Door
-  m_TagString: Untagged
+  m_TagString: ButtonPressable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -234,12 +234,6 @@ MonoBehaviour:
   openDoorObj: {fileID: 2263350920981603153}
   closeDoorObj: {fileID: 5225801740490402691}
   platformCollider: {fileID: 245897007322094089}
-  groundCollider: {fileID: 4474494874657298597}
-  groundCheck: {fileID: 4783358189165946706}
-  groundCheckSize: {x: 1.25, y: 0.1}
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 64
 --- !u!61 &635017186068292578
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -443,7 +437,7 @@ BoxCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 1536
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
