@@ -5081,11 +5081,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSpeed: 5
+  pushingBoxMaxSpeed: 2.5
   acceleration: 1000
   deceleration: 1000
   minFallAcceleration: 15
   maxFallAcceleration: 30
-  fallClamp: 40
+  fallClamp: 20
   flipGravity: 0
   jumpHeight: 13.5
   doorJumpHeight: 15
