@@ -22,6 +22,8 @@ public class MainMenu : MonoBehaviour
         SetMusicVolume(musicSlider.value);
         sfxSlider.value = PlayerPrefs.GetFloat("sfxVolume");
         SetSFXVolume(sfxSlider.value);
+
+        ResetSOs();
     }
 
     public void StartGame(string firstLevel)

@@ -7,6 +7,8 @@ public class UnitHealth : MonoBehaviour
     [SerializeField] protected float health;
     protected float maxHealth;
     [SerializeField] protected float defaultKnockbackForce;
+    [SerializeField] protected AudioManager.Sounds takeDamageSound;
+    [SerializeField] protected AudioManager.Sounds deathSound;
     protected virtual void Awake()
     {
         maxHealth = health;
@@ -16,6 +18,7 @@ public class UnitHealth : MonoBehaviour
     {
         health -= damage;
         //Debug.Log("take " + damage + " damage");
+        AudioManager.Instance.PlaySound(takeDamageSound);
 
         if (health <= 0) {
             Die();
@@ -40,7 +43,8 @@ public class UnitHealth : MonoBehaviour
         }
     }
 
-    public virtual void Die() { 
+    public virtual void Die() {
+        AudioManager.Instance.PlaySound(deathSound);
         Destroy(gameObject);
     }
 }
