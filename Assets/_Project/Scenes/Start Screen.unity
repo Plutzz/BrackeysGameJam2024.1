@@ -1259,6 +1259,38 @@ PrefabInstance:
       propertyPath: spawnPositions.Array.data[3].originalSpawnpoint.y
       value: -5.5
       objectReference: {fileID: 0}
+    - target: {fileID: 4730860842280937877, guid: 78cf3d16a7c64fe4492c1816df1bc3a7, type: 3}
+      propertyPath: spawnPositions.Array.data[0].originalDoorSpawnpoint.x
+      value: 39.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 4730860842280937877, guid: 78cf3d16a7c64fe4492c1816df1bc3a7, type: 3}
+      propertyPath: spawnPositions.Array.data[0].originalDoorSpawnpoint.y
+      value: 6.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 4730860842280937877, guid: 78cf3d16a7c64fe4492c1816df1bc3a7, type: 3}
+      propertyPath: spawnPositions.Array.data[1].originalDoorSpawnpoint.x
+      value: 91.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4730860842280937877, guid: 78cf3d16a7c64fe4492c1816df1bc3a7, type: 3}
+      propertyPath: spawnPositions.Array.data[1].originalDoorSpawnpoint.y
+      value: 6.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4730860842280937877, guid: 78cf3d16a7c64fe4492c1816df1bc3a7, type: 3}
+      propertyPath: spawnPositions.Array.data[2].originalDoorSpawnpoint.x
+      value: 48.57
+      objectReference: {fileID: 0}
+    - target: {fileID: 4730860842280937877, guid: 78cf3d16a7c64fe4492c1816df1bc3a7, type: 3}
+      propertyPath: spawnPositions.Array.data[2].originalDoorSpawnpoint.y
+      value: -4.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 4730860842280937877, guid: 78cf3d16a7c64fe4492c1816df1bc3a7, type: 3}
+      propertyPath: spawnPositions.Array.data[3].originalDoorSpawnpoint.x
+      value: -11.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4730860842280937877, guid: 78cf3d16a7c64fe4492c1816df1bc3a7, type: 3}
+      propertyPath: spawnPositions.Array.data[3].originalDoorSpawnpoint.y
+      value: -4.75
+      objectReference: {fileID: 0}
     - target: {fileID: 4871180044846502877, guid: 78cf3d16a7c64fe4492c1816df1bc3a7, type: 3}
       propertyPath: m_MaxValue
       value: 20
