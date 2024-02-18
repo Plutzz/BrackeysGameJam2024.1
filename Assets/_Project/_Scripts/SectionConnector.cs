@@ -19,20 +19,23 @@ public class SectionConnector : MonoBehaviour
         }
 
         Vector3 playerPosition = collision.transform.position;
-        bool respawnWithDoor = PlayerController.Instance.hasDoor;
 
         if (Vector3.Distance(playerPosition, sideOne.position) < Vector3.Distance(playerPosition, sideTwo.position))
         {
             SectionInformation sectionInformation = cameraOne.GetComponent<SectionInformation>();
-            LevelManager.Instance.SetRespawnLocation(sectionInformation.playerSpawnPosition, sectionInformation.doorSpawnPosition, cameraOne);
             cameraOne.enabled = true;
             cameraTwo.enabled = false;
+            if (sectionInformation.ignoreSectionInformation) return;
+            LevelManager.Instance.SetRespawnLocation(sectionInformation.playerSpawnPosition, sectionInformation.doorSpawnPosition, cameraOne);
+
         }
         else {
             SectionInformation sectionInformation = cameraTwo.GetComponent<SectionInformation>();
-            LevelManager.Instance.SetRespawnLocation(sectionInformation.playerSpawnPosition, sectionInformation.doorSpawnPosition, cameraTwo);
             cameraOne.enabled = false;
             cameraTwo.enabled = true;
+            if (sectionInformation.ignoreSectionInformation) return;
+            LevelManager.Instance.SetRespawnLocation(sectionInformation.playerSpawnPosition, sectionInformation.doorSpawnPosition, cameraTwo);
+
         }
     }
 }

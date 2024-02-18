@@ -5081,13 +5081,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSpeed: 5
+  pushingBoxMaxSpeed: 2.5
   acceleration: 1000
   deceleration: 1000
   minFallAcceleration: 15
   maxFallAcceleration: 30
   fallClamp: 20
-  flipGravity: 0
+  IsGravityFlipped: 0
   jumpHeight: 13.5
+  doorJumpHeight: 15
   jumpApexThreshold: 1
   coyoteTimeThreshold: 0.1
   jumpBuffer: 0.1
@@ -5114,17 +5116,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraFollowObject: {fileID: 0}
   fallingGameObject: {fileID: 7922510943616794740}
-  specialMaxHoldTime: 1
-  dummyAnimator: {fileID: 0}
   hasDoor: 0
   startOffset: -0.5
   rayLength: 1.5
   interactableLayer:
     serializedVersion: 2
     m_Bits: 128
-  doorLayer:
+  boxLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 512
+  pushableBox: {fileID: 0}
 --- !u!61 &2912692242817594504
 BoxCollider2D:
   m_ObjectHideFlags: 0

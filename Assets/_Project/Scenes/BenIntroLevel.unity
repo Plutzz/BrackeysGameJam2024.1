@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 24211083}
   - component: {fileID: 24211082}
   - component: {fileID: 24211081}
+  - component: {fileID: 24211084}
   m_Layer: 0
   m_Name: Virtual Camera R10
   m_TagString: Untagged
@@ -235,6 +236,22 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 1056144579}
+--- !u!114 &24211084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 24211079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f7aa2f590aa44459ffe80052df0aad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSpawnPosition: {x: 119.79, y: 7.53, z: 0}
+  doorSpawnPosition: {x: 119.79, y: 7.53, z: 0}
+  usedCamera: {fileID: 0}
+  ignoreSectionInformation: 0
 --- !u!1001 &30454760
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -673,6 +690,7 @@ GameObject:
   - component: {fileID: 60750176}
   - component: {fileID: 60750175}
   - component: {fileID: 60750174}
+  - component: {fileID: 60750177}
   m_Layer: 0
   m_Name: Virtual Camera R13
   m_TagString: Untagged
@@ -773,6 +791,22 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 295882825}
+--- !u!114 &60750177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 60750172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f7aa2f590aa44459ffe80052df0aad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSpawnPosition: {x: 0, y: 0, z: 0}
+  doorSpawnPosition: {x: 48.57, y: -4.03, z: 0}
+  usedCamera: {fileID: 0}
+  ignoreSectionInformation: 1
 --- !u!1001 &60840878
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -858,6 +892,7 @@ GameObject:
   - component: {fileID: 67141199}
   - component: {fileID: 67141198}
   - component: {fileID: 67141197}
+  - component: {fileID: 67141200}
   m_Layer: 0
   m_Name: Virtual Camera R17
   m_TagString: Untagged
@@ -958,6 +993,22 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 1621901375}
+--- !u!114 &67141200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 67141195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f7aa2f590aa44459ffe80052df0aad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSpawnPosition: {x: 300.68, y: 5.63, z: 0}
+  doorSpawnPosition: {x: 300.68, y: 5.63, z: 0}
+  usedCamera: {fileID: 0}
+  ignoreSectionInformation: 0
 --- !u!1001 &85098546
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1426,6 +1477,7 @@ GameObject:
   - component: {fileID: 123839250}
   - component: {fileID: 123839249}
   - component: {fileID: 123839248}
+  - component: {fileID: 123839251}
   m_Layer: 0
   m_Name: Virtual Camera R14
   m_TagString: Untagged
@@ -1526,6 +1578,22 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 1750656540}
+--- !u!114 &123839251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 123839246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f7aa2f590aa44459ffe80052df0aad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSpawnPosition: {x: 222.67, y: 7.65, z: 0}
+  doorSpawnPosition: {x: 222.67, y: 7.65, z: 0}
+  usedCamera: {fileID: 0}
+  ignoreSectionInformation: 0
 --- !u!1001 &147718017
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2603,6 +2671,7 @@ GameObject:
   - component: {fileID: 501591457}
   - component: {fileID: 501591456}
   - component: {fileID: 501591455}
+  - component: {fileID: 501591458}
   m_Layer: 0
   m_Name: Virtual Camera R8
   m_TagString: Untagged
@@ -2703,6 +2772,22 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 412458690}
+--- !u!114 &501591458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 501591453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f7aa2f590aa44459ffe80052df0aad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSpawnPosition: {x: 63.8, y: -3.31, z: 0}
+  doorSpawnPosition: {x: 63.8, y: -3.31, z: 0}
+  usedCamera: {fileID: 0}
+  ignoreSectionInformation: 0
 --- !u!1001 &501785601
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2936,6 +3021,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8783410162731260220, guid: cd3f13005deabaf4eb37a7caf7477f0d, type: 3}
   m_PrefabInstance: {fileID: 524983035}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &525219297
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4334007900233895944, guid: d8f92fe05fcce6a47a5e56e2f3992100, type: 3}
+      propertyPath: m_Name
+      value: TechBox
+      objectReference: {fileID: 0}
+    - target: {fileID: 7642662046181385148, guid: d8f92fe05fcce6a47a5e56e2f3992100, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 301.5693
+      objectReference: {fileID: 0}
+    - target: {fileID: 7642662046181385148, guid: d8f92fe05fcce6a47a5e56e2f3992100, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.477407
+      objectReference: {fileID: 0}
+    - target: {fileID: 7642662046181385148, guid: d8f92fe05fcce6a47a5e56e2f3992100, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7642662046181385148, guid: d8f92fe05fcce6a47a5e56e2f3992100, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7642662046181385148, guid: d8f92fe05fcce6a47a5e56e2f3992100, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7642662046181385148, guid: d8f92fe05fcce6a47a5e56e2f3992100, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7642662046181385148, guid: d8f92fe05fcce6a47a5e56e2f3992100, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7642662046181385148, guid: d8f92fe05fcce6a47a5e56e2f3992100, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7642662046181385148, guid: d8f92fe05fcce6a47a5e56e2f3992100, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7642662046181385148, guid: d8f92fe05fcce6a47a5e56e2f3992100, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d8f92fe05fcce6a47a5e56e2f3992100, type: 3}
 --- !u!1001 &525652918
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -82938,6 +83080,7 @@ GameObject:
   - component: {fileID: 677069860}
   - component: {fileID: 677069859}
   - component: {fileID: 677069858}
+  - component: {fileID: 677069861}
   m_Layer: 0
   m_Name: Virtual Camera R15
   m_TagString: Untagged
@@ -83038,6 +83181,22 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 926227488}
+--- !u!114 &677069861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 677069856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f7aa2f590aa44459ffe80052df0aad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSpawnPosition: {x: 0, y: 0, z: 0}
+  doorSpawnPosition: {x: 48.57, y: -4.03, z: 0}
+  usedCamera: {fileID: 0}
+  ignoreSectionInformation: 1
 --- !u!1001 &680516429
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -83359,6 +83518,7 @@ GameObject:
   - component: {fileID: 788452276}
   - component: {fileID: 788452275}
   - component: {fileID: 788452274}
+  - component: {fileID: 788452277}
   m_Layer: 0
   m_Name: Virtual Camera R3
   m_TagString: Untagged
@@ -83459,6 +83619,22 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 510501662}
+--- !u!114 &788452277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 788452272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f7aa2f590aa44459ffe80052df0aad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSpawnPosition: {x: 34.1, y: -4.33, z: 0}
+  doorSpawnPosition: {x: 48.57, y: -4.03, z: 0}
+  usedCamera: {fileID: 0}
+  ignoreSectionInformation: 0
 --- !u!1001 &795406918
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -83705,6 +83881,14 @@ PrefabInstance:
       propertyPath: cameraTwo
       value: 
       objectReference: {fileID: 1313273709}
+    - target: {fileID: 2801025895521499892, guid: cd3f13005deabaf4eb37a7caf7477f0d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 2801025895521499892, guid: cd3f13005deabaf4eb37a7caf7477f0d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.27
+      objectReference: {fileID: 0}
     - target: {fileID: 4996228686048066639, guid: cd3f13005deabaf4eb37a7caf7477f0d, type: 3}
       propertyPath: m_Size.x
       value: 2.51
@@ -83716,6 +83900,14 @@ PrefabInstance:
     - target: {fileID: 8038944874918213231, guid: cd3f13005deabaf4eb37a7caf7477f0d, type: 3}
       propertyPath: m_Name
       value: Camera Border (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8097060554038014025, guid: cd3f13005deabaf4eb37a7caf7477f0d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 8097060554038014025, guid: cd3f13005deabaf4eb37a7caf7477f0d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.22
       objectReference: {fileID: 0}
     - target: {fileID: 8783410162731260220, guid: cd3f13005deabaf4eb37a7caf7477f0d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -86376,6 +86568,7 @@ GameObject:
   - component: {fileID: 1238313571}
   - component: {fileID: 1238313570}
   - component: {fileID: 1238313569}
+  - component: {fileID: 1238313572}
   m_Layer: 0
   m_Name: Virtual Camera R16
   m_TagString: Untagged
@@ -86476,6 +86669,22 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 1218178005}
+--- !u!114 &1238313572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1238313567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f7aa2f590aa44459ffe80052df0aad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSpawnPosition: {x: 0, y: 0, z: 0}
+  doorSpawnPosition: {x: 48.57, y: -4.03, z: 0}
+  usedCamera: {fileID: 0}
+  ignoreSectionInformation: 1
 --- !u!1 &1238331087
 GameObject:
   m_ObjectHideFlags: 0
@@ -86488,6 +86697,7 @@ GameObject:
   - component: {fileID: 1238331091}
   - component: {fileID: 1238331090}
   - component: {fileID: 1238331089}
+  - component: {fileID: 1238331092}
   m_Layer: 0
   m_Name: Virtual Camera R11
   m_TagString: Untagged
@@ -86588,6 +86798,22 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 2060729260}
+--- !u!114 &1238331092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1238331087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f7aa2f590aa44459ffe80052df0aad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSpawnPosition: {x: 134.63, y: 6.66, z: 0}
+  doorSpawnPosition: {x: 134.63, y: 6.66, z: 0}
+  usedCamera: {fileID: 0}
+  ignoreSectionInformation: 0
 --- !u!114 &1240995460 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7655687684572543257, guid: 1324743ee9bb12441bb4a41e6f3018ec, type: 3}
@@ -87069,6 +87295,7 @@ GameObject:
   - component: {fileID: 1313273709}
   - component: {fileID: 1313273708}
   - component: {fileID: 1313273707}
+  - component: {fileID: 1313273710}
   m_Layer: 0
   m_Name: Virtual Camera R4
   m_TagString: Untagged
@@ -87169,6 +87396,22 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 1655109754}
+--- !u!114 &1313273710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1313273705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f7aa2f590aa44459ffe80052df0aad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSpawnPosition: {x: 0, y: 0, z: 0}
+  doorSpawnPosition: {x: 48.57, y: -4.03, z: 0}
+  usedCamera: {fileID: 0}
+  ignoreSectionInformation: 1
 --- !u!1001 &1345917669
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -87372,6 +87615,7 @@ GameObject:
   - component: {fileID: 1363840147}
   - component: {fileID: 1363840146}
   - component: {fileID: 1363840145}
+  - component: {fileID: 1363840148}
   m_Layer: 0
   m_Name: Virtual Camera BR
   m_TagString: Untagged
@@ -87472,6 +87716,22 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 1764586911}
+--- !u!114 &1363840148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1363840143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f7aa2f590aa44459ffe80052df0aad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSpawnPosition: {x: 0, y: 0, z: 0}
+  doorSpawnPosition: {x: 48.57, y: -4.03, z: 0}
+  usedCamera: {fileID: 0}
+  ignoreSectionInformation: 1
 --- !u!1 &1373236165
 GameObject:
   m_ObjectHideFlags: 0
@@ -87649,6 +87909,7 @@ GameObject:
   - component: {fileID: 1385824840}
   - component: {fileID: 1385824839}
   - component: {fileID: 1385824838}
+  - component: {fileID: 1385824841}
   m_Layer: 0
   m_Name: Virtual Camera R5
   m_TagString: Untagged
@@ -87749,6 +88010,22 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 546297656}
+--- !u!114 &1385824841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1385824836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f7aa2f590aa44459ffe80052df0aad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSpawnPosition: {x: 52.35, y: -21.3, z: 0}
+  doorSpawnPosition: {x: 48.57, y: -4.03, z: 0}
+  usedCamera: {fileID: 0}
+  ignoreSectionInformation: 0
 --- !u!1 &1394945286
 GameObject:
   m_ObjectHideFlags: 0
@@ -87940,6 +88217,7 @@ GameObject:
   - component: {fileID: 1442690088}
   - component: {fileID: 1442690087}
   - component: {fileID: 1442690086}
+  - component: {fileID: 1442690089}
   m_Layer: 0
   m_Name: Virtual Camera R18
   m_TagString: Untagged
@@ -88040,6 +88318,22 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 1712921455}
+--- !u!114 &1442690089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1442690084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f7aa2f590aa44459ffe80052df0aad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSpawnPosition: {x: 0, y: 0, z: 0}
+  doorSpawnPosition: {x: 48.57, y: -4.03, z: 0}
+  usedCamera: {fileID: 0}
+  ignoreSectionInformation: 1
 --- !u!1001 &1446920685
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -89745,6 +90039,7 @@ GameObject:
   - component: {fileID: 1763544351}
   - component: {fileID: 1763544350}
   - component: {fileID: 1763544349}
+  - component: {fileID: 1763544352}
   m_Layer: 0
   m_Name: Virtual Camera R9
   m_TagString: Untagged
@@ -89845,6 +90140,22 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 1550436226}
+--- !u!114 &1763544352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1763544347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f7aa2f590aa44459ffe80052df0aad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSpawnPosition: {x: 101.68, y: 0.57, z: 0}
+  doorSpawnPosition: {x: 101.68, y: 0.57, z: 0}
+  usedCamera: {fileID: 0}
+  ignoreSectionInformation: 0
 --- !u!114 &1764404439 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2564698751860823762, guid: 526bbe4949843fa40825aeeadd75e009, type: 3}
@@ -90091,6 +90402,7 @@ GameObject:
   - component: {fileID: 1813369895}
   - component: {fileID: 1813369894}
   - component: {fileID: 1813369893}
+  - component: {fileID: 1813369896}
   m_Layer: 0
   m_Name: Virtual Camera R12
   m_TagString: Untagged
@@ -90191,6 +90503,22 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 2121665418}
+--- !u!114 &1813369896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1813369891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f7aa2f590aa44459ffe80052df0aad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSpawnPosition: {x: 174.32, y: -0.4, z: 0}
+  doorSpawnPosition: {x: 174.32, y: -0.4, z: 0}
+  usedCamera: {fileID: 0}
+  ignoreSectionInformation: 0
 --- !u!1 &1820525857
 GameObject:
   m_ObjectHideFlags: 0
@@ -91969,11 +92297,11 @@ PrefabInstance:
       objectReference: {fileID: 602086181069090120}
     - target: {fileID: 4775942610013423041, guid: 71011ac535ff0164598c76982f3ae617, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.746
+      value: 300.04
       objectReference: {fileID: 0}
     - target: {fileID: 4775942610013423041, guid: 71011ac535ff0164598c76982f3ae617, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.724
+      value: 5.66
       objectReference: {fileID: 0}
     - target: {fileID: 4775942610013423041, guid: 71011ac535ff0164598c76982f3ae617, type: 3}
       propertyPath: m_LocalPosition.z
@@ -92093,6 +92421,7 @@ GameObject:
   - component: {fileID: 2119272136}
   - component: {fileID: 2119272135}
   - component: {fileID: 2119272134}
+  - component: {fileID: 2119272137}
   m_Layer: 0
   m_Name: Virtual Camera R6
   m_TagString: Untagged
@@ -92193,6 +92522,22 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 1689770939}
+--- !u!114 &2119272137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2119272132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f7aa2f590aa44459ffe80052df0aad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSpawnPosition: {x: 0, y: 0, z: 0}
+  doorSpawnPosition: {x: 48.57, y: -4.03, z: 0}
+  usedCamera: {fileID: 0}
+  ignoreSectionInformation: 1
 --- !u!1 &2121665417
 GameObject:
   m_ObjectHideFlags: 3
@@ -92515,6 +92860,7 @@ GameObject:
   - component: {fileID: 2187647086816166273}
   - component: {fileID: 2321725093418482455}
   - component: {fileID: 4813399792829872237}
+  - component: {fileID: 4813399792829872238}
   m_Layer: 0
   m_Name: Virtual Camera R1
   m_TagString: Untagged
@@ -92610,6 +92956,7 @@ GameObject:
   - component: {fileID: 7127068374146859391}
   - component: {fileID: 512001606937475913}
   - component: {fileID: 5712218482881898107}
+  - component: {fileID: 7127068374146859392}
   m_Layer: 0
   m_Name: Virtual Camera R2
   m_TagString: Untagged
@@ -92692,6 +93039,22 @@ MonoBehaviour:
   m_BoundingShape2D: {fileID: 9168570904221998483}
   m_Damping: 0.39
   m_MaxWindowSize: -1
+--- !u!114 &4813399792829872238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2480768955736240491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f7aa2f590aa44459ffe80052df0aad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSpawnPosition: {x: -2.5, y: 5.72, z: 0}
+  doorSpawnPosition: {x: 48.57, y: -4.03, z: 0}
+  usedCamera: {fileID: 0}
+  ignoreSectionInformation: 0
 --- !u!1 &5272986805180649103
 GameObject:
   m_ObjectHideFlags: 0
@@ -92933,6 +93296,22 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 6177090655519190060}
+--- !u!114 &7127068374146859392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3222382926331070752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f7aa2f590aa44459ffe80052df0aad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSpawnPosition: {x: 16.45, y: -5.04, z: 0}
+  doorSpawnPosition: {x: 48.57, y: -4.03, z: 0}
+  usedCamera: {fileID: 0}
+  ignoreSectionInformation: 0
 --- !u!4 &7200686556373412258
 Transform:
   m_ObjectHideFlags: 3
@@ -93337,3 +93716,4 @@ SceneRoots:
   - {fileID: 1607433824}
   - {fileID: 1579785641}
   - {fileID: 1516924496}
+  - {fileID: 525219297}
