@@ -104,7 +104,7 @@ public class PlayerController : Singleton<PlayerController>
             Flip();
             PausePlayerMovement();
             GetComponentInChildren<ParticleSystem>().Stop();
-            AudioManager.Instance.PlayEntireSound(AudioManager.Sounds.DoorGet);
+            AudioManager.Instance?.PlayEntireSound(AudioManager.Sounds.DoorGet);
             GetComponent<PlayerAnimationHandler>().ChangeAnimationState("Duck_Getdoor");
             StartCoroutine(WaitForCutscene());
         }

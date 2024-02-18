@@ -29,7 +29,7 @@ public class MainMenu : MonoBehaviour
     public void StartGame(string firstLevel)
     {
         ResetSOs();
-        AudioManager.Instance.PlaySong(AudioManager.Songs.HaroldsPerplection);
+        AudioManager.Instance?.PlaySong(AudioManager.Songs.HaroldsPerplection);
         SceneManager.LoadScene(firstLevel);
     }
 

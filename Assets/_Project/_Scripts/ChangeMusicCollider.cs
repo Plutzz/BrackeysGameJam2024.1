@@ -8,7 +8,7 @@ public class ChangeMusicCollider : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            AudioManager.Instance.PlaySong(AudioManager.Songs.SeaOfCircuts);
+            AudioManager.Instance?.PlaySong(AudioManager.Songs.SeaOfCircuts);
         }
     }
 }
