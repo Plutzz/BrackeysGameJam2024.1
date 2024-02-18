@@ -22,6 +22,8 @@ public class Button : MonoBehaviour
     private void ButtonDown()
     {
         if (!buttonReady) return;
+
+        AudioManager.Instance.PlaySound(AudioManager.Sounds.Lever);
         buttonReady = false;
         Debug.Log("ButtonDown");
         ChangeAnimationState("ButtonDown");

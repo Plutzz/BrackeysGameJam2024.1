@@ -18,6 +18,8 @@ public class HiddenLevelObject : MonoBehaviour
     protected virtual void Reveal()
     {
         if (!hidden) return;
+
+        AudioManager.Instance.PlaySound(AudioManager.Sounds.HiddenThings);
         riftSprite.enabled = false;
         hidden = false;
         if(hiddenObject != null) { hiddenObject.SetActive(true); }
