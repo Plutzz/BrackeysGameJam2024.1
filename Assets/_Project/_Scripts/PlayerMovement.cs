@@ -275,7 +275,7 @@ public class PlayerMovement : MonoBehaviour
         if (IsGrounded || coyoteUsable)
         {
             Jump();
-            AudioManager.Instance.PlaySound(AudioManager.Sounds.Jump);
+            
         }
     }
 
@@ -300,6 +300,8 @@ public class PlayerMovement : MonoBehaviour
     private void Jump()
     {
         if (PlayerController.Instance.isPushingBox) return;
+        AudioManager.Instance.PlaySound(AudioManager.Sounds.Jump);
+
         float _jumpHeight = jumpingOffOfDoor ? doorJumpHeight : jumpHeight;
 
         animationHandler.ChangeAnimationState(animationHandler.DuckJumpState);

@@ -9,6 +9,9 @@ public class SectionConnector : MonoBehaviour
     [SerializeField] private Transform sideOne;
     [SerializeField] private Transform sideTwo;
 
+    [SerializeField] private bool sideOneRespawnDoor;
+    [SerializeField] private bool sideTwoRespawnDoor;
+
     [SerializeField] private CinemachineVirtualCamera cameraOne;
     [SerializeField] private CinemachineVirtualCamera cameraTwo;
 

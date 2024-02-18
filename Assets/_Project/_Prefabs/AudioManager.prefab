@@ -53,19 +53,19 @@ MonoBehaviour:
     volume: 0.5
   - sound: 2
     audioClip: {fileID: 8300000, guid: e9cb7af1a3da3ee4abe20ebc3fbfd6d0, type: 3}
-    volume: 0.5
+    volume: 1
   - sound: 3
     audioClip: {fileID: 8300000, guid: 3aceeadf8b810b4468d1cdbdc2a1e0d1, type: 3}
-    volume: 0.5
+    volume: 1
   - sound: 4
     audioClip: {fileID: 8300000, guid: 32d4b1811dda14a6cb9e059ee8ad17d2, type: 3}
     volume: 0.5
   - sound: 5
     audioClip: {fileID: 8300000, guid: b99da9a57308d4ba1bee1cf1d9038376, type: 3}
-    volume: 0.5
+    volume: 0.359
   - sound: 6
     audioClip: {fileID: 8300000, guid: 2c5292ba5cf254919a6b9e2b18e04f49, type: 3}
-    volume: 0.5
+    volume: 0.25
   - sound: 7
     audioClip: {fileID: 8300000, guid: 81652031b64c342cc8dbc59c138d77c5, type: 3}
     volume: 0.5
@@ -74,11 +74,11 @@ MonoBehaviour:
   musicAudioClipsArray:
   - song: 0
     audioClip: {fileID: 8300000, guid: dbe3881515b436f45acd323ce242f6d4, type: 3}
-    volume: 0.32
+    volume: 0.215
   - song: 1
     audioClip: {fileID: 8300000, guid: 7648d0081f8602548a5fee1231d897f7, type: 3}
-    volume: 0.32
+    volume: 0.219
   - song: 2
     audioClip: {fileID: 8300000, guid: f48a2ef1b4d56a3418b2dc260b17c453, type: 3}
-    volume: 0.32
+    volume: 0.239
   musicMixerGroup: {fileID: -8655911079447086582, guid: 5ec34e81d5fba4d40816561ff87eba5c, type: 2}
