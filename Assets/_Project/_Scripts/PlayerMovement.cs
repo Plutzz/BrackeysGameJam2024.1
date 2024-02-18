@@ -43,11 +43,13 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float coyoteTimeThreshold = 0.1f;
     [SerializeField] private float jumpBuffer = 0.2f;
     [SerializeField] private float jumpEndEarlyGravityModifier = 3;
+    [SerializeField] private float jumpCooldown = 0.1f;
     private bool jumpingOffOfDoor;
     [SerializeField] private bool coyoteUsable;
     private bool endedJumpEarly = true;
     private float apexPoint;
     private float lastJumpPressed;
+    private float lastJumpTime;
     //private bool HasBufferedJump => IsGrounded && lastJumpPressed + jumpBuffer > Time.time;
 
 
@@ -284,7 +286,6 @@ public class PlayerMovement : MonoBehaviour
         if (IsGrounded || coyoteUsable)
         {
             Jump();
-            
         }
     }
 
@@ -309,7 +310,6 @@ public class PlayerMovement : MonoBehaviour
     private void Jump()
     {
         if (PlayerController.Instance.isPushingBox) return;
-        AudioManager.Instance.PlaySound(AudioManager.Sounds.Jump);
 
         float _jumpHeight = jumpingOffOfDoor ? doorJumpHeight : jumpHeight;
 
@@ -325,7 +325,9 @@ public class PlayerMovement : MonoBehaviour
         {
             currentVelocityY = -_jumpHeight;
         }
-
+        if (Time.time < lastJumpTime + jumpCooldown) return;
+        AudioManager.Instance.PlaySound(AudioManager.Sounds.Jump);
+        lastJumpTime = Time.time;
     }
 
     private IEnumerator StartCoyoteFrames()

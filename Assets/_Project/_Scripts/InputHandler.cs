@@ -18,8 +18,6 @@ public class InputHandler : Singleton<InputHandler>
     public Vector2 inputVector;     //Player's input vector for movement
     public bool isInteracting;      //is true if player is pressing interact button
     public bool isJumping;      //is true if player is pressing interact button
-    public bool chargeSpecial;
-    public float chargePressTime;
     protected override void Awake()
     {
         base.Awake();
@@ -45,14 +43,5 @@ public class InputHandler : Singleton<InputHandler>
         universalMap = playerInputActions.Universal.enabled;
         UIMap = playerInputActions.UI.enabled;
         dialogueMap = playerInputActions.Dialogue.enabled;
-
-        if (playerInputActions.Player.Special.WasPerformedThisFrame()) { 
-            chargeSpecial = true;
-            chargePressTime = Time.time;
-        }
-
-        if (playerInputActions.Player.Special.WasReleasedThisFrame()) {
-            chargeSpecial = false;
-        }
     }
 }

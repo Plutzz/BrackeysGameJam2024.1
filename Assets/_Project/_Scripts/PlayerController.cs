@@ -65,10 +65,6 @@ public class PlayerController : Singleton<PlayerController>
         {
             playerMovement.JumpCanceled();
         }
-        if (InputHandler.Instance.playerInputActions.Player.Special.WasPerformedThisFrame()) 
-        {
-            PausePlayerMovement();
-        }
         if (InputHandler.Instance.playerInputActions.Player.Interact.WasPerformedThisFrame()) 
         {
             TryInteract();
@@ -89,7 +85,7 @@ public class PlayerController : Singleton<PlayerController>
         {
             StopPushingBox();
         }
-        if (Input.GetKeyDown(KeyCode.R)) { 
+        if (InputHandler.Instance.playerInputActions.Player.QuickRestart.WasPressedThisFrame()) { 
             LevelManager.Instance.ResetLevel();
         }
     }
@@ -203,18 +199,22 @@ public class PlayerController : Singleton<PlayerController>
         //start ray behind to slightly ahead
         //checking for anything on door layer
         //can be optimsed with layer mask
-        RaycastHit2D hit = Physics2D.Raycast(transform.position + transform.right * startOffset, transform.right, rayLength, interactableLayer);
-        if (hit.collider != null)
+        var hits = Physics2D.RaycastAll(transform.position + transform.right * startOffset, transform.right, rayLength, interactableLayer);
+        foreach(var hit in hits)
         {
-            door = hit.collider.GetComponent<Door>();
-            if (door != null)
+            if (hit.collider != null)
             {
-                if(!isPushingBox)
+                door = hit.collider.GetComponent<Door>();
+                if (door != null)
                 {
-                    PickUpDoor();
+                    if (!isPushingBox)
+                    {
+                        PickUpDoor();
+                    }
                 }
             }
         }
+
     }
     // Coroutine for if the door pickup is on toggle
     //private IEnumerator PickUpDoor()

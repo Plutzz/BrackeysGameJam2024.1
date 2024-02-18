@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : SingletonPersistent<AudioManager>
 {
@@ -51,6 +52,10 @@ public class AudioManager : SingletonPersistent<AudioManager>
     private void Start()
     {
         PlaySong(Songs.MainMenu);
+        SceneManager.sceneLoaded += (Scene scene, LoadSceneMode mode) =>
+        {
+            soundAudioClipsQueue = null;
+        };
     }
 
     /// <summary>

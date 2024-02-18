@@ -8,15 +8,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Project/Scenes/Start Screen.unity
     guid: bdd20256d49d33c48a890c92b08711cb
-  - enabled: 0
-    path: Assets/_Project/Scenes/RandomStuff.unity
-    guid: 9748ab93d3b3af3439fec508162734f6
-  - enabled: 1
-    path: Assets/_Project/Scenes/2D Platforming scene.unity
-    guid: 832ebbe90428c404b88de730289ec96a
-  - enabled: 0
-    path: Assets/_Project/Scenes/Testing Scene.unity
-    guid: e3dada9dd34d11947836aa188a2c9b29
   - enabled: 1
     path: Assets/_Project/Scenes/BenIntroLevel.unity
     guid: 25980e22cce70a7488638fb9587b7491

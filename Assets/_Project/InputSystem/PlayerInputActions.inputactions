@@ -24,36 +24,9 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Attack 1",
-                    "type": "Button",
-                    "id": "40eed502-ee1a-4dd1-9952-b8a4e0a7812a",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Attack 2",
-                    "type": "Button",
-                    "id": "2036a822-16a2-46d6-8a01-20192a4823cf",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "Jump",
                     "type": "Button",
                     "id": "c403c8f7-bffc-4d09-9977-4b93079e852b",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Special",
-                    "type": "Button",
-                    "id": "36fd46f2-4e27-42fd-8055-efbffd11d57b",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -72,6 +45,15 @@
                     "name": "Push",
                     "type": "Button",
                     "id": "f6d5d8d4-bced-46c6-83da-899da7a60fc6",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "QuickRestart",
+                    "type": "Button",
+                    "id": "e8b60bbb-6ab9-4247-b3ae-4c1ab0dd4e1c",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -169,28 +151,6 @@
                 },
                 {
                     "name": "",
-                    "id": "a38186d9-0bf6-4ed5-bd81-5645411998d9",
-                    "path": "<Mouse>/leftButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard",
-                    "action": "Attack 1",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "c85cd541-f7c6-4577-9025-faa69340035a",
-                    "path": "<Mouse>/rightButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard",
-                    "action": "Attack 2",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "a0de8c63-9ece-4c37-bf33-80c9d30933ba",
                     "path": "<Keyboard>/space",
                     "interactions": "",
@@ -219,17 +179,6 @@
                     "processors": "",
                     "groups": "GamePad",
                     "action": "Jump",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "f8e930f3-4a42-4dd9-b864-8f0838f7e050",
-                    "path": "<Mouse>/rightButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard",
-                    "action": "Special",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -276,6 +225,28 @@
                     "action": "Door",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "361913cc-90b7-49ad-a48e-aecdd486198b",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "QuickRestart",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2ae4ce55-d6ae-4d41-8d44-4b32be4a1c5c",
+                    "path": "<Gamepad>/select",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "GamePad",
+                    "action": "QuickRestart",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -301,6 +272,17 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
+                    "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "68833f39-1f71-4aea-8aba-37411641db0c",
+                    "path": "<Gamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "GamePad",
                     "action": "Pause",
                     "isComposite": false,
                     "isPartOfComposite": false
