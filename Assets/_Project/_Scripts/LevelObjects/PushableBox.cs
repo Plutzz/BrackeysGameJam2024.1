@@ -61,14 +61,6 @@ public class PushableBox : MonoBehaviour
             }
         }
 
-        // When the box hits the ground, set it's body type to static
-        if (!gettingPushed && rb.bodyType != RigidbodyType2D.Static)
-        {
-            if (IsGrounded)
-            {
-                //rb.bodyType = RigidbodyType2D.Static;
-            }
-        }
     }
 
     private void GravityCheck()

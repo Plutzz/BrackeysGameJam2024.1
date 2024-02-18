@@ -11,7 +11,7 @@ public class LevelManager : Singleton<LevelManager>
     [SerializeField] private LevelDataScriptableObject levelData;
     [SerializeField] private CinemachineVirtualCamera[] virtualCameras;
     [SerializeField] private GameObject player;
-    [SerializeField] private GameObject door;
+    public GameObject door;
 
     [SerializeField] private Image overlay; //temp
     [SerializeField, Min(.01f)] private float overlayFadeTime;

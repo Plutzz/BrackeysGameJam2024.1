@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - ButtonPressable
+  - Cutscene
   layers:
   - Default
   - TransparentFX
@@ -56,4 +57,7 @@ TagManager:
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Cutscene
+    uniqueID: 3566550923
     locked: 0
