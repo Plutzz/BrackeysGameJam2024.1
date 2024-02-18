@@ -34,7 +34,7 @@ public class Stalectite : MonoBehaviour
         Instantiate(fallingStalectite, spawnPoint.position, Quaternion.identity);
         stalectiteReady = false;
         animator.SetTrigger("drop");
-        AudioManager.Instance.PlaySound(AudioManager.Sounds.Stalactite);
+        AudioManager.Instance?.PlaySound(AudioManager.Sounds.Stalactite);
     }
 
     public void finishedRecharge() { 

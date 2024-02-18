@@ -326,8 +326,8 @@ public class PlayerMovement : MonoBehaviour
             currentVelocityY = -_jumpHeight;
         }
         if (Time.time < lastJumpTime + jumpCooldown) return;
-        AudioManager.Instance.PlaySound(AudioManager.Sounds.Jump);
         lastJumpTime = Time.time;
+        AudioManager.Instance?.PlaySound(AudioManager.Sounds.Jump);
     }
 
     private IEnumerator StartCoyoteFrames()

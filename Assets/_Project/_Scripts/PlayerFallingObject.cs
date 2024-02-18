@@ -15,7 +15,7 @@ public class PlayerFallingObject : MonoBehaviour
             {
                 health.TakeDamage(1);
                 GetComponentInParent<PlayerMovement>().TakeKnockBack(GetComponentInParent<Rigidbody2D>().velocity, verticalVelocity);
-                AudioManager.Instance.PlaySound(AudioManager.Sounds.Jump);
+                AudioManager.Instance?.PlaySound(AudioManager.Sounds.Jump);
             }
         }
     }

@@ -228,7 +228,7 @@ public class PlayerController : Singleton<PlayerController>
         door.transform.position = transform.position + (Vector3.up * 0.5f);
         door.transform.parent = transform;
         hasDoor = true;
-        AudioManager.Instance.PlaySound(AudioManager.Sounds.PickUpDoor);
+        AudioManager.Instance?.PlaySound(AudioManager.Sounds.PickUpDoor);
     }
     private void PutDownDoor()
     {

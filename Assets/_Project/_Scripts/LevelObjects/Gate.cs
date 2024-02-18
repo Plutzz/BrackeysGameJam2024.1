@@ -23,7 +23,7 @@ public class Gate : Activatable
         currentActivations++;
         ChangeAnimationState("GateOpen");
         gateCollider.enabled = false;
-        AudioManager.Instance.PlaySound(AudioManager.Sounds.Gate);
+        AudioManager.Instance?.PlaySound(AudioManager.Sounds.Gate);
     }
 
     private void CloseGate()

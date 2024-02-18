@@ -116,7 +116,7 @@ public class PushableBox : MonoBehaviour
         Debug.Log("Start Push");
         rb.bodyType = RigidbodyType2D.Dynamic;
 
-        AudioManager.Instance.PlaySound(AudioManager.Sounds.Box);
+        AudioManager.Instance?.PlaySound(AudioManager.Sounds.Box);
     }
 
     public void StopPush()
@@ -127,7 +127,7 @@ public class PushableBox : MonoBehaviour
         Debug.Log("Stop Push");
         rb.velocity = Vector2.zero;
 
-        AudioManager.Instance.PlaySound(AudioManager.Sounds.Box);
+        AudioManager.Instance?.PlaySound(AudioManager.Sounds.Box);
     }
 
     public void SetSpeed(float _speed)

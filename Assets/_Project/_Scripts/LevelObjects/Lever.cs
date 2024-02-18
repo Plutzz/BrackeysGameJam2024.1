@@ -24,7 +24,7 @@ public class Lever : Interactable
             LeverOn();
         }
 
-        AudioManager.Instance.PlaySound(AudioManager.Sounds.Lever);
+        AudioManager.Instance?.PlaySound(AudioManager.Sounds.Lever);
     }
 
     private void Awake()

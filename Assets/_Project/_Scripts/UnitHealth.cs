@@ -18,12 +18,12 @@ public class UnitHealth : MonoBehaviour
     {
         health -= damage;
         //Debug.Log("take " + damage + " damage");
-        AudioManager.Instance.PlaySound(takeDamageSound);
 
         if (health <= 0) {
             Die();
         }
         health = Mathf.Min(health, maxHealth);
+        AudioManager.Instance?.PlaySound(takeDamageSound);
     }
 
     //Currently doesn't apply knockback due to scripts setting velocity directly
@@ -44,7 +44,7 @@ public class UnitHealth : MonoBehaviour
     }
 
     public virtual void Die() {
-        AudioManager.Instance.PlaySound(deathSound);
         Destroy(gameObject);
+        AudioManager.Instance?.PlaySound(deathSound);
     }
 }

@@ -23,7 +23,7 @@ public class Button : MonoBehaviour
     {
         if (!buttonReady) return;
 
-        AudioManager.Instance.PlaySound(AudioManager.Sounds.Lever);
+        
         buttonReady = false;
         Debug.Log("ButtonDown");
         ChangeAnimationState("ButtonDown");
@@ -34,6 +34,8 @@ public class Button : MonoBehaviour
                 activatable.Activate();
             }
         }
+
+        AudioManager.Instance?.PlaySound(AudioManager.Sounds.Lever);
     }
     protected virtual void ButtonUp()
     {

@@ -54,7 +54,7 @@ public class EnemyWanderingController : MonoBehaviour
         transform.rotation = Quaternion.Euler(new Vector3(transform.rotation.x, facingRight ? 180 : 0, transform.rotation.z));
         facingRight = !facingRight;
 
-        //rb.velocity = transform.right * moveSpeed;
+        AudioManager.Instance?.PlaySound(AudioManager.Sounds.BorgTurn);
     }
 
 
@@ -76,7 +76,7 @@ public class EnemyWanderingController : MonoBehaviour
                 health.TakeDamage(1);
             }
 
-            AudioManager.Instance.PlaySound(AudioManager.Sounds.Door_Gorg);
+            AudioManager.Instance?.PlaySound(AudioManager.Sounds.Door_Gorg);
         }
     }
 
