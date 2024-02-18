@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -99,6 +100,26 @@ public class PlayerController : Singleton<PlayerController>
         DownwardCheck();
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Cutscene"))
+        {
+            collision.gameObject.SetActive(false);
+            Flip();
+            PausePlayerMovement();
+            GetComponentInChildren<ParticleSystem>().Stop();
+            AudioManager.Instance.PlayEntireSound(AudioManager.Sounds.DoorGet);
+            GetComponent<PlayerAnimationHandler>().ChangeAnimationState("Duck_Getdoor");
+            StartCoroutine(WaitForCutscene());
+        }
+    }
+    private IEnumerator WaitForCutscene()
+    {
+        yield return new WaitForSeconds(9f);
+        ResumePlayerMovement();
+        LevelManager.Instance.door.transform.position = transform.position;
+    }
+
     private void TurnCheck()
     {
         if (InputHandler.Instance.inputVector.x > 0 && !isFacingRight)
@@ -129,10 +150,12 @@ public class PlayerController : Singleton<PlayerController>
     private void PausePlayerMovement() { 
         playerMovement.enabled = false;
         rb.velocity = Vector3.zero;
+        InputHandler.Instance.playerInputActions.Player.Disable();
     }
 
     private void ResumePlayerMovement() {
         playerMovement.enabled = true;
+        InputHandler.Instance.playerInputActions.Player.Enable();
     }
 
     private void TryInteract() {

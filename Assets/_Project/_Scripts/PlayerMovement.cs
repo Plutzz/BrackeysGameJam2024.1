@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody2D rb;
     private PlayerAnimationHandler animationHandler;
+    [SerializeField] private ParticleSystem particles;
 
     // Player Movement variables
     //--------------------------------------------------------
@@ -110,9 +111,6 @@ public class PlayerMovement : MonoBehaviour
     private void GravityCheck()
     {
 
-
-        if (Input.GetKeyDown(KeyCode.G)) FlipGravity();
-
         gravityMultiplier = !IsGravityFlipped ? 1 : -1;
 
         if (!IsGravityFlipped)
@@ -178,6 +176,17 @@ public class PlayerMovement : MonoBehaviour
         {
             IsGrounded = false;
         }
+
+        if(IsGrounded && Mathf.Abs(currentVelocityX) > 0.1f)
+        {
+            if (particles.isPlaying) return;
+            particles.Play();
+        }
+        else
+        {
+            particles.Stop();
+        }
+
         var _headCheck = Physics2D.OverlapBox(headCheck.position, headCheckSize, 0f, groundLayer);
         // If it is a platform, player does not hit head
         if (_headCheck != null && _headCheck.GetComponent<PlatformEffector2D>() == null)
