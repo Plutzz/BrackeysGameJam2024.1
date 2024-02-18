@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Project/Scenes/BenIntroLevel.unity
     guid: 25980e22cce70a7488638fb9587b7491
+  - enabled: 1
+    path: Assets/_Project/Scenes/Level_2.unity
+    guid: ddad441ea9a40b34fa18321621f7b0ad
+  - enabled: 1
+    path: Assets/_Project/Scenes/Level_Demo.unity
+    guid: 196163cbfac505c4d813cfe3f5e30457
   m_configObjects: {}

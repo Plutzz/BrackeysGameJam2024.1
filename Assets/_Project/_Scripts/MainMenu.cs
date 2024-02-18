@@ -10,11 +10,13 @@ public class MainMenu : MonoBehaviour
 
     [SerializeField] private PresetSpawnPositions[] spawnPositions;
 
-    public void StartGame()
+    
+
+    public void StartGame(string firstLevel)
     {
         ResetSOs();
         AudioManager.Instance.PlaySong(AudioManager.Songs.HaroldsPerplection);
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(firstLevel);
     }
 
     public void ExitGame()
