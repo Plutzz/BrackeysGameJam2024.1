@@ -8,8 +8,8 @@ using UnityEngine.UI;
 
 public class LevelManager : Singleton<LevelManager> 
 {
-    [SerializeField] private LevelDataScriptableObject levelData;
-    [SerializeField] private CinemachineVirtualCamera[] virtualCameras;
+    public LevelDataScriptableObject levelData;
+    public CinemachineVirtualCamera[] virtualCameras;
     [SerializeField] private GameObject player;
     public GameObject door;
 

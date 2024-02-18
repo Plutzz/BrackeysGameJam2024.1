@@ -199,22 +199,19 @@ public class PlayerController : Singleton<PlayerController>
         //start ray behind to slightly ahead
         //checking for anything on door layer
         //can be optimsed with layer mask
-        var hits = Physics2D.RaycastAll(transform.position + transform.right * startOffset, transform.right, rayLength, interactableLayer);
-        foreach(var hit in hits)
+        var hit = Physics2D.Raycast(transform.position + transform.right * startOffset, transform.right, rayLength, interactableLayer);
+        if (hit.collider != null)
         {
-            if (hit.collider != null)
+            door = hit.collider.GetComponent<Door>();
+            if (door != null)
             {
-                door = hit.collider.GetComponent<Door>();
-                if (door != null)
+                if (!isPushingBox)
                 {
-                    if (!isPushingBox)
-                    {
-                        PickUpDoor();
-                    }
+                    PickUpDoor();
                 }
             }
-        }
 
+        }
     }
     // Coroutine for if the door pickup is on toggle
     //private IEnumerator PickUpDoor()
