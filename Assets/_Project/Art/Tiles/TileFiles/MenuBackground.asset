@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9d1514134bc4fbd41bb739b1b9a49231, type: 3}
-  m_Name: Background1
+  m_Name: MenuBackground
   m_EditorClassIdentifier: 
-  m_DefaultSprite: {fileID: 3592190047786968252, guid: 3d664200ca0d89648bb1dd4c1049bba6, type: 3}
+  m_DefaultSprite: {fileID: -1103810016111797108, guid: 09aaf2ccb11cf384a9898d5f85cec037, type: 3}
   m_DefaultGameObject: {fileID: 0}
   m_DefaultColliderType: 1
   m_TilingRules:
   - m_Id: 2
     m_Sprites:
-    - {fileID: 8286443662729730586, guid: 3d664200ca0d89648bb1dd4c1049bba6, type: 3}
+    - {fileID: 590114051690402443, guid: 09aaf2ccb11cf384a9898d5f85cec037, type: 3}
     m_GameObject: {fileID: 0}
     m_MinAnimationSpeed: 1
     m_MaxAnimationSpeed: 1
@@ -35,7 +35,7 @@ MonoBehaviour:
     m_RuleTransform: 1
   - m_Id: 0
     m_Sprites:
-    - {fileID: 1529174959692419758, guid: 3d664200ca0d89648bb1dd4c1049bba6, type: 3}
+    - {fileID: -6640148605328879919, guid: 09aaf2ccb11cf384a9898d5f85cec037, type: 3}
     m_GameObject: {fileID: 0}
     m_MinAnimationSpeed: 1
     m_MaxAnimationSpeed: 1
@@ -52,7 +52,7 @@ MonoBehaviour:
     m_RuleTransform: 1
   - m_Id: 1
     m_Sprites:
-    - {fileID: 3592190047786968252, guid: 3d664200ca0d89648bb1dd4c1049bba6, type: 3}
+    - {fileID: -1103810016111797108, guid: 09aaf2ccb11cf384a9898d5f85cec037, type: 3}
     m_GameObject: {fileID: 0}
     m_MinAnimationSpeed: 1
     m_MaxAnimationSpeed: 1
