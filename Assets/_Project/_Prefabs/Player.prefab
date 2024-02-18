@@ -5277,6 +5277,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 10
   defaultKnockbackForce: 50
+  takeDamageSound: 8
+  deathSound: 1
   knockUpAmount: 10
   invincibilityTime: 2
   invincibilityBlinks: 6

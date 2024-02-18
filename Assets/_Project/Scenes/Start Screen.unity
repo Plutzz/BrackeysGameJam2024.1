@@ -608,7 +608,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5349768576132091953, guid: 78cf3d16a7c64fe4492c1816df1bc3a7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: BenIntroLevel
+      value: Level_Demo
       objectReference: {fileID: 0}
     - target: {fileID: 7649292234632182877, guid: 78cf3d16a7c64fe4492c1816df1bc3a7, type: 3}
       propertyPath: m_Camera

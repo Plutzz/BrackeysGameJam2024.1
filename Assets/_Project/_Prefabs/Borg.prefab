@@ -127,6 +127,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 4
   defaultKnockbackForce: 10
+  takeDamageSound: 8
+  deathSound: 9
 --- !u!114 &2107361259040402519
 MonoBehaviour:
   m_ObjectHideFlags: 0

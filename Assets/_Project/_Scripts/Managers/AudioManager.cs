@@ -33,6 +33,11 @@ public class AudioManager : SingletonPersistent<AudioManager>
         Box,
         Jump,
         Stalactite,
+        PlayerTD,
+        BorgDeath,
+        PickUpDoor,
+        HiddenThings,
+        Gate,
 
     }
 
