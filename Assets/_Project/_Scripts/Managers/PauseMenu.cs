@@ -14,8 +14,11 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] private Slider sfxSlider;
     [SerializeField] private AudioMixer audioMixer;
 
-    private void Awake()
+    private void Start()
     {
+        Debug.Log($"Music Volume on awake {PlayerPrefs.GetFloat("musicVolume")}");
+        Debug.Log($"SFX Volume on awake {PlayerPrefs.GetFloat("sfxVolume")}");
+
         musicSlider.value = PlayerPrefs.GetFloat("musicVolume");
         SetMusicVolume(musicSlider.value);
         sfxSlider.value = PlayerPrefs.GetFloat("sfxVolume");

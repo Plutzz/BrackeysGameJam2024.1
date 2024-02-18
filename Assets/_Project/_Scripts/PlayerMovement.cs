@@ -275,6 +275,7 @@ public class PlayerMovement : MonoBehaviour
         if (IsGrounded || coyoteUsable)
         {
             Jump();
+            AudioManager.Instance.PlaySound(AudioManager.Sounds.Jump);
         }
     }
 

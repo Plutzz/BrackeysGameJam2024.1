@@ -75,6 +75,8 @@ public class EnemyWanderingController : MonoBehaviour
             if (health != null) {
                 health.TakeDamage(1);
             }
+
+            AudioManager.Instance.PlaySound(AudioManager.Sounds.Door_Gorg);
         }
     }
 

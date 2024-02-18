@@ -117,11 +117,14 @@ public class PushableBox : MonoBehaviour
     //Velocity to be set by PlayerMovement Script (SetSpeed method)
     public void StartPush()
     {
+
         if (gettingPushed) return;
 
         gettingPushed = true;
         Debug.Log("Start Push");
         rb.bodyType = RigidbodyType2D.Dynamic;
+
+        AudioManager.Instance.PlaySound(AudioManager.Sounds.Box);
     }
 
     public void StopPush()
@@ -132,6 +135,7 @@ public class PushableBox : MonoBehaviour
         Debug.Log("Stop Push");
         rb.velocity = Vector2.zero;
 
+        AudioManager.Instance.PlaySound(AudioManager.Sounds.Box);
     }
 
     public void SetSpeed(float _speed)

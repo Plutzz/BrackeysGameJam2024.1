@@ -69,7 +69,7 @@ MonoBehaviour:
   - sound: 7
     audioClip: {fileID: 8300000, guid: 81652031b64c342cc8dbc59c138d77c5, type: 3}
     volume: 0.5
-  sfxMixerGroup: {fileID: 0}
+  sfxMixerGroup: {fileID: 5967273936267279566, guid: 5ec34e81d5fba4d40816561ff87eba5c, type: 2}
   maxAudioSources: 10
   musicAudioClipsArray:
   - song: 0
@@ -81,4 +81,4 @@ MonoBehaviour:
   - song: 2
     audioClip: {fileID: 8300000, guid: f48a2ef1b4d56a3418b2dc260b17c453, type: 3}
     volume: 0.32
-  musicMixerGroup: {fileID: 0}
+  musicMixerGroup: {fileID: -8655911079447086582, guid: 5ec34e81d5fba4d40816561ff87eba5c, type: 2}

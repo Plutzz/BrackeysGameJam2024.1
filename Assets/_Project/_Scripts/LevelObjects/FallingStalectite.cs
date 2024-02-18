@@ -19,5 +19,6 @@ public class FallingStalectite : MonoBehaviour
         }
 
         Destroy(gameObject);
+        AudioManager.Instance.PlaySound(AudioManager.Sounds.Stalactite);
     }
 }

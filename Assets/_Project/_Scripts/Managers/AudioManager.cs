@@ -69,7 +69,7 @@ public class AudioManager : SingletonPersistent<AudioManager>
             soundGameObject = new GameObject("Sound");
             soundAudioClipsQueue.Enqueue(soundGameObject);
             audioSource = soundGameObject.AddComponent<AudioSource>();
-            audioSource.outputAudioMixerGroup = sfxMixerGroup;
+            
         }
         else
         {
@@ -78,6 +78,7 @@ public class AudioManager : SingletonPersistent<AudioManager>
             audioSource = soundGameObject.GetComponent<AudioSource>();
             audioSource.Stop();
         }
+        audioSource.outputAudioMixerGroup = sfxMixerGroup;
         audioSource.clip = GetAudioClip(_sound).audioClip;
         audioSource.volume = GetAudioClip(_sound).volume;
         audioSource.PlayOneShot(audioSource.clip);
