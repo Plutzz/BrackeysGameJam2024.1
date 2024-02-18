@@ -6,6 +6,6 @@ using UnityEngine;
 public class LevelDataScriptableObject : ScriptableObject
 {
     public Vector3 respawnLocation;
+    public Vector3 respawnDoorLocation;
     public int cameraIndex;
-    public bool respawnWithDoor;
 }

@@ -50,6 +50,10 @@ public class PauseMenu : MonoBehaviour
         LevelManager.Instance.ScenicResetLevel();
     }
 
+    public void ReturnToMenu() { 
+        LevelManager.Instance.ReturnToMenu();
+    }
+
     public void QuitGame() { 
         LevelManager.Instance.ExitGame();
     }

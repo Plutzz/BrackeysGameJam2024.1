@@ -9,9 +9,6 @@ public class SectionConnector : MonoBehaviour
     [SerializeField] private Transform sideOne;
     [SerializeField] private Transform sideTwo;
 
-    [SerializeField] private bool sideOneRespawnDoor;
-    [SerializeField] private bool sideTwoRespawnDoor;
-
     [SerializeField] private CinemachineVirtualCamera cameraOne;
     [SerializeField] private CinemachineVirtualCamera cameraTwo;
 
@@ -26,12 +23,12 @@ public class SectionConnector : MonoBehaviour
 
         if (Vector3.Distance(playerPosition, sideOne.position) < Vector3.Distance(playerPosition, sideTwo.position))
         {
-            LevelManager.Instance.SetRespawnLocation(sideOne.position, cameraOne, respawnWithDoor);
+            LevelManager.Instance.SetRespawnLocation(sideOne.position, Vector3.zero, cameraOne);
             cameraOne.enabled = true;
             cameraTwo.enabled = false;
         }
         else {
-            LevelManager.Instance.SetRespawnLocation(sideTwo.position, cameraTwo, respawnWithDoor);
+            LevelManager.Instance.SetRespawnLocation(sideTwo.position, Vector3.zero, cameraTwo);
             cameraOne.enabled = false;
             cameraTwo.enabled = true;
         }

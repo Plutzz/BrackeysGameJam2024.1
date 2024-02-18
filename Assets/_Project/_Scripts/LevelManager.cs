@@ -23,10 +23,9 @@ public class LevelManager : Singleton<LevelManager>
     private void OnEnable()
     {
         player.transform.position = levelData.respawnLocation;
-        if (levelData.respawnWithDoor)
-        {
-            door.transform.position = levelData.respawnLocation;
-        }
+        
+        door.transform.position = levelData.respawnDoorLocation;
+        
 
         foreach (var cam in virtualCameras)
         {
@@ -49,9 +48,9 @@ public class LevelManager : Singleton<LevelManager>
         SceneManager.LoadScene(sceneName);
     }
 
-    public void SetRespawnLocation(Vector3 newRespawnLocation, CinemachineVirtualCamera activeCamera, bool respawnWithDoor) {
+    public void SetRespawnLocation(Vector3 newRespawnLocation, Vector3 newDoorLocation, CinemachineVirtualCamera activeCamera) {
         levelData.respawnLocation = newRespawnLocation;
-        levelData.respawnWithDoor = respawnWithDoor;
+        levelData.respawnDoorLocation = newDoorLocation;
         for (int i = 0; i < virtualCameras.Length; i++) { 
             if (virtualCameras[i] == activeCamera)
             {
@@ -93,6 +92,11 @@ public class LevelManager : Singleton<LevelManager>
         glitchEffect.GetComponent<Animation>().Play();
         yield return new WaitForSeconds(glitchEffect.GetComponent<Animation>().clip.length);
         //ResetLevel();
+    }
+
+    public void ReturnToMenu()
+    {
+        SceneManager.LoadScene(0);
     }
 
     public void ExitGame()
