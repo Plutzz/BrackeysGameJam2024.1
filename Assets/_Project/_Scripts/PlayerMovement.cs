@@ -31,7 +31,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float minFallAcceleration = 1f;
     [SerializeField] private float maxFallAcceleration = 3f;
     [SerializeField] private float fallClamp = -40f;
-    [SerializeField] private bool flipGravity = false;
+    public bool IsGravityFlipped = false;
     private float fallAcceleration;
     private float gravityMultiplier;
 
@@ -113,9 +113,9 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.G)) FlipGravity();
 
-        gravityMultiplier = !flipGravity ? 1 : -1;
+        gravityMultiplier = !IsGravityFlipped ? 1 : -1;
 
-        if (!flipGravity)
+        if (!IsGravityFlipped)
         {
             transform.localScale = new Vector2(1, 1);
         }
@@ -281,7 +281,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void JumpCanceled()
     {
-        float _gravityMultiplier = !flipGravity ? 1 : -1;
+        float _gravityMultiplier = !IsGravityFlipped ? 1 : -1;
         // End the jump early if button released
         if (!IsGrounded && !endedJumpEarly && rb.velocity.y * _gravityMultiplier > 0)
         {
@@ -308,7 +308,7 @@ public class PlayerMovement : MonoBehaviour
         endedJumpEarly = false;
         coyoteUsable = false;
         // Jump if: grounded or within coyote threshold || sufficient jump buffer
-        if (!flipGravity)
+        if (!IsGravityFlipped)
         {
             currentVelocityY = _jumpHeight;
         }
@@ -336,7 +336,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void FlipGravity()
     {
-        flipGravity = !flipGravity;
+        IsGravityFlipped = !IsGravityFlipped;
         if(PlayerController.Instance.hasDoor)
         {
             PlayerController.Instance.door.FlipGravity();

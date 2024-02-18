@@ -13,7 +13,7 @@ public class Door : Interactable
     [SerializeField] private GameObject closeDoorObj;
     [SerializeField] private GameObject platformCollider;
 
-    private bool flipGravity;
+    private bool isGravityFlipped;
     private int gravityMultiplier;
 
     private void Awake()
@@ -37,6 +37,7 @@ public class Door : Interactable
         col.enabled = false;
         platformCollider.SetActive(false);
         graphics.SetActive(false);
+        isGravityFlipped = PlayerController.Instance.GetComponent<PlayerMovement>().IsGravityFlipped;
         rb.bodyType = RigidbodyType2D.Kinematic;
     }
 
@@ -82,9 +83,9 @@ public class Door : Interactable
 
     private void GravityCheck()
     {
-        gravityMultiplier = !flipGravity ? 1 : -1;
+        gravityMultiplier = !isGravityFlipped ? 1 : -1;
 
-        if (!flipGravity)
+        if (!isGravityFlipped)
         {
             transform.localScale = new Vector2(1, 1);
             rb.gravityScale = 1;
@@ -99,13 +100,13 @@ public class Door : Interactable
 
     public void FlipGravity()
     {
-        flipGravity = !flipGravity;
+        isGravityFlipped = !isGravityFlipped;
     }
 
     public void ResetPosition()
     {
         Vector3 _position = PlayerController.Instance.transform.position;
-        if(!flipGravity)
+        if(!isGravityFlipped)
         {
             _position.y += 0.5f;
         }

@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e90a20beaec810341ab0ae04d86ee0da, type: 3}
   m_Name: BenLevelData
   m_EditorClassIdentifier: 
-  respawnLocation: {x: 164.49, y: 1.06, z: 0}
+  respawnLocation: {x: 175.8, y: 0.02, z: 0}
   cameraIndex: 11
   respawnWithDoor: 1

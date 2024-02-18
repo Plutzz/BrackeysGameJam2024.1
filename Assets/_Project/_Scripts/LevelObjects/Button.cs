@@ -33,7 +33,7 @@ public class Button : MonoBehaviour
             }
         }
     }
-    private void ButtonUp()
+    protected virtual void ButtonUp()
     {
         if (buttonReady) return;
         buttonReady = true;
