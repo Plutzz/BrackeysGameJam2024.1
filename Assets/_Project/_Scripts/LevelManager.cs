@@ -22,8 +22,9 @@ public class LevelManager : Singleton<LevelManager>
 
     private void OnEnable()
     {
+        Debug.Log($"Player pos: {levelData.respawnLocation}");
         player.transform.position = levelData.respawnLocation;
-        
+        Debug.Log($"Door pos: {levelData.respawnDoorLocation}");
         door.transform.position = levelData.respawnDoorLocation;
         
 

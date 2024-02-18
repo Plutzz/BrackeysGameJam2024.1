@@ -23,12 +23,14 @@ public class SectionConnector : MonoBehaviour
 
         if (Vector3.Distance(playerPosition, sideOne.position) < Vector3.Distance(playerPosition, sideTwo.position))
         {
-            LevelManager.Instance.SetRespawnLocation(sideOne.position, Vector3.zero, cameraOne);
+            SectionInformation sectionInformation = cameraOne.GetComponent<SectionInformation>();
+            LevelManager.Instance.SetRespawnLocation(sectionInformation.playerSpawnPosition, sectionInformation.doorSpawnPosition, cameraOne);
             cameraOne.enabled = true;
             cameraTwo.enabled = false;
         }
         else {
-            LevelManager.Instance.SetRespawnLocation(sideTwo.position, Vector3.zero, cameraTwo);
+            SectionInformation sectionInformation = cameraTwo.GetComponent<SectionInformation>();
+            LevelManager.Instance.SetRespawnLocation(sectionInformation.playerSpawnPosition, sectionInformation.doorSpawnPosition, cameraTwo);
             cameraOne.enabled = false;
             cameraTwo.enabled = true;
         }
