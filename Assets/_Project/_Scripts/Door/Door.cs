@@ -13,13 +13,20 @@ public class Door : Interactable
     [SerializeField] private GameObject closeDoorObj;
     [SerializeField] private GameObject platformCollider;
 
-
+    private bool flipGravity;
+    private int gravityMultiplier;
 
     private void Awake()
     {
         col = GetComponent<Collider2D>();
         rb = GetComponent<Rigidbody2D>();
     }
+
+    private void Update()
+    {
+        GravityCheck();
+    }
+
     public void PickUp()
     {
         if(isOpen)
@@ -39,7 +46,9 @@ public class Door : Interactable
         col.enabled = true;
         platformCollider.SetActive(true);
         graphics.SetActive(true);
+        ResetPosition();
         rb.bodyType = RigidbodyType2D.Dynamic;
+
     }
 
     public void OpenDoor()
@@ -56,6 +65,7 @@ public class Door : Interactable
         platformCollider.SetActive(true);
         openDoorObj.SetActive(false);
         closeDoorObj.SetActive(true);
+
     }
 
     public override void Interact()
@@ -68,5 +78,41 @@ public class Door : Interactable
         {
             CloseDoor();
         }
+    }
+
+    private void GravityCheck()
+    {
+        gravityMultiplier = !flipGravity ? 1 : -1;
+
+        if (!flipGravity)
+        {
+            transform.localScale = new Vector2(1, 1);
+            rb.gravityScale = 1;
+
+        }
+        else
+        {
+            transform.localScale = new Vector2(1, -1);
+            rb.gravityScale = -1;
+        }
+    }
+
+    public void FlipGravity()
+    {
+        flipGravity = !flipGravity;
+    }
+
+    public void ResetPosition()
+    {
+        Vector3 _position = PlayerController.Instance.transform.position;
+        if(!flipGravity)
+        {
+            _position.y += 0.5f;
+        }
+        else
+        {
+            _position.y -= 0.5f;
+        }
+        transform.position = _position;
     }
 }

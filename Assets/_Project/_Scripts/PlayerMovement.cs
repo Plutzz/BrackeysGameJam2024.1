@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Xml.Serialization;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -335,6 +334,10 @@ public class PlayerMovement : MonoBehaviour
     public void FlipGravity()
     {
         flipGravity = !flipGravity;
+        if(PlayerController.Instance.hasDoor)
+        {
+            PlayerController.Instance.door.FlipGravity();
+        }
     }
 
 }

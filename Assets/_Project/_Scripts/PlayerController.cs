@@ -20,7 +20,7 @@ public class PlayerController : Singleton<PlayerController>
     [SerializeField] private float startOffset = -.5f;
     [SerializeField] private float rayLength = 1.5f;
     [SerializeField] private LayerMask interactableLayer;
-    private Door door;
+    public Door door { get; private set; }
 
     [Header("Box")]
     [SerializeField] private LayerMask boxLayer;

@@ -11,6 +11,7 @@ public class LevelManager : Singleton<LevelManager>
     [SerializeField] private LevelDataScriptableObject levelData;
     [SerializeField] private CinemachineVirtualCamera[] virtualCameras;
     [SerializeField] private GameObject player;
+    [SerializeField] private GameObject door;
 
     [SerializeField] private Image overlay; //temp
     [SerializeField, Min(.01f)] private float overlayFadeTime;
@@ -22,6 +23,11 @@ public class LevelManager : Singleton<LevelManager>
     private void OnEnable()
     {
         player.transform.position = levelData.respawnLocation;
+        if (levelData.respawnWithDoor)
+        {
+            door.transform.position = levelData.respawnLocation;
+        }
+
         foreach (var cam in virtualCameras)
         {
             cam.enabled = false;
@@ -43,8 +49,9 @@ public class LevelManager : Singleton<LevelManager>
         SceneManager.LoadScene(sceneName);
     }
 
-    public void SetRespawnLocation(Vector3 newRespawnLocation, CinemachineVirtualCamera activeCamera) {
+    public void SetRespawnLocation(Vector3 newRespawnLocation, CinemachineVirtualCamera activeCamera, bool respawnWithDoor) {
         levelData.respawnLocation = newRespawnLocation;
+        levelData.respawnWithDoor = respawnWithDoor;
         for (int i = 0; i < virtualCameras.Length; i++) { 
             if (virtualCameras[i] == activeCamera)
             {

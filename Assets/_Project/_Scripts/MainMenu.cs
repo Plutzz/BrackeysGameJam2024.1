@@ -32,6 +32,7 @@ public class MainMenu : MonoBehaviour
         foreach (var SO in spawnPositions) {
             SO.levelData.respawnLocation = SO.originalSpawnpoint;
             SO.levelData.cameraIndex = SO.originalCamera;
+            SO.levelData.respawnWithDoor = false;
         }
     }
 }
