@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: EndPortal
-  m_Shader: {fileID: -6465566751694194690, guid: 5773d962b24c4544092f80e4c72bd63a, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 1224ba6463618c8438afdb3692c26263, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
