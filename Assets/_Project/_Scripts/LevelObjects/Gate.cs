@@ -8,6 +8,7 @@ public class Gate : Activatable
     private string currentState;
     private Collider2D gateCollider;
     [SerializeField] private bool inverseGate;
+    private int currentActivations;
 
     private void Awake()
     {
@@ -19,14 +20,22 @@ public class Gate : Activatable
 
     private void OpenGate()
     {
+        currentActivations++;
         ChangeAnimationState("GateOpen");
         gateCollider.enabled = false;
     }
 
     private void CloseGate()
     {
-        ChangeAnimationState("GateClose");
-        gateCollider.enabled = true;
+        currentActivations--;
+        //Only close if all activations have turned off for this gate
+        if(currentActivations <= 0)
+        {
+            currentActivations = 0;
+            ChangeAnimationState("GateClose");
+            gateCollider.enabled = true;
+        }
+
     }
 
     private void ChangeAnimationState(string newState)

@@ -110,169 +110,169 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TechDoor_open_0
+      name: TechDoor_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 78986f5a415c026469fec6422ae39f85
-      internalID: 2106992691
+      spriteID: 67d4ea4a9f8fb254a9774c32b1cbe833
+      internalID: 322589398
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TechDoor_open_1
+      name: TechDoor_1
       rect:
         serializedVersion: 2
         x: 32
         y: 0
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 334ad8f12d6cf9e4ebd48885456fab86
-      internalID: 83165927
+      spriteID: c4ae61a1a95a4e440acaef02923a3635
+      internalID: 1307392639
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TechDoor_open_2
+      name: TechDoor_2
       rect:
         serializedVersion: 2
         x: 64
         y: 0
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1becd1785106d6c4fae9c2581ea08658
-      internalID: 1349024730
+      spriteID: 5ea480c882a7aab449f8be3c865f5676
+      internalID: 1891683333
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TechDoor_open_3
+      name: TechDoor_3
       rect:
         serializedVersion: 2
         x: 96
         y: 0
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a819760275d32d14ea66d3a30b3d19e3
-      internalID: 1097614403
+      spriteID: 7ca37883d7d54f2439ef166492bfebea
+      internalID: -1096225616
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TechDoor_open_4
+      name: TechDoor_4
       rect:
         serializedVersion: 2
         x: 128
         y: 0
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 14ffcfab2bec67a44b6559be019c26f0
-      internalID: 1539672075
+      spriteID: 426dea866245e5a42bc9c570f2451dcf
+      internalID: -457757513
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TechDoor_open_5
+      name: TechDoor_5
       rect:
         serializedVersion: 2
         x: 160
         y: 0
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 773b8ba371cecd64c94a33aa129fdeb1
-      internalID: -834805615
+      spriteID: 75d2c9b4f4781d64d81aeaaf3efe60e4
+      internalID: -1608235930
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TechDoor_open_6
+      name: TechDoor_6
       rect:
         serializedVersion: 2
         x: 192
         y: 0
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6b2e3ad0128fafc458aac7afc6dc62a1
-      internalID: -1353974798
+      spriteID: ef879babc2684b645a83b25e6e51ea3b
+      internalID: 2073204701
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TechDoor_open_7
+      name: TechDoor_7
       rect:
         serializedVersion: 2
         x: 224
         y: 0
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 93f1531f7a68a7b4bb0ed4168b9e4777
-      internalID: -1628795179
+      spriteID: fd9e53838136fc842ae9bc33b81e5c3a
+      internalID: 1980244866
       vertices: []
       indices: 
       edges: []
@@ -288,14 +288,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      TechDoor_open_0: 2106992691
-      TechDoor_open_1: 83165927
-      TechDoor_open_2: 1349024730
-      TechDoor_open_3: 1097614403
-      TechDoor_open_4: 1539672075
-      TechDoor_open_5: -834805615
-      TechDoor_open_6: -1353974798
-      TechDoor_open_7: -1628795179
+      TechDoor_0: 322589398
+      TechDoor_1: 1307392639
+      TechDoor_2: 1891683333
+      TechDoor_3: -1096225616
+      TechDoor_4: -457757513
+      TechDoor_5: -1608235930
+      TechDoor_6: 2073204701
+      TechDoor_7: 1980244866
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
